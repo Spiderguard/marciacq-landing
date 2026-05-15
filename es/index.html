@@ -22,6 +22,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#F5EFE9">
 <title>Marciacq Travel Studio — Donde el viaje significativo se vive sin fricción</title>
+<link rel="alternate" hreflang="en" href="https://spiderguard.github.io/marciacq-landing/">
+<link rel="alternate" hreflang="es" href="https://spiderguard.github.io/marciacq-landing/es/">
+<link rel="alternate" hreflang="fr" href="https://spiderguard.github.io/marciacq-landing/fr/">
+<link rel="alternate" hreflang="x-default" href="https://spiderguard.github.io/marciacq-landing/">
+
 <meta name="description" content="Un estudio de viajes estructurado y de alta confianza. Itinerarios internacionales, experiencias en Panamá, programas corporativos y viajes multigeneracionales — diseñados sin fricción.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,9 +97,10 @@ p{color:var(--musgo);font-weight:300}
 .topstrip a:hover{color:var(--arena)}
 .topstrip .right{display:flex;gap:24px;align-items:center}
 .lang{display:inline-flex;gap:6px;align-items:center;color:var(--musgo);letter-spacing:.16em}
-.lang a{padding:1px 4px;transition:color .15s,background .15s;border-radius:2px}
+
 .lang a:hover{color:var(--arena)}
-.lang a.on{color:var(--perla);background:var(--arena);font-weight:500}
+.lang .on{color:var(--perla);background:var(--arena);font-weight:500;padding:1px 6px;border-radius:2px}
+.lang a{padding:2px 6px;min-height:24px;display:inline-flex;align-items:center;border-radius:2px;transition:color .15s,background .15s}
 @media(max-width:760px){.topstrip .left span:nth-child(3),.topstrip .right .v{display:none}.topstrip{font-size:9.5px}}
 
 /* ================ NAV ================ */
@@ -133,8 +139,8 @@ p{color:var(--musgo);font-weight:300}
   transition:background .25s ease,color .25s ease;
 }
 .cta:hover{background:var(--arena)}
-.cta.alt{background:var(--terra)}
-.cta.alt:hover{background:#8E4A2D}
+.cta.alt{background:var(--selva)}
+.cta.alt:hover{background:var(--arena)}
 .cta.ghost{background:transparent;color:var(--arena);border:1px solid var(--arena)}
 .cta.ghost:hover{background:var(--arena);color:var(--perla)}
 .cta.light{background:transparent;color:var(--perla);border:1px solid rgba(245,239,233,.45)}
@@ -312,11 +318,11 @@ p{color:var(--musgo);font-weight:300}
 .pcard .price small{display:block;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;margin-bottom:3px}
 .pcard .price b{font-weight:400}
 .pcard .price .sig{font-weight:400}
-.pcard .arrow{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:22px;color:var(--musgo);transition:color .2s,transform .25s;font-weight:300}
+.pcard .arrow{font-family:"Raleway",sans-serif;font-size:18px;color:var(--musgo);transition:color .2s,transform .25s;font-weight:300}
 .pcard:hover .arrow{color:var(--terra);transform:translateX(6px)}
 .pcard .days{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--musgo);font-weight:500}
 
-.programs .note{margin-top:48px;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:16px;color:var(--arena);line-height:1.55;max-width:64ch}
+.programs .note{margin-top:48px;font-family:"Raleway",sans-serif;font-style:italic;font-weight:300;font-size:15px;color:var(--musgo);line-height:1.75;max-width:64ch}
 .programs .note::before{content:"— ";color:var(--terra)}
 
 @media(max-width:1020px){.pgrid{grid-template-columns:1fr 1fr;gap:20px}}
@@ -339,7 +345,7 @@ p{color:var(--musgo);font-weight:300}
 .vert .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
 .vert .meta span{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--musgo);font-weight:500;padding:5px 10px;border:1px solid rgba(49,37,31,.16)}
 .vert .more{margin-top:auto;padding-top:24px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--arena);font-weight:500;display:inline-flex;align-items:center;gap:10px}
-.vert .more::after{content:"→";font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;transition:transform .25s,color .25s}
+.vert .more::after{content:"→";font-family:"Raleway",sans-serif;font-size:14px;transition:transform .25s,color .25s}
 .vert:hover .more::after{transform:translateX(6px);color:var(--terra)}
 @media(max-width:880px){.vgrid{grid-template-columns:1fr}.vert{padding:36px 28px}.verticals .head{grid-template-columns:1fr;gap:24px}}
 
@@ -354,7 +360,7 @@ p{color:var(--musgo);font-weight:300}
 .step{padding:36px 22px 0 0;border-right:1px solid rgba(245,239,233,.16);position:relative}
 .step:nth-child(n+2){padding-left:22px}
 .step:last-child{border-right:none;padding-right:0}
-.step .sn{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;font-size:38px;color:rgba(245,239,233,.50);line-height:1;margin-bottom:22px;display:block}
+.step .sn{font-family:"Raleway",sans-serif;font-weight:200;font-size:32px;color:rgba(245,239,233,.50);line-height:1;margin-bottom:22px;display:block;letter-spacing:-.02em}
 .step h4{font-size:14px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:var(--perla);margin-bottom:14px;line-height:1.2}
 .step p{font-size:14px;color:rgba(245,239,233,.72);line-height:1.7;font-weight:300}
 .step .dur{margin-top:18px;padding-top:14px;border-top:1px solid rgba(245,239,233,.16);font-size:10.5px;letter-spacing:.20em;text-transform:uppercase;color:rgba(245,239,233,.55);font-weight:500}
@@ -381,7 +387,7 @@ p{color:var(--musgo);font-weight:300}
 .case-list li{display:grid;grid-template-columns:auto 1fr;gap:24px;padding:16px 0;border-bottom:1px solid rgba(49,37,31,.08);font-size:14.5px;color:var(--arena);line-height:1.55;font-weight:300}
 .case-list li:last-child{border-bottom:none}
 .case-list .k{font-size:10.5px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500;padding-top:3px;min-width:96px}
-.case .footnote{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:16px;color:var(--arena);line-height:1.55;border-top:1px solid rgba(49,37,31,.16);padding-top:22px}
+.case .footnote{font-family:"Raleway",sans-serif;font-style:italic;font-weight:300;font-size:14px;color:var(--musgo);line-height:1.75;border-top:1px solid rgba(49,37,31,.16);padding-top:22px}
 .case .footnote::before{content:"— ";color:var(--terra)}
 @media(max-width:980px){.case{grid-template-columns:1fr}.case .img{min-height:340px}.case .right{padding:40px 32px}.proof .head{grid-template-columns:1fr;gap:24px}}
 
@@ -395,7 +401,7 @@ p{color:var(--musgo);font-weight:300}
 .tcell{padding:36px 28px 36px 0;border-right:1px solid rgba(245,239,233,.16)}
 .tcell:nth-child(n+2){padding-left:28px}
 .tcell:nth-child(4n){border-right:none;padding-right:0}
-.tcell .ti{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:30px;color:rgba(245,239,233,.5);font-weight:300;line-height:1;margin-bottom:18px;display:block}
+.tcell .ti{font-family:"Raleway",sans-serif;font-weight:200;font-size:26px;color:rgba(245,239,233,.5);line-height:1;margin-bottom:18px;display:block;letter-spacing:-.02em}
 .tcell p{font-size:14px;color:rgba(245,239,233,.78);line-height:1.65;font-weight:300}
 .tcell p strong{color:var(--perla);font-weight:400}
 @media(max-width:980px){.trust-grid{grid-template-columns:1fr 1fr}.tcell:nth-child(2n){border-right:none;padding-right:0}.tcell:nth-child(2n+1){padding-left:0}.tcell{border-bottom:1px solid rgba(245,239,233,.16);padding-bottom:28px;padding-top:28px}}
@@ -481,9 +487,9 @@ p{color:var(--musgo);font-weight:300}
 .ch .cv{font-size:18px;color:var(--perla);font-weight:300;letter-spacing:-.005em;line-height:1.35;font-family:"Raleway"}
 .ch .cv .sig{font-weight:400}
 .ch .cd{font-size:13px;color:rgba(245,239,233,.65);line-height:1.6;font-weight:300;margin-top:auto;padding-top:18px}
-.ch .arrow{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;font-size:24px;color:rgba(245,239,233,.6);align-self:flex-start;transition:color .25s,transform .25s}
+.ch .arrow{font-family:"Raleway",sans-serif;font-weight:300;font-size:20px;color:rgba(245,239,233,.6);align-self:flex-start;transition:color .25s,transform .25s}
 .ch:hover .arrow{color:var(--terra);transform:translateX(8px)}
-.intake .response{margin-top:60px;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:18px;color:rgba(245,239,233,.72);line-height:1.55;max-width:60ch}
+.intake .response{margin-top:30px;font-family:"Raleway",sans-serif;font-style:italic;font-weight:300;font-size:15px;color:rgba(245,239,233,.72);line-height:1.75;max-width:60ch}
 .intake .response::before{content:"— ";color:var(--terra)}
 .intake .actions{margin-top:46px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 @media(max-width:880px){.intake .head{grid-template-columns:1fr;gap:24px}.channels{grid-template-columns:1fr}.ch,.ch:nth-child(n+2){border-right:none;border-bottom:1px solid rgba(245,239,233,.16);padding:30px 0}.ch:last-child{border-bottom:none}.ch:hover,.ch:nth-child(1):hover{padding-left:0}}
@@ -541,9 +547,9 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
       <span>Ciudad de Panamá · Solo con cita</span>
     </div>
     <div class="right">
+      <a href="tel:+50766731449" class="v">+507 6673-1449</a>
       <a href="mailto:hello@marciacqtravelstudio.com" class="v">hello@marciacqtravelstudio.com</a>
-      <a href="https://instagram.com/marciacqtravelstudio" class="v">Instagram</a>
-      <span class="lang"><a href="../">EN</a><a href="#" class="on">ES</a><a href="../fr/">FR</a></span>
+      <span class="lang"><a href="/marciacq-landing/">EN</a><span class="on">ES</span><a href="/marciacq-landing/fr/">FR</a></span>
     </div>
   </div>
 </div>
@@ -558,9 +564,9 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
     <nav class="nav-links">
       <a href="#programs" class="lnk">Programas</a>
       <a href="#what" class="lnk">Verticales</a>
-      <a href="#how" class="lnk">Cómo trabajamos</a>
+      <a href="#how" class="lnk">Método</a>
       <a href="#program" class="lnk">Un programa</a>
-      <a href="#founder" class="lnk">Nicole</a>
+      <a href="#founder" class="lnk">Estudio</a>
       <a href="#intake" class="cta">Iniciar consulta</a>
       <button class="menu-toggle" id="menuOpen" aria-label="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
@@ -585,6 +591,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
     <a href="#intake">Iniciar consulta</a>
   </nav>
   <div class="foot">
+    <a href="tel:+50766731449">+507 6673-1449 · WhatsApp</a>
     <a href="mailto:hello@marciacqtravelstudio.com">hello@marciacqtravelstudio.com</a>
     <a href="https://instagram.com/marciacqtravelstudio">Instagram</a>
     <span>Ciudad de Panamá · Solo con cita</span>
@@ -613,7 +620,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
 
     <div class="trust">
       <div class="t"><b>4 <span class="sig">verticales</span></b><small>Leisure · Panamá · Corporativo / MICE · Familia</small></div>
-      <div class="t"><b>+40 países</b><small>Red de proveedores validada</small></div>
+      <div class="t"><b>Virtuoso <span class="sig">·</span> FORA</b><small>Acceso de red de miembros</small></div>
       <div class="t"><b>Con <span class="sig">cita</span></b><small>Consulta selectiva, calendario pausado</small></div>
       <div class="t"><b>EN · ES · FR</b><small>Idiomas operativos</small></div>
     </div>
@@ -623,12 +630,12 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
 <!-- AFFILIATIONS -->
 <section class="affil">
   <div class="container">
-    <span class="al-tag">Red de membresía</span>
+    <span class="al-tag">Acceso a la red</span>
     <div class="marks">
-      <span class="mk"><b>Virtuoso</b><small>Red de partners preferenciales</small></span>
+      <span class="mk"><b>Virtuoso</b><small>Tarifas y amenities preferenciales</small></span>
       <span class="mk"><b>FORA Travel</b><small>Asesora independiente</small></span>
-      <span class="mk"><b>Forbes Five-Star</b><small>Acceso curado</small></span>
-      <span class="mk"><b>Travel + Leisure</b><small>Hoteles partner A-list</small></span>
+      <span class="mk"><b>Forbes Five-Star</b><small>Acceso reservado · 5★</small></span>
+      <span class="mk"><b>Travel + Leisure</b><small>Hoteles a tarifa preferencial</small></span>
     </div>
   </div>
 </section>
@@ -667,9 +674,11 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
     </div>
 
     <article class="feature-card">
-      <div class="imgz v1 img" aria-hidden="true">
+      <!--MOCKUP-IMG · replace before launch-->
+      <div class="imgz real v1 img" aria-hidden="true">
+        <img src="../images/adriatic-coast.jpg" alt="" loading="lazy">
         <span class="index">№ 01 / Feature</span>
-        <span class="cap">Image<small>A vessel at anchor, Croatian coast, blue hour. Single subject.</small></span>
+        <span class="cap">Editorial<small>Vernazza · last light, no figures.</small></span>
       </div>
       <div class="body">
         <div>
@@ -681,7 +690,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
           <div class="fact"><small>Duración</small><b>12 noches</b></div>
           <div class="fact"><small>Recorrido</small><b>Roma → Florencia → Hvar → Dubrovnik</b></div>
           <div class="fact"><small>Grupo</small><b>Hasta 14 viajeros</b></div>
-          <div class="fact"><small>Inversión</small><b>Desde <span class="sig">USD 145,000</span></b></div>
+          <div class="fact"><small>Compromiso</small><b>Por <span class="sig">encargo</span></b></div>
         </div>
         <div class="ctas">
           <a href="#intake" class="cta">Solicitar la arquitectura</a>
@@ -714,7 +723,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
           <h3>Guna Yala · <span class="sig">Open Water</span></h3>
           <p>Un programa de navegación por el archipiélago de la Comarca — diseñado con los stewards indígenas, no a través de ellos. Embarcación privada, capitán validado, sin encuentros posados. Continuidad operativa de extremo a extremo.</p>
           <div class="footrow">
-            <div class="price"><small>Desde</small><b>USD <span class="sig">58,000</span></b></div>
+            <div class="price"><small>Compromiso</small><b>Por <span class="sig">encargo</span></b></div>
             <span class="arrow">→</span>
           </div>
         </div>
@@ -728,7 +737,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
           <h3>The <span class="sig">Highland</span> Threshold</h3>
           <p>Boquete, Cerro Punta, Volcán Barú. Un programa para principales que miden la altitud en silencio. Ascenso pre-alba a 3.475 m, mañanas de bosque nuboso, noches off-grid.</p>
           <div class="footrow">
-            <div class="price"><small>Desde</small><b>USD <span class="sig">42,000</span></b></div>
+            <div class="price"><small>Compromiso</small><b>Por <span class="sig">encargo</span></b></div>
             <span class="arrow">→</span>
           </div>
         </div>
@@ -741,7 +750,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
           <h3>The <span class="sig">Azuero</span> Sequence</h3>
           <p>Las Tablas, Pedasí, Pedregal. Construido alrededor del calendario cultural — festivales, polleras, cocinas familiares, guías de lenguas indígenas de la región. No es un circuito.</p>
           <div class="footrow">
-            <div class="price"><small>Desde</small><b>USD <span class="sig">38,000</span></b></div>
+            <div class="price"><small>Compromiso</small><b>Por <span class="sig">encargo</span></b></div>
             <span class="arrow">→</span>
           </div>
         </div>
@@ -754,7 +763,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
           <h3>The <span class="sig">Atelier</span> Route</h3>
           <p>París, Ginebra, Florencia, Milán. Acceso privado a ateliers de trabajo — cuero, relojería, textiles, cerámica. No es un tour. Un aprendizaje documentado en restraint.</p>
           <div class="footrow">
-            <div class="price"><small>Desde</small><b>USD <span class="sig">128,000</span></b></div>
+            <div class="price"><small>Compromiso</small><b>Por <span class="sig">encargo</span></b></div>
             <span class="arrow">→</span>
           </div>
         </div>
@@ -767,17 +776,17 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
           <h3>The Family <span class="sig">Concession</span></h3>
           <p>Una sola hacienda como base. Tres generaciones, perfiles de movilidad distribuidos, días programados y tardes sin programar. Para principales que quieren presencia sin coreografía.</p>
           <div class="footrow">
-            <div class="price"><small>Desde</small><b>USD <span class="sig">92,000</span></b></div>
+            <div class="price"><small>Compromiso</small><b>Por <span class="sig">encargo</span></b></div>
             <span class="arrow">→</span>
           </div>
         </div>
       </article>
 
       <article class="pcard">
-        <div class="imgz img"><span class="index">№ 06 · Corporate</span><span class="cap">Image<small>Empty boardroom, evening light, single seat.</small></span></div>
+        <!--MOCKUP-IMG--><div class="imgz real img"><img src="../images/boardroom-evening.jpg" alt="" loading="lazy"><span class="index">№ 06 · Corporate</span><span class="cap">Editorial<small>Empty office hall, evening light.</small></span></div>
         <div class="pbody">
           <span class="tag">Corporativo / MICE · 3-7 noches</span>
-          <h3>The Offsite <span class="sig">Mainframe</span></h3>
+          <h3>Corporativo &amp; <span class="sig">Grupo</span></h3>
           <p>Un marco corporativo modular. Sedes validadas en tres continentes. Superficie de riesgo mapeada, contingencias documentadas, escalaciones eliminadas antes de que se formen.</p>
           <div class="footrow">
             <div class="price"><small>Compromiso</small><b>Por <span class="sig">encargo</span></b></div>
@@ -848,7 +857,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
       <div class="step"><span class="sn">i.</span><h4>Consulta</h4><p>Un formulario estructurado y una conversación de 30 minutos. Evaluamos fit antes que alcance, alcance antes que precio.</p><div class="dur">Formulario 15 min · Llamada 30 min</div></div>
       <div class="step"><span class="sn">ii.</span><h4>Descubrimiento</h4><p>Stakeholders, contexto, restricciones. Sacamos a la superficie las variables que determinan si el programa es factible al nivel prometido.</p><div class="dur">5-10 días hábiles</div></div>
       <div class="step"><span class="sn">iii.</span><h4>Arquitectura</h4><p>Una propuesta documentada con resumen de validación de proveedores, contingencias de riesgo y estructura clara de costos. Sin relleno.</p><div class="dur">10-14 días hábiles</div></div>
-      <div class="step"><span class="sn">iv.</span><h4>Ejecución</h4><p>El programa corre sobre proveedores validados y procesos documentados. Único punto de contacto, continuidad operativa de inicio a fin.</p><div class="dur">Duración del viaje</div></div>
+      <div class="step"><span class="sn">iv.</span><h4>Ejecución</h4><p>El programa corre sobre proveedores validados y procesos documentados. <strong>Global Rescue, evacuación médica y protocolos de risk-advisory activos en todo momento.</strong> Único punto de contacto, de inicio a fin.</p><div class="dur">Duración del viaje</div></div>
       <div class="step"><span class="sn">v.</span><h4>Continuidad</h4><p>Debrief, archivo y una versión documentada de tu programa — repetible cuando tus necesidades vuelvan. Los clientes de largo plazo construyen a lo largo de años.</p><div class="dur">Continuo</div></div>
     </div>
 
@@ -962,7 +971,9 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
 <!-- FOUNDER -->
 <section id="founder" class="founder r">
   <div class="container">
-    <div class="imgz v4 portrait" aria-hidden="true">
+    <!--MOCKUP-IMG · replace with editorial Nicole photo per brand image direction-->
+    <div class="imgz real portrait" aria-hidden="true">
+      <img src="../images/nicole.jpg" alt="" loading="lazy" class="founder-photo">
       <span class="index">№ 08 / Fundadora</span>
       <span class="cap">Image<small>Nicole en el estudio — trabajando, media luz, sin contacto visual con la cámara.</small></span>
     </div>
@@ -1038,14 +1049,15 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
         <span class="cd">Evidencia operativa, no output estético.</span>
         <span class="arrow">→</span>
       </a>
-      <a href="#" class="ch">
-        <span class="ck">03 — Clientes existentes</span>
-        <span class="cv">WhatsApp · <span class="sig">por referencia</span></span>
-        <span class="cd">Línea directa para programas activos y continuidad.</span>
+      <a href="https://wa.me/50766731449?text=Hola%20Marciacq%20Studio" class="ch">
+        <span class="ck">03 — Línea directa</span>
+        <span class="cv">+507 6673-1449 · <span class="sig">WhatsApp</span></span>
+        <span class="cd">Para introducciones, programas activos y continuidad.</span>
         <span class="arrow">→</span>
       </a>
     </div>
 
+    <p class="discretion">La discreción es procedimental. NDA firmado antes de la arquitectura. Identidades, itinerarios y relaciones de proveedores archivados bajo acceso restringido.</p>
     <p class="response">Respuesta en dos días hábiles. Confirmación de fit en cinco. El estudio opera con calendario pausado; la consulta cierra cuando la capacidad está comprometida.</p>
 
     <div class="actions">
