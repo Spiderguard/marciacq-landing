@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#F5EFE9">
 <title>Marciacq Travel Studio — Where Meaningful Travel Feels Effortless</title>
-<meta name="description" content="Operational certainty through structural travel design. International itineraries, Panama experiences, corporate & MICE programs, multigenerational family travel.">
+<meta name="description" content="A structured, high-trust travel studio. International itineraries, Panama experiences, corporate programs, and multigenerational journeys — designed without friction.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet">
@@ -13,17 +13,16 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
-  /* exact palette from brand guide */
-  --perla:    #F5EFE9;   /* primary background */
-  --linen:    #E9DFD3;   /* secondary background */
-  --selva:    #2F4A3F;   /* primary dark / block */
-  --salvia:   #4F6356;   /* secondary block */
-  --musgo:    #5F6F5E;   /* text mid / structure */
-  --orion:    #6F8786;   /* tonal / labels */
-  --terra:    #A65A38;   /* accent — use intentionally */
-  --arena:    #31251F;   /* primary text / dark base */
+  --perla:    #F5EFE9;
+  --linen:    #E9DFD3;
+  --selva:    #2F4A3F;
+  --salvia:   #4F6356;
+  --musgo:    #5F6F5E;
+  --orion:    #6F8786;
+  --terra:    #A65A38;
+  --arena:    #31251F;
 
-  --max:      1240px;
+  --max:      1280px;
   --gut:      72px;
   --sec:      130px;
 }
@@ -46,20 +45,19 @@ img{display:block;max-width:100%}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
 ::selection{background:var(--selva);color:var(--perla)}
 
-.sig{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;letter-spacing:.002em}
+.sig{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;letter-spacing:.002em}
 
 .container{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
 
-/* labels */
 .label{
-  font-size:11.5px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;
-  color:var(--musgo);line-height:1;
+  font-size:11.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--musgo);line-height:1;display:inline-flex;align-items:center;gap:14px;
 }
-.label-num{
-  display:inline-flex;align-items:center;gap:14px;
-}
-.label-num::before{content:"";width:20px;height:1px;background:currentColor}
-.label-light{color:rgba(245,239,233,.62)}
+.label::before{content:"";display:inline-block;width:22px;height:1px;background:currentColor}
+.label.light{color:rgba(245,239,233,.65)}
+.label.light::before{background:rgba(245,239,233,.5)}
+.label.terra{color:var(--terra)}
+.label.terra::before{background:var(--terra)}
 
 h1,h2,h3,h4{font-family:"Raleway",sans-serif;font-weight:200;color:var(--arena);line-height:1.05;letter-spacing:-.022em}
 p{color:var(--musgo);font-weight:300}
@@ -67,13 +65,16 @@ p{color:var(--musgo);font-weight:300}
 /* ================ TOPSTRIP ================ */
 .topstrip{
   border-bottom:1px solid rgba(49,37,31,.08);
-  font-size:11px;color:var(--musgo);letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+  font-size:10.5px;color:var(--musgo);letter-spacing:.20em;text-transform:uppercase;font-weight:500;
   background:var(--perla);
 }
-.topstrip .container{display:flex;justify-content:space-between;align-items:center;padding-top:11px;padding-bottom:11px;gap:18px}
-.topstrip a{transition:color .2s}
+.topstrip .container{display:flex;justify-content:space-between;align-items:center;padding-top:12px;padding-bottom:12px;gap:18px}
+.topstrip .left{display:flex;gap:14px;align-items:center}
+.topstrip .pulse{width:6px;height:6px;border-radius:50%;background:var(--terra);display:inline-block;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .topstrip a:hover{color:var(--arena)}
-@media(max-width:760px){.topstrip .left span:nth-child(2){display:none}.topstrip{font-size:10px}}
+.topstrip .right{display:flex;gap:24px;align-items:center}
+@media(max-width:760px){.topstrip .left span:nth-child(3),.topstrip .right .v{display:none}.topstrip{font-size:9.5px}}
 
 /* ================ NAV ================ */
 .nav{
@@ -83,17 +84,17 @@ p{color:var(--musgo);font-weight:300}
   -webkit-backdrop-filter:saturate(180%) blur(14px);
   border-bottom:1px solid rgba(49,37,31,.08);
 }
-.nav .container{display:flex;align-items:center;justify-content:space-between;height:82px}
-.brand{display:flex;flex-direction:column;line-height:1;gap:4px}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{display:flex;flex-direction:column;line-height:1;gap:5px}
 .brand .mark{
   font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;
-  font-size:26px;letter-spacing:.06em;color:var(--arena);
+  font-size:30px;letter-spacing:.04em;color:var(--arena);
 }
-.brand .sub{font-size:9.5px;letter-spacing:.30em;text-transform:uppercase;color:var(--musgo);font-weight:500}
+.brand .sub{font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--musgo);font-weight:500}
 
-.nav-links{display:flex;align-items:center;gap:42px}
+.nav-links{display:flex;align-items:center;gap:38px}
 .nav-links a.lnk{
-  font-size:11.5px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;
+  font-size:11.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
   color:var(--arena);position:relative;padding:6px 0;
 }
 .nav-links a.lnk::after{
@@ -105,29 +106,29 @@ p{color:var(--musgo);font-weight:300}
 
 .cta{
   display:inline-flex;align-items:center;gap:10px;
-  font-size:11.5px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;
+  font-size:11.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
   color:var(--perla);background:var(--selva);
   padding:14px 22px;line-height:1;
-  transition:background .25s ease;
+  transition:background .25s ease,color .25s ease;
 }
 .cta:hover{background:var(--arena)}
 .cta.alt{background:var(--terra)}
 .cta.alt:hover{background:#8E4A2D}
 .cta.ghost{background:transparent;color:var(--arena);border:1px solid var(--arena)}
 .cta.ghost:hover{background:var(--arena);color:var(--perla)}
-.cta.light{background:var(--perla);color:var(--arena)}
-.cta.light:hover{background:#fff}
+.cta.light{background:transparent;color:var(--perla);border:1px solid rgba(245,239,233,.45)}
+.cta.light:hover{background:var(--perla);color:var(--arena);border-color:var(--perla)}
 
 .menu-toggle{display:none;width:42px;height:42px;align-items:center;justify-content:center;color:var(--arena)}
 .menu-toggle svg{width:22px;height:22px}
 
-@media(max-width:980px){
+@media(max-width:1020px){
   .nav-links .lnk{display:none}
   .menu-toggle{display:inline-flex}
 }
 @media(max-width:760px){
   .nav .container{height:68px}
-  .brand .mark{font-size:22px}
+  .brand .mark{font-size:24px}
   .brand .sub{font-size:8.5px}
   .cta{padding:11px 16px;font-size:10.5px}
 }
@@ -140,207 +141,327 @@ p{color:var(--musgo);font-weight:300}
 }
 .mm.on{transform:translateY(0)}
 .mm .top{display:flex;justify-content:space-between;align-items:center;height:58px;border-bottom:1px solid rgba(49,37,31,.08)}
-.mm .close{font-size:30px;color:var(--arena);width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;line-height:1;font-weight:200}
-.mm nav{margin-top:60px;display:flex;flex-direction:column;gap:0}
+.mm .close{font-size:30px;color:var(--arena);width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;font-weight:200}
+.mm nav{margin-top:54px;display:flex;flex-direction:column}
 .mm nav a{
   font-size:13px;font-weight:500;letter-spacing:.30em;text-transform:uppercase;color:var(--arena);
-  padding:24px 0;border-bottom:1px solid rgba(49,37,31,.08);
+  padding:22px 0;border-bottom:1px solid rgba(49,37,31,.08);
 }
 .mm .foot{margin-top:auto;padding:30px 0 calc(20px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:10px;color:var(--musgo);font-size:12px;letter-spacing:.10em;text-transform:uppercase}
 .mm .foot a{color:var(--arena)}
-@media(max-width:760px){.mm{padding:14px 26px}}
+
+/* ================ IMAGE PLACEHOLDERS (atmospheric stand-ins per brand image direction) ================ */
+.imgz{
+  position:relative;overflow:hidden;background:var(--linen);
+}
+.imgz::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(60% 50% at 20% 25%, rgba(166,90,56,.18) 0%, transparent 60%),
+    radial-gradient(70% 60% at 80% 80%, rgba(47,74,63,.45) 0%, transparent 65%),
+    linear-gradient(155deg, #DAC9AC 0%, #B49E81 35%, #6F7A6A 75%, #3A4B41 100%);
+}
+.imgz::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(49,37,31,.4) 100%)}
+.imgz .cap{
+  position:absolute;left:22px;bottom:20px;z-index:2;
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--perla);font-weight:500;
+  display:flex;align-items:center;gap:10px;max-width:80%;
+}
+.imgz .cap::before{content:"";display:inline-block;width:16px;height:1px;background:rgba(245,239,233,.6);flex-shrink:0}
+.imgz .cap small{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:13px;letter-spacing:0;color:rgba(245,239,233,.85);text-transform:none;display:block;margin-top:3px}
+.imgz .index{
+  position:absolute;top:18px;right:20px;z-index:2;
+  font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,239,233,.65);font-weight:500;
+}
+
+/* variants for variety */
+.imgz.v1::before{background:radial-gradient(55% 60% at 70% 20%, rgba(166,90,56,.22) 0%, transparent 60%),radial-gradient(70% 80% at 30% 90%, rgba(47,74,63,.5) 0%, transparent 60%),linear-gradient(170deg, #C8B79A 0%, #948065 40%, #4F5749 75%, #2F4A3F 100%)}
+.imgz.v2::before{background:radial-gradient(60% 50% at 30% 15%, rgba(111,135,134,.4) 0%, transparent 60%),radial-gradient(70% 60% at 80% 90%, rgba(49,37,31,.45) 0%, transparent 65%),linear-gradient(180deg, #B9C0BB 0%, #7F8C84 40%, #4F6356 80%, #2F4A3F 100%)}
+.imgz.v3::before{background:radial-gradient(70% 60% at 50% 30%, rgba(166,90,56,.18) 0%, transparent 65%),linear-gradient(160deg, #E0C9A7 0%, #B89876 40%, #8A7256 80%, #5B4B36 100%)}
+.imgz.v4::before{background:radial-gradient(60% 70% at 20% 80%, rgba(111,135,134,.35) 0%, transparent 60%),linear-gradient(195deg, #D4C4A9 0%, #9A8C6F 50%, #4F6356 100%)}
+.imgz.v5::before{background:radial-gradient(80% 60% at 100% 0%, rgba(166,90,56,.2) 0%, transparent 60%),linear-gradient(145deg, #A89172 0%, #7A6655 50%, #31251F 100%)}
 
 /* ================ HERO ================ */
-.hero{
-  padding:130px 0 150px;
-  position:relative;background:var(--perla);
-}
-.hero .container{position:relative}
-.hero .lbl{margin-bottom:42px}
+.hero{padding:100px 0 120px;position:relative;background:var(--perla);overflow:hidden}
+.hero .container{display:grid;grid-template-columns:1.25fr 1fr;gap:80px;align-items:center;position:relative}
+.hero .lbl{margin-bottom:36px;display:inline-flex}
 .hero h1{
   font-size:clamp(40px,5.6vw,84px);
   font-weight:200;line-height:1.04;letter-spacing:-.025em;color:var(--arena);
-  max-width:18ch;margin-bottom:48px;
+  margin-bottom:36px;
 }
 .hero h1 .sig{font-weight:400;letter-spacing:.005em}
 .hero .lead{
-  font-size:18px;line-height:1.7;color:var(--arena);
-  max-width:54ch;margin-bottom:48px;font-weight:300;
+  font-size:18px;line-height:1.72;color:var(--arena);
+  max-width:48ch;margin-bottom:42px;font-weight:300;
 }
-.hero .lead .em{font-weight:400}
-.hero .actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-.hero .principle{
-  position:absolute;top:0;right:var(--gut);
-  max-width:280px;border-top:1px solid var(--orion);padding-top:18px;
-  font-size:12px;color:var(--musgo);line-height:1.6;font-weight:300;
+.hero .actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:50px}
+.hero-visual{aspect-ratio:4/5;width:100%}
+.hero-visual.imgz .cap{font-size:10.5px}
+.hero .trust{
+  grid-column:1 / -1;
+  border-top:1px solid rgba(49,37,31,.10);padding-top:42px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
 }
-.hero .principle b{display:block;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--arena);font-weight:500;margin-bottom:10px}
-.hero .principle em{font-style:italic;color:var(--terra);font-weight:400}
-@media(max-width:980px){.hero{padding:80px 0 100px}.hero .principle{position:static;max-width:none;margin-bottom:50px}}
+.hero .trust .t b{font-family:"Raleway";font-weight:300;font-size:30px;color:var(--arena);letter-spacing:-.01em;line-height:1;display:block}
+.hero .trust .t b .sig{font-size:.92em}
+.hero .trust .t small{display:block;margin-top:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--musgo);font-weight:500;line-height:1.4}
 
-/* big watermark in hero */
-.hero .watermark{
-  position:absolute;right:-40px;top:50%;transform:translateY(-50%);
-  font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;
-  font-size:clamp(220px,28vw,420px);
-  color:rgba(166,90,56,.05);line-height:.8;letter-spacing:-.04em;
-  z-index:0;pointer-events:none;user-select:none;
+@media(max-width:980px){
+  .hero{padding:60px 0 80px}
+  .hero .container{grid-template-columns:1fr;gap:48px}
+  .hero-visual{aspect-ratio:3/2;max-height:440px}
+  .hero .trust{grid-template-columns:1fr 1fr;gap:30px 20px}
 }
-@media(max-width:980px){.hero .watermark{display:none}}
 
-/* ================ POSITIONING (3 pillars in dark) ================ */
-.positioning{background:var(--selva);color:var(--perla);padding:var(--sec) 0;border-top:1px solid rgba(245,239,233,.05)}
-.positioning .label{color:rgba(245,239,233,.7)}
-.positioning .label::before{background:rgba(245,239,233,.4)}
-.positioning .head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:80px}
-.positioning h2{
-  font-size:clamp(34px,4.2vw,60px);
-  font-weight:200;line-height:1.06;letter-spacing:-.022em;color:var(--perla);margin-top:24px;
-}
-.positioning h2 .sig{font-weight:400;color:#D4C3A7}
-.positioning .head .right{padding-bottom:8px}
-.positioning .head .right p{color:rgba(245,239,233,.74);font-size:15.5px;line-height:1.75;max-width:46ch}
-.positioning .head .right p strong{color:var(--perla);font-weight:400}
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(245,239,233,.18)}
-.pillar{padding:48px 36px 48px 0;border-right:1px solid rgba(245,239,233,.18)}
-.pillar:nth-child(3n){border-right:none;padding-right:0}
-.pillar:nth-child(n+2){padding-left:36px}
-.pillar .pn{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,239,233,.5);font-weight:500;margin-bottom:24px}
-.pillar h3{font-size:22px;font-weight:300;color:var(--perla);letter-spacing:-.005em;line-height:1.2;margin-bottom:18px}
-.pillar p{font-size:14.5px;color:rgba(245,239,233,.74);line-height:1.7;font-weight:300}
-@media(max-width:880px){.positioning .head{grid-template-columns:1fr;gap:24px;margin-bottom:50px}.pillars{grid-template-columns:1fr;border-top:1px solid rgba(245,239,233,.18)}.pillar,.pillar:nth-child(n+2){padding:36px 0;border-right:none;border-bottom:1px solid rgba(245,239,233,.18);padding-left:0}.pillar:last-child{border-bottom:none}}
+/* ================ INTRO ================ */
+.intro{padding:var(--sec) 0;background:var(--linen);border-top:1px solid rgba(49,37,31,.06);border-bottom:1px solid rgba(49,37,31,.06)}
+.intro .container{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+.intro h2{font-size:clamp(28px,3.4vw,46px);font-weight:200;line-height:1.1;letter-spacing:-.022em;margin-top:28px;max-width:14ch}
+.intro h2 .sig{font-weight:400}
+.intro .body p{font-size:17px;color:var(--arena);line-height:1.8;margin-bottom:20px;max-width:58ch;font-weight:300}
+.intro .body p strong{color:var(--arena);font-weight:500}
+.intro .body p:last-child{margin-bottom:0}
+.intro .body .signoff{margin-top:36px;padding-top:24px;border-top:1px solid rgba(49,37,31,.12);font-size:14px;color:var(--musgo);letter-spacing:.02em;display:flex;flex-direction:column;gap:4px}
+.intro .body .signoff .name{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:22px;color:var(--arena);font-weight:400}
+@media(max-width:880px){.intro .container{grid-template-columns:1fr;gap:30px}}
 
-/* ================ VERTICALS (4 services on linen) ================ */
-.verticals{background:var(--linen);padding:var(--sec) 0;border-top:1px solid rgba(49,37,31,.08)}
-.verticals .head{margin-bottom:80px;max-width:880px}
-.verticals h2{
-  font-size:clamp(34px,4.2vw,60px);font-weight:200;line-height:1.06;letter-spacing:-.022em;margin-top:24px;color:var(--arena);
+/* ================ FEATURED JOURNEY ================ */
+.feature{padding:var(--sec) 0;background:var(--perla)}
+.feature .head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
+.feature .head h2{font-size:clamp(30px,3.8vw,52px);font-weight:200;line-height:1.06;letter-spacing:-.022em;margin-top:24px;max-width:20ch}
+.feature .head h2 .sig{font-weight:400}
+.feature .head .meta{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;padding-bottom:14px;line-height:1.5;text-align:right}
+.feature .head .meta b{display:block;color:var(--arena);font-size:13px;font-weight:500;margin-bottom:6px}
+
+.feature-card{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border:1px solid rgba(49,37,31,.10);background:var(--linen);overflow:hidden}
+.feature-card .img{aspect-ratio:auto;height:auto;min-height:520px}
+.feature-card .body{padding:60px 56px;display:flex;flex-direction:column;gap:32px;justify-content:space-between;background:var(--perla)}
+.feature-card .tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:500}
+.feature-card h3{font-family:"Raleway";font-size:34px;font-weight:200;letter-spacing:-.022em;line-height:1.12;color:var(--arena);max-width:18ch}
+.feature-card h3 .sig{font-weight:400}
+.feature-card .summary{font-size:15.5px;color:var(--musgo);line-height:1.75;font-weight:300;max-width:42ch}
+.feature-card .facts{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;border-top:1px solid rgba(49,37,31,.10);padding-top:24px}
+.feature-card .fact small{display:block;font-size:10.5px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500;margin-bottom:6px}
+.feature-card .fact b{font-size:15px;color:var(--arena);font-weight:400;line-height:1.3}
+.feature-card .fact b .sig{font-weight:400;font-size:1.05em}
+.feature-card .ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+@media(max-width:980px){.feature-card{grid-template-columns:1fr}.feature-card .img{min-height:340px}.feature-card .body{padding:40px 32px}}
+
+/* ================ SIGNATURE PROGRAMS ================ */
+.programs{padding:var(--sec) 0;background:var(--linen);border-top:1px solid rgba(49,37,31,.06);border-bottom:1px solid rgba(49,37,31,.06)}
+.programs .head{margin-bottom:70px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+.programs h2{font-size:clamp(30px,4vw,56px);font-weight:200;line-height:1.06;letter-spacing:-.022em;margin-top:24px}
+.programs h2 .sig{font-weight:400}
+.programs .head .right p{font-size:16px;color:var(--musgo);line-height:1.75;max-width:48ch}
+
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pcard{background:var(--perla);border:1px solid rgba(49,37,31,.10);display:flex;flex-direction:column;transition:transform .35s ease, border-color .25s ease}
+.pcard:hover{transform:translateY(-6px);border-color:var(--terra)}
+.pcard .img{aspect-ratio:5/4}
+.pcard .pbody{padding:28px 28px 30px;display:flex;flex-direction:column;gap:14px;flex:1}
+.pcard .tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:500}
+.pcard h3{font-family:"Raleway";font-size:22px;font-weight:300;letter-spacing:-.01em;line-height:1.2;color:var(--arena)}
+.pcard h3 .sig{font-weight:400}
+.pcard p{font-size:14px;color:var(--musgo);line-height:1.7;font-weight:300}
+.pcard .footrow{
+  margin-top:auto;padding-top:18px;border-top:1px solid rgba(49,37,31,.10);
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
 }
+.pcard .price{font-family:"Raleway";font-size:15px;color:var(--arena);font-weight:400;letter-spacing:-.005em;line-height:1.2}
+.pcard .price small{display:block;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;margin-bottom:3px}
+.pcard .price b{font-weight:400}
+.pcard .price .sig{font-weight:400}
+.pcard .arrow{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:22px;color:var(--musgo);transition:color .2s,transform .25s;font-weight:300}
+.pcard:hover .arrow{color:var(--terra);transform:translateX(6px)}
+.pcard .days{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--musgo);font-weight:500}
+
+.programs .note{margin-top:48px;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:16px;color:var(--arena);line-height:1.55;max-width:64ch}
+.programs .note::before{content:"— ";color:var(--terra)}
+
+@media(max-width:1020px){.pgrid{grid-template-columns:1fr 1fr;gap:20px}}
+@media(max-width:680px){.pgrid{grid-template-columns:1fr}.programs .head{grid-template-columns:1fr;gap:24px}.pcard .pbody{padding:24px 22px}}
+
+/* ================ WHAT WE DO (verticals) ================ */
+.verticals{padding:var(--sec) 0;background:var(--perla)}
+.verticals .head{margin-bottom:70px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+.verticals h2{font-size:clamp(30px,4vw,56px);font-weight:200;line-height:1.06;letter-spacing:-.022em;margin-top:24px}
 .verticals h2 .sig{font-weight:400}
-.verticals .head .lead{margin-top:26px;font-size:16px;color:var(--musgo);line-height:1.75;max-width:64ch}
-.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(49,37,31,.10);border:1px solid rgba(49,37,31,.10)}
-.vert{background:var(--perla);padding:42px 32px 42px;display:flex;flex-direction:column;gap:18px;transition:background .25s ease}
+.verticals .head .right p{font-size:16px;color:var(--musgo);line-height:1.75;max-width:48ch}
+
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(49,37,31,.10);border:1px solid rgba(49,37,31,.10)}
+.vert{background:var(--perla);padding:48px 44px;display:flex;flex-direction:column;gap:18px;transition:background .25s ease;position:relative}
 .vert:hover{background:#FBF7F1}
-.vert .vico{
-  width:22px;height:22px;color:var(--terra);opacity:.85;
+.vert .vn{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:500;line-height:1;margin-bottom:6px}
+.vert h3{font-size:24px;font-weight:300;color:var(--arena);letter-spacing:-.005em;line-height:1.18}
+.vert h3 .sig{font-weight:400}
+.vert p{font-size:15px;color:var(--musgo);line-height:1.75;font-weight:300;max-width:42ch}
+.vert .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.vert .meta span{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--musgo);font-weight:500;padding:5px 10px;border:1px solid rgba(49,37,31,.16)}
+.vert .more{margin-top:auto;padding-top:24px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--arena);font-weight:500;display:inline-flex;align-items:center;gap:10px}
+.vert .more::after{content:"→";font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;transition:transform .25s,color .25s}
+.vert:hover .more::after{transform:translateX(6px);color:var(--terra)}
+@media(max-width:880px){.vgrid{grid-template-columns:1fr}.vert{padding:36px 28px}.verticals .head{grid-template-columns:1fr;gap:24px}}
+
+/* ================ HOW WE WORK ================ */
+.how{padding:var(--sec) 0;background:var(--selva);color:var(--perla);border-top:1px solid rgba(245,239,233,.05)}
+.how h2{font-size:clamp(30px,4vw,56px);font-weight:200;line-height:1.08;letter-spacing:-.022em;color:var(--perla);margin-top:26px;max-width:18ch}
+.how h2 .sig{font-weight:400;color:#D4C3A7}
+.how .intro-p{font-size:16px;color:rgba(245,239,233,.78);line-height:1.75;max-width:54ch;margin-top:26px;font-weight:300}
+.how .intro-p strong{color:var(--perla);font-weight:400}
+
+.steps{margin-top:74px;display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid rgba(245,239,233,.16)}
+.step{padding:36px 22px 0 0;border-right:1px solid rgba(245,239,233,.16);position:relative}
+.step:nth-child(n+2){padding-left:22px}
+.step:last-child{border-right:none;padding-right:0}
+.step .sn{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;font-size:38px;color:rgba(245,239,233,.50);line-height:1;margin-bottom:22px;display:block}
+.step h4{font-size:14px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:var(--perla);margin-bottom:14px;line-height:1.2}
+.step p{font-size:14px;color:rgba(245,239,233,.72);line-height:1.7;font-weight:300}
+.step .dur{margin-top:18px;padding-top:14px;border-top:1px solid rgba(245,239,233,.16);font-size:10.5px;letter-spacing:.20em;text-transform:uppercase;color:rgba(245,239,233,.55);font-weight:500}
+@media(max-width:980px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(2n){border-right:none;padding-right:0}.step:nth-child(2n+1){padding-left:0}.step{border-bottom:1px solid rgba(245,239,233,.16);padding-bottom:28px;padding-top:28px}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}.step,.step:nth-child(n+2){padding-left:0;padding-right:0;border-right:none}}
+.how .actions{margin-top:54px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* ================ CASE (program in structure) ================ */
+.proof{padding:var(--sec) 0;background:var(--perla)}
+.proof .head{margin-bottom:60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+.proof h2{font-size:clamp(30px,4vw,52px);font-weight:200;line-height:1.08;letter-spacing:-.022em;margin-top:24px}
+.proof h2 .sig{font-weight:400}
+.proof .head .right p{font-size:16px;color:var(--musgo);line-height:1.75;max-width:48ch}
+
+.case{display:grid;grid-template-columns:1fr 1.1fr;gap:0;border:1px solid rgba(49,37,31,.10);background:var(--linen)}
+.case .img{min-height:520px}
+.case .right{padding:54px 50px;background:var(--perla);display:flex;flex-direction:column;gap:30px}
+.case .tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:500}
+.case h3{font-family:"Raleway";font-size:30px;font-weight:200;letter-spacing:-.018em;line-height:1.15;color:var(--arena);max-width:20ch}
+.case h3 .sig{font-weight:400}
+.case .summary{font-size:15px;color:var(--musgo);line-height:1.75;font-weight:300;max-width:46ch}
+.case h5{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;margin-top:6px}
+.case-list{list-style:none;display:flex;flex-direction:column}
+.case-list li{display:grid;grid-template-columns:auto 1fr;gap:24px;padding:16px 0;border-bottom:1px solid rgba(49,37,31,.08);font-size:14.5px;color:var(--arena);line-height:1.55;font-weight:300}
+.case-list li:last-child{border-bottom:none}
+.case-list .k{font-size:10.5px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500;padding-top:3px;min-width:96px}
+.case .footnote{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:16px;color:var(--arena);line-height:1.55;border-top:1px solid rgba(49,37,31,.16);padding-top:22px}
+.case .footnote::before{content:"— ";color:var(--terra)}
+@media(max-width:980px){.case{grid-template-columns:1fr}.case .img{min-height:340px}.case .right{padding:40px 32px}.proof .head{grid-template-columns:1fr;gap:24px}}
+
+/* ================ TRUSTED BY (anonymized) ================ */
+.trusted{padding:90px 0;background:var(--arena);color:var(--perla)}
+.trusted .head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:50px}
+.trusted .head h3{font-family:"Raleway";font-size:22px;font-weight:200;letter-spacing:-.012em;color:var(--perla);line-height:1.2;max-width:22ch}
+.trusted .head h3 .sig{font-weight:400;color:#D4C3A7}
+.trusted .head .note{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,239,233,.55);font-weight:500}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(245,239,233,.16)}
+.tcell{padding:36px 28px 36px 0;border-right:1px solid rgba(245,239,233,.16)}
+.tcell:nth-child(n+2){padding-left:28px}
+.tcell:nth-child(4n){border-right:none;padding-right:0}
+.tcell .ti{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:30px;color:rgba(245,239,233,.5);font-weight:300;line-height:1;margin-bottom:18px;display:block}
+.tcell p{font-size:14px;color:rgba(245,239,233,.78);line-height:1.65;font-weight:300}
+.tcell p strong{color:var(--perla);font-weight:400}
+@media(max-width:980px){.trust-grid{grid-template-columns:1fr 1fr}.tcell:nth-child(2n){border-right:none;padding-right:0}.tcell:nth-child(2n+1){padding-left:0}.tcell{border-bottom:1px solid rgba(245,239,233,.16);padding-bottom:28px;padding-top:28px}}
+@media(max-width:560px){.trust-grid{grid-template-columns:1fr}.tcell,.tcell:nth-child(n+2){padding-left:0;padding-right:0;border-right:none}}
+
+/* ================ FOR WHOM ================ */
+.whom{padding:var(--sec) 0;background:var(--linen);border-top:1px solid rgba(49,37,31,.06);border-bottom:1px solid rgba(49,37,31,.06)}
+.whom .container{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+.whom h2{font-size:clamp(28px,3.6vw,48px);font-weight:200;line-height:1.08;letter-spacing:-.022em;margin-top:24px}
+.whom h2 .sig{font-weight:400}
+.whom .head .lead{font-size:16px;color:var(--musgo);line-height:1.75;margin-top:24px;max-width:32ch}
+.fits{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(49,37,31,.10);background:rgba(49,37,31,.06)}
+.fits > div{background:var(--perla);padding:36px 32px;display:flex;flex-direction:column;gap:14px}
+.fits h4{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;line-height:1;margin-bottom:10px}
+.fits .fit h4{color:var(--selva)}
+.fits .nofit h4{color:var(--musgo)}
+.fits ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.fits li{font-size:14.5px;color:var(--arena);line-height:1.65;font-weight:300;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.fits .fit li::before{content:"—";color:var(--terra);font-weight:400}
+.fits .nofit li{color:var(--musgo)}
+.fits .nofit li::before{content:"×";color:var(--musgo);font-weight:300}
+@media(max-width:880px){.whom .container{grid-template-columns:1fr;gap:30px}.fits{grid-template-columns:1fr}.fits > div{padding:30px 28px}}
+
+/* ================ FOUNDER ================ */
+.founder{padding:var(--sec) 0;background:var(--perla)}
+.founder .container{display:grid;grid-template-columns:.82fr 1.18fr;gap:80px;align-items:start}
+.portrait{aspect-ratio:4/5}
+.founder h2{font-size:clamp(28px,3.6vw,50px);font-weight:200;line-height:1.08;letter-spacing:-.022em;margin-top:24px;max-width:16ch}
+.founder h2 .sig{font-weight:400}
+.founder p{font-size:16.5px;color:var(--arena);line-height:1.8;margin-top:22px;max-width:54ch;font-weight:300}
+.founder p strong{font-weight:500}
+.founder .signature{display:inline-flex;align-items:center;gap:14px;margin-top:34px;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:24px;color:var(--terra)}
+.founder .signature::after{content:"";width:60px;height:1px;background:var(--terra)}
+.founder .facts{margin-top:42px;padding-top:30px;border-top:1px solid rgba(49,37,31,.12);display:grid;grid-template-columns:repeat(4,auto);gap:42px}
+.founder .facts .f b{font-family:"Raleway";font-weight:300;font-size:22px;color:var(--arena);letter-spacing:-.01em;line-height:1;display:block}
+.founder .facts .f small{display:block;margin-top:8px;font-size:10.5px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500;line-height:1.4}
+@media(max-width:880px){.founder .container{grid-template-columns:1fr;gap:40px}.portrait{max-width:360px}.founder .facts{gap:24px;grid-template-columns:1fr 1fr}}
+
+/* ================ DISPATCH ================ */
+.dispatch{padding:90px 0;background:var(--linen);border-top:1px solid rgba(49,37,31,.06);border-bottom:1px solid rgba(49,37,31,.06)}
+.dispatch .container{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.dispatch .l h3{font-family:"Raleway";font-size:clamp(26px,3.2vw,38px);font-weight:200;letter-spacing:-.018em;line-height:1.1;color:var(--arena);margin-top:22px;max-width:18ch}
+.dispatch .l h3 .sig{font-weight:400}
+.dispatch .l p{margin-top:20px;font-size:15.5px;color:var(--musgo);line-height:1.75;max-width:46ch}
+.dispatch .l small{margin-top:18px;display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500}
+.dispatch-form{
+  background:var(--perla);border:1px solid rgba(49,37,31,.12);padding:32px 30px;
+  display:flex;flex-direction:column;gap:18px;
 }
-.vert .vico svg{width:100%;height:100%}
-.vert h3{font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--arena);line-height:1.35}
-.vert p{font-size:14.5px;color:var(--musgo);line-height:1.7;font-weight:300}
-.vgrid .vert:nth-child(4){border-top:2px solid var(--terra);padding-top:40px}
-@media(max-width:980px){.vgrid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.vgrid{grid-template-columns:1fr}}
-
-/* ================ VOICE (write this / never this) ================ */
-.voice{background:var(--perla);padding:var(--sec) 0}
-.voice .head{margin-bottom:70px;max-width:680px}
-.voice h2{font-size:clamp(34px,4.2vw,56px);font-weight:200;letter-spacing:-.022em;line-height:1.06;margin-top:24px;color:var(--arena)}
-.voice h2 .sig{font-weight:400}
-.voice .head .lead{margin-top:24px;font-size:16px;color:var(--musgo);line-height:1.75;max-width:60ch}
-.vc-table{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(49,37,31,.10)}
-.vc-head{padding:18px 28px;font-size:11.5px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;line-height:1}
-.vc-head.do{background:var(--selva);color:var(--perla)}
-.vc-head.dont{background:var(--linen);color:var(--musgo)}
-.vc-cell{padding:24px 28px;font-size:14.6px;line-height:1.6;border-top:1px solid rgba(49,37,31,.08);font-weight:300}
-.vc-cell.do{color:var(--arena);background:var(--perla)}
-.vc-cell.dont{color:var(--musgo);background:var(--linen);text-decoration:line-through;text-decoration-color:rgba(95,111,94,.5)}
-@media(max-width:760px){.vc-table{grid-template-columns:1fr}.vc-cell{padding:18px 22px;font-size:14px}.vc-head{padding:14px 22px}}
-
-/* ================ TAGLINE BIG ================ */
-.tagline{background:var(--perla);padding:calc(var(--sec) + 20px) 0;text-align:center;position:relative;overflow:hidden}
-.tagline .container{position:relative}
-.tagline .lbl{display:inline-block;margin-bottom:50px}
-.tagline h2{
-  font-size:clamp(40px,6vw,86px);font-weight:200;line-height:1.08;letter-spacing:-.022em;color:var(--arena);
+.dispatch-form label{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500}
+.dispatch-form input{
+  width:100%;background:transparent;border:none;border-bottom:1px solid rgba(49,37,31,.20);
+  padding:14px 0 12px;font-family:inherit;font-size:16px;font-weight:300;color:var(--arena);
+  letter-spacing:-.005em;outline:none;transition:border-color .2s;
 }
-.tagline h2 .sig{font-weight:400;letter-spacing:0}
-.tagline .echo{
-  position:absolute;left:0;right:0;top:60%;transform:translateY(-30%);
-  font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;
-  font-size:clamp(160px,22vw,360px);color:rgba(166,90,56,.08);line-height:.8;letter-spacing:-.04em;
-  pointer-events:none;user-select:none;text-align:center;z-index:0;
+.dispatch-form input:focus{border-color:var(--terra)}
+.dispatch-form input::placeholder{color:var(--musgo);font-weight:300}
+.dispatch-form .row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.dispatch-form button{
+  background:var(--selva);color:var(--perla);
+  font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;
+  padding:14px 22px;align-self:flex-start;cursor:pointer;
+  transition:background .2s;border:none;line-height:1;
 }
-.tagline .sub{position:relative;font-size:15.5px;color:var(--musgo);line-height:1.75;max-width:48ch;margin:32px auto 0;font-weight:300}
-.tagline .dual{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:80px;border:1px solid rgba(49,37,31,.10);text-align:left;position:relative;background:var(--linen)}
-.tagline .dual > div{padding:34px 32px;border-right:1px solid rgba(49,37,31,.10)}
-.tagline .dual > div:last-child{border-right:none}
-.tagline .dual h4{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:500;margin-bottom:18px;line-height:1}
-.tagline .dual p{font-size:14.6px;color:var(--arena);line-height:1.7}
-@media(max-width:760px){.tagline .dual{grid-template-columns:1fr}.tagline .dual > div{border-right:none;border-bottom:1px solid rgba(49,37,31,.10)}.tagline .dual > div:last-child{border-bottom:none}}
+.dispatch-form button:hover{background:var(--arena)}
+.dispatch-form .fine{font-size:11px;color:var(--musgo);letter-spacing:.04em;line-height:1.55;font-weight:300}
+@media(max-width:880px){.dispatch .container{grid-template-columns:1fr;gap:40px}.dispatch-form .row{grid-template-columns:1fr}}
 
-/* ================ FILTER (content filter) ================ */
-.filter{background:var(--arena);color:var(--perla);padding:var(--sec) 0}
-.filter .label{color:rgba(245,239,233,.65)}
-.filter .label::before{background:rgba(245,239,233,.4)}
-.filter h2{
-  font-size:clamp(30px,3.6vw,48px);font-weight:200;line-height:1.1;letter-spacing:-.022em;
-  color:var(--perla);max-width:24ch;margin:24px 0 70px;
-}
-.fcards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(245,239,233,.16)}
-.fcard{padding:42px 30px 42px 0;border-right:1px solid rgba(245,239,233,.16);position:relative}
-.fcard:nth-child(n+2){padding-left:30px}
-.fcard:nth-child(4n){border-right:none;padding-right:0}
-.fcard .fn{position:absolute;top:42px;right:24px;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;font-size:54px;color:rgba(245,239,233,.18);line-height:1}
-.fcard:nth-child(4n) .fn{right:0}
-.fcard h4{font-size:13px;font-weight:500;letter-spacing:.20em;text-transform:uppercase;color:var(--perla);margin-bottom:18px;line-height:1}
-.fcard p{font-size:14px;color:rgba(245,239,233,.72);line-height:1.7;font-weight:300;max-width:32ch}
-.filter .note{margin-top:60px;padding-top:36px;border-top:1px solid rgba(245,239,233,.16);font-size:14.5px;color:rgba(245,239,233,.65);font-style:italic;line-height:1.75;max-width:78ch;font-family:"Cormorant Garamond",serif;font-weight:300}
-@media(max-width:980px){.fcards{grid-template-columns:1fr 1fr}.fcard:nth-child(2n){border-right:none;padding-right:0}.fcard:nth-child(2n+1){padding-left:0}.fcard{border-bottom:1px solid rgba(245,239,233,.16);padding-bottom:32px;padding-top:32px}}
-@media(max-width:560px){.fcards{grid-template-columns:1fr}.fcard,.fcard:nth-child(n+2){padding-left:0;padding-right:0;border-right:none}}
+/* ================ INTAKE ================ */
+.intake{background:var(--arena);color:var(--perla);padding:var(--sec) 0}
+.intake .head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:70px}
+.intake h2{font-size:clamp(36px,5vw,68px);font-weight:200;line-height:1.06;letter-spacing:-.022em;color:var(--perla);margin-top:24px}
+.intake h2 .sig{font-weight:400;color:#D4C3A7}
+.intake .head .right p{font-size:16px;color:rgba(245,239,233,.78);line-height:1.75;max-width:46ch;font-weight:300}
 
-/* ================ NON-NEGOTIABLES ================ */
-.rules{background:var(--linen);padding:var(--sec) 0}
-.rules .head{margin-bottom:64px;max-width:680px}
-.rules h2{font-size:clamp(32px,4vw,52px);font-weight:200;letter-spacing:-.022em;line-height:1.08;margin-top:24px;color:var(--arena)}
-.rules h2 .sig{font-weight:400}
-.rule-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(49,37,31,.10);border:1px solid rgba(49,37,31,.10)}
-.rule{background:var(--perla);padding:30px 32px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start}
-.rule::before{content:"—";color:var(--terra);font-weight:300;font-size:18px;line-height:1.6}
-.rule p{font-size:14.5px;color:var(--arena);line-height:1.7;font-weight:300}
-@media(max-width:760px){.rule-grid{grid-template-columns:1fr}.rule{padding:24px 24px}}
-
-/* ================ FINAL PRINCIPLE ================ */
-.final-p{background:var(--selva);color:var(--perla);padding:calc(var(--sec) + 30px) 0;text-align:left}
-.final-p .lbl{color:rgba(245,239,233,.6);margin-bottom:50px}
-.final-p .lbl::before{background:rgba(245,239,233,.4)}
-.final-p blockquote{
-  font-size:clamp(28px,3.6vw,48px);font-weight:200;line-height:1.18;letter-spacing:-.018em;color:var(--perla);max-width:28ch;
-}
-.final-p blockquote .sig{font-weight:400;color:#D4C3A7;letter-spacing:0}
-.final-p cite{display:block;font-style:normal;margin-top:48px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,239,233,.55);font-weight:500}
-.final-p cite::before{content:"";display:inline-block;width:24px;height:1px;background:rgba(245,239,233,.5);vertical-align:middle;margin-right:14px}
-
-/* ================ CONTACT ================ */
-.contact{background:var(--perla);padding:var(--sec) 0}
-.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.contact h2{font-size:clamp(34px,4.2vw,60px);font-weight:200;line-height:1.06;letter-spacing:-.022em;margin-top:24px;color:var(--arena)}
-.contact h2 .sig{font-weight:400}
-.contact .lead{margin-top:26px;font-size:16px;color:var(--musgo);line-height:1.75;max-width:42ch}
-.contact .actions{margin-top:42px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
-.channels{border-top:1px solid rgba(49,37,31,.10);padding-top:32px;display:flex;flex-direction:column;gap:0}
-.ch{display:grid;grid-template-columns:auto 1fr auto;gap:24px;padding:22px 0;border-bottom:1px solid rgba(49,37,31,.08);align-items:center;transition:color .2s}
-.ch:hover{color:var(--terra)}
-.ch:hover .ch-arrow{color:var(--terra);transform:translateX(4px)}
-.ch-num{font-size:10.5px;letter-spacing:.22em;color:var(--musgo);font-weight:500;text-transform:uppercase}
-.ch-label{font-size:11px;letter-spacing:.20em;color:var(--musgo);font-weight:500;text-transform:uppercase;margin-bottom:4px}
-.ch-val{font-size:16px;color:var(--arena);font-weight:300}
-.ch-arrow{font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--musgo);font-weight:300;transition:transform .25s,color .25s}
-@media(max-width:880px){.contact .grid{grid-template-columns:1fr;gap:50px}}
+.channels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid rgba(245,239,233,.16);border-bottom:1px solid rgba(245,239,233,.16)}
+.ch{padding:36px 32px 36px 0;border-right:1px solid rgba(245,239,233,.16);display:flex;flex-direction:column;gap:12px;transition:padding .25s ease}
+.ch:nth-child(n+2){padding-left:32px}
+.ch:last-child{border-right:none;padding-right:0}
+.ch:hover{padding-left:42px}
+.ch:nth-child(1):hover{padding-left:10px}
+.ch .ck{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,239,233,.55);font-weight:500}
+.ch .cv{font-size:18px;color:var(--perla);font-weight:300;letter-spacing:-.005em;line-height:1.35;font-family:"Raleway"}
+.ch .cv .sig{font-weight:400}
+.ch .cd{font-size:13px;color:rgba(245,239,233,.65);line-height:1.6;font-weight:300;margin-top:auto;padding-top:18px}
+.ch .arrow{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;font-size:24px;color:rgba(245,239,233,.6);align-self:flex-start;transition:color .25s,transform .25s}
+.ch:hover .arrow{color:var(--terra);transform:translateX(8px)}
+.intake .response{margin-top:60px;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:18px;color:rgba(245,239,233,.72);line-height:1.55;max-width:60ch}
+.intake .response::before{content:"— ";color:var(--terra)}
+.intake .actions{margin-top:46px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+@media(max-width:880px){.intake .head{grid-template-columns:1fr;gap:24px}.channels{grid-template-columns:1fr}.ch,.ch:nth-child(n+2){border-right:none;border-bottom:1px solid rgba(245,239,233,.16);padding:30px 0}.ch:last-child{border-bottom:none}.ch:hover,.ch:nth-child(1):hover{padding-left:0}}
 
 /* ================ FOOTER ================ */
-footer{background:var(--arena);color:rgba(245,239,233,.7);padding:80px 0 36px}
+footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:54px;margin-bottom:64px}
 .foot-grid h6{font-size:10.5px;color:rgba(245,239,233,.5);letter-spacing:.22em;text-transform:uppercase;font-weight:500;margin-bottom:22px}
 .foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:11px}
 .foot-grid a{font-size:13.5px;color:rgba(245,239,233,.78);transition:color .2s;font-weight:300}
 .foot-grid a:hover{color:var(--terra)}
-.foot-brand .mark{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:32px;color:var(--perla);letter-spacing:.04em;line-height:1}
-.foot-brand .sub{margin-top:8px;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:rgba(245,239,233,.5);font-weight:500}
-.foot-brand p{font-size:13.5px;color:rgba(245,239,233,.6);margin-top:22px;max-width:36ch;line-height:1.7;font-weight:300}
+.foot-brand .mark{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:34px;color:var(--perla);letter-spacing:.04em;line-height:1}
+.foot-brand .sub{margin-top:10px;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:rgba(245,239,233,.5);font-weight:500}
+.foot-brand p{font-size:14px;color:rgba(245,239,233,.65);margin-top:22px;max-width:36ch;line-height:1.7;font-weight:300}
 .foot-bottom{
   border-top:1px solid rgba(245,239,233,.12);padding-top:24px;
   display:flex;justify-content:space-between;align-items:center;
-  font-size:10.5px;letter-spacing:.20em;text-transform:uppercase;color:rgba(245,239,233,.5);
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,239,233,.5);
   flex-wrap:wrap;gap:14px;font-weight:500;
 }
 @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr;gap:36px}}
@@ -350,42 +471,43 @@ footer{background:var(--arena);color:rgba(245,239,233,.7);padding:80px 0 36px}
 @media(max-width:1080px){:root{--gut:48px;--sec:100px}}
 @media(max-width:760px){
   :root{--gut:24px;--sec:72px}
-  .hero h1{font-size:42px}
-  .positioning h2,.verticals h2,.voice h2,.tagline h2,.contact h2,.rules h2{font-size:32px}
-  .filter h2{font-size:26px}
-  .final-p blockquote{font-size:26px}
-  .hero .lead{font-size:16.5px}
-  input,textarea,select{font-size:16px !important}
+  .hero h1{font-size:38px}
+  .intro h2,.verticals h2,.how h2,.proof h2,.whom h2,.founder h2,.intake h2,.feature .head h2,.programs h2{font-size:30px}
+  .hero .lead,.intro .body p,.founder p{font-size:15.5px}
+  .vert h3{font-size:21px}
+  .case h3,.feature-card h3{font-size:24px}
   .cta{padding:13px 18px;min-height:44px}
+  input,textarea,select{font-size:16px !important}
 }
-@media(max-width:380px){:root{--gut:18px}.topstrip .right{display:none}}
+@media(max-width:380px){:root{--gut:18px}}
 
 @supports(padding:env(safe-area-inset-bottom)){
   footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
 }
 
-/* reveal */
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 
-<!-- ================ TOPSTRIP ================ -->
+<!-- TOPSTRIP -->
 <div class="topstrip">
   <div class="container">
     <div class="left">
-      <span>Marciacq Travel Studio</span>
+      <span class="pulse"></span>
+      <span>Intake open · Q3–Q4 2026 programs</span>
       &nbsp;·&nbsp;
-      <span>Operational certainty through structural travel design</span>
+      <span>Panama City · By appointment</span>
     </div>
     <div class="right">
-      <a href="#contact">Begin intake →</a>
+      <a href="mailto:hello@marciacqtravelstudio.com" class="v">hello@marciacqtravelstudio.com</a>
+      <a href="https://instagram.com/marciacqtravelstudio">Instagram</a>
     </div>
   </div>
 </div>
 
-<!-- ================ NAV ================ -->
+<!-- NAV -->
 <header class="nav">
   <div class="container">
     <a href="#" class="brand">
@@ -393,11 +515,12 @@ footer{background:var(--arena);color:rgba(245,239,233,.7);padding:80px 0 36px}
       <span class="sub">Travel Studio</span>
     </a>
     <nav class="nav-links">
-      <a href="#positioning" class="lnk">Positioning</a>
-      <a href="#verticals" class="lnk">Verticals</a>
-      <a href="#voice" class="lnk">Approach</a>
-      <a href="#rules" class="lnk">Principles</a>
-      <a href="#contact" class="cta">Begin intake</a>
+      <a href="#programs" class="lnk">Programs</a>
+      <a href="#what" class="lnk">Verticals</a>
+      <a href="#how" class="lnk">How we work</a>
+      <a href="#program" class="lnk">A program</a>
+      <a href="#founder" class="lnk">Nicole</a>
+      <a href="#intake" class="cta">Begin intake</a>
       <button class="menu-toggle" id="menuOpen" aria-label="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
       </button>
@@ -412,312 +535,521 @@ footer{background:var(--arena);color:rgba(245,239,233,.7);padding:80px 0 36px}
     <button class="close" id="menuClose" aria-label="Close">×</button>
   </div>
   <nav>
-    <a href="#positioning">Positioning</a>
-    <a href="#verticals">Verticals</a>
-    <a href="#voice">Approach</a>
-    <a href="#rules">Principles</a>
-    <a href="#contact">Begin intake</a>
+    <a href="#programs">Signature programs</a>
+    <a href="#what">Service verticals</a>
+    <a href="#how">How we work</a>
+    <a href="#program">A program in structure</a>
+    <a href="#fit">Who it's for</a>
+    <a href="#founder">Nicole Marciacq</a>
+    <a href="#intake">Begin intake</a>
   </nav>
   <div class="foot">
     <a href="mailto:hello@marciacqtravelstudio.com">hello@marciacqtravelstudio.com</a>
     <a href="https://instagram.com/marciacqtravelstudio">Instagram</a>
-    <span>Panama</span>
+    <span>Panama City · By appointment</span>
   </div>
 </div>
 
-<!-- ================ HERO ================ -->
+<!-- HERO -->
 <section class="hero">
   <div class="container">
-    <span class="label label-num lbl">01 — Studio</span>
-    <h1>Where <span class="sig">Meaningful</span> Travel Feels <span class="sig">Effortless</span>.</h1>
-    <p class="lead">A structured, high-trust travel studio. <span class="em">Operational certainty through structural travel design</span> — for international itineraries, Panama experiences, corporate programs, and multigenerational family travel.</p>
-    <div class="actions">
-      <a href="#contact" class="cta">Begin intake</a>
-      <a href="#positioning" class="cta ghost">Studio positioning</a>
+    <div>
+      <span class="label lbl">A travel studio</span>
+      <h1>Where <span class="sig">Meaningful</span> Travel Feels <span class="sig">Effortless</span>.</h1>
+      <p class="lead">A structured, high-trust studio designing international itineraries, Panama experiences, corporate programs, and multigenerational journeys. The complexity is resolved before you feel it.</p>
+      <div class="actions">
+        <a href="#intake" class="cta">Begin intake</a>
+        <a href="#programs" class="cta ghost">Signature programs</a>
+      </div>
     </div>
 
-    <aside class="principle">
-      <b>Brand principle</b>
-      If the client feels effort — <em>the brand breaks</em>.
-    </aside>
+    <div class="imgz hero-visual" aria-hidden="true">
+      <span class="index">№ 01 / Editorial</span>
+      <span class="cap">Image<small>Adriatic coastline, last light, no figures.</small></span>
+    </div>
 
-    <span class="watermark">M</span>
+    <div class="trust">
+      <div class="t"><b>4 <span class="sig">verticals</span></b><small>Leisure · Panama · Corporate / MICE · Family</small></div>
+      <div class="t"><b>40+ countries</b><small>Validated supplier network</small></div>
+      <div class="t"><b>By <span class="sig">appointment</span></b><small>Selective intake, paced calendar</small></div>
+      <div class="t"><b>EN · ES · FR</b><small>Operating languages</small></div>
+    </div>
   </div>
 </section>
 
-<!-- ================ POSITIONING (3 pillars in dark) ================ -->
-<section id="positioning" class="positioning r">
+<!-- STUDIO NOTE -->
+<section class="intro r">
+  <div class="container">
+    <div>
+      <span class="label">A note from the studio</span>
+      <h2>We design conditions, not <span class="sig">itineraries</span>.</h2>
+    </div>
+    <div class="body">
+      <p>Most travel is built reactively — booked piece by piece, dependent on the energy of whoever's coordinating it. We work differently.</p>
+      <p>Every program is built on <strong>validated suppliers, documented processes, and a clear service architecture</strong>. The structure is designed before the pitch starts. The work happens in the backend. The client experiences the result, not the process.</p>
+      <p>We're not for everyone, and that's the point. The studio operates on a paced, selective calendar — because what we promise can only be delivered when capacity matches commitment.</p>
+      <div class="signoff">
+        <span class="name">— Nicole Marciacq</span>
+        <span>Founder · Marciacq Travel Studio</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED JOURNEY -->
+<section class="feature r">
   <div class="container">
     <div class="head">
       <div>
-        <span class="label label-num">02 — Core Positioning</span>
-        <h2>You don't design travel.<br>You <span class="sig">engineer</span> the conditions under which travel runs without failure.</h2>
+        <span class="label terra">Currently architecting</span>
+        <h2>This season's <span class="sig">signature</span> journey.</h2>
       </div>
-      <div class="right">
-        <p>The studio is not a content brand. It is <strong>infrastructure</strong>. Validated suppliers, documented processes, repeatable architecture — visible before the pitch starts, accountable long after.</p>
+      <div class="meta">
+        <b>№ 04 — 2026 · 2027</b>
+        Released to qualified intake<br>· Limited departures
       </div>
     </div>
 
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pn">01</div>
-        <h3>Operational Certainty</h3>
-        <p>The client doesn't manage logistics, doesn't absorb friction, doesn't coordinate moving parts. That's already done — structurally, not reactively.</p>
+    <article class="feature-card">
+      <div class="imgz v1 img" aria-hidden="true">
+        <span class="index">№ 01 / Feature</span>
+        <span class="cap">Image<small>A vessel at anchor, Croatian coast, blue hour. Single subject.</small></span>
       </div>
-      <div class="pillar">
-        <div class="pn">02</div>
-        <h3>Systems Mindset</h3>
-        <p>Repeatable infrastructure, not one-off plans. Validated suppliers, documented processes, clear service architecture — visible before the pitch starts.</p>
+      <div class="body">
+        <div>
+          <span class="tag">Multigenerational · Italy &amp; Croatia</span>
+          <h3>The <span class="sig">Adriatic Architecture</span>.</h3>
+          <p class="summary" style="margin-top:18px">A 12-day documented program built for three-generation principals. Rome to the Dalmatian islands. Private vessel for the maritime leg. Single point of operational contact throughout.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><small>Duration</small><b>12 nights</b></div>
+          <div class="fact"><small>Routing</small><b>Rome → Florence → Hvar → Dubrovnik</b></div>
+          <div class="fact"><small>Group</small><b>Up to 14 travelers</b></div>
+          <div class="fact"><small>Investment</small><b>From <span class="sig">USD 145,000</span></b></div>
+        </div>
+        <div class="ctas">
+          <a href="#intake" class="cta">Request the architecture</a>
+          <a href="#program" class="cta ghost">See documented version</a>
+        </div>
       </div>
-      <div class="pillar">
-        <div class="pn">03</div>
-        <h3>Multi-Context Fluency</h3>
-        <p>Operating across leisure, corporate, MICE, and family travel means understanding how different stakeholder dynamics, budgets, and risk tolerances actually work.</p>
-      </div>
-    </div>
+    </article>
   </div>
 </section>
 
-<!-- ================ VERTICALS ================ -->
-<section id="verticals" class="verticals r">
+<!-- SIGNATURE PROGRAMS -->
+<section id="programs" class="programs r">
   <div class="container">
     <div class="head">
-      <span class="label label-num">03 — Service Verticals</span>
-      <h2>Four verticals.<br>One <span class="sig">infrastructure</span>.</h2>
-      <p class="lead">The same systems mindset and validated supplier network operates across all service lines. Context changes. The operational rigor doesn't.</p>
+      <div>
+        <span class="label">Signature programs</span>
+        <h2>Six frameworks. <span class="sig">Documented</span>, adaptable, never improvised.</h2>
+      </div>
+      <div class="right">
+        <p>Each signature program is a documented architecture — refined across iterations, adapted per client, executed through validated operators. Bespoke work begins from any of these or from a blank brief.</p>
+      </div>
+    </div>
+
+    <div class="pgrid">
+      <article class="pcard">
+        <div class="imgz v1 img"><span class="index">№ 01</span><span class="cap">Image<small>Dalmatian shore, low sun.</small></span></div>
+        <div class="pbody">
+          <span class="tag">Multigenerational · 12 nights</span>
+          <h3>The <span class="sig">Adriatic Architecture</span></h3>
+          <p>Rome to the Dalmatian islands. Private vessel for the maritime leg. Three generations, fourteen variables, one execution plan.</p>
+          <div class="footrow">
+            <div class="price"><small>From</small><b>USD <span class="sig">145,000</span></b></div>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="imgz v3 img"><span class="index">№ 02</span><span class="cap">Image<small>Comarca dawn, mangrove channel.</small></span></div>
+        <div class="pbody">
+          <span class="tag">Panama · 8 nights</span>
+          <h3>The <span class="sig">Indigenous</span> Coast</h3>
+          <p>Pacific coastline through Guna Yala. Vetted local stewards, private boats, no posed encounters. Designed for principals who measure depth, not distance.</p>
+          <div class="footrow">
+            <div class="price"><small>From</small><b>USD <span class="sig">68,000</span></b></div>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="imgz v4 img"><span class="index">№ 03</span><span class="cap">Image<small>European atelier, single subject, working hands.</small></span></div>
+        <div class="pbody">
+          <span class="tag">Europe · 11 nights</span>
+          <h3>The <span class="sig">Atelier</span> Route</h3>
+          <p>Paris, Geneva, Florence, Milan. Private access to working ateliers — leather, watchmaking, textiles, ceramics. Not a tour. A documented apprenticeship in restraint.</p>
+          <div class="footrow">
+            <div class="price"><small>From</small><b>USD <span class="sig">128,000</span></b></div>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="imgz v5 img"><span class="index">№ 04</span><span class="cap">Image<small>Andalusian estate, midday, architectural shadow.</small></span></div>
+        <div class="pbody">
+          <span class="tag">Family · 9 nights</span>
+          <h3>The Family <span class="sig">Concession</span></h3>
+          <p>A single Andalusian estate as base. Three generations, distributed mobility profiles, programmed days and unprogrammed afternoons. Built for principals who want presence without choreography.</p>
+          <div class="footrow">
+            <div class="price"><small>From</small><b>USD <span class="sig">92,000</span></b></div>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="imgz v2 img"><span class="index">№ 05</span><span class="cap">Image<small>Conference space, empty, evening light.</small></span></div>
+        <div class="pbody">
+          <span class="tag">Corporate / MICE · 3–7 nights</span>
+          <h3>The Offsite <span class="sig">Mainframe</span></h3>
+          <p>A modular corporate framework. Validated venues across three continents. Risk surface mapped, contingencies documented, escalations eliminated before they form.</p>
+          <div class="footrow">
+            <div class="price"><small>Engagement</small><b>By <span class="sig">brief</span></b></div>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="imgz img"><span class="index">№ 06</span><span class="cap">Image<small>Bespoke detail — undisclosed.</small></span></div>
+        <div class="pbody">
+          <span class="tag">Bespoke · By inquiry</span>
+          <h3>The Quiet <span class="sig">Itinerary</span></h3>
+          <p>A single-destination program designed from a blank brief. For repeat clients and complex principals. Architecture starts at intake; the rest is built around you.</p>
+          <div class="footrow">
+            <div class="price"><small>Engagement</small><b>By <span class="sig">inquiry</span></b></div>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="note">All investments are starting points. Final program cost is a function of group size, operational scope, sourcing, and duration. We quote in USD and accommodate multi-currency on request.</p>
+  </div>
+</section>
+
+<!-- VERTICALS -->
+<section id="what" class="verticals r">
+  <div class="container">
+    <div class="head">
+      <div>
+        <span class="label">What we do</span>
+        <h2>Four verticals.<br>One <span class="sig">infrastructure</span>.</h2>
+      </div>
+      <div class="right">
+        <p>The same systems and validated supplier network operate across every service line. Context changes. The operational rigor doesn't.</p>
+      </div>
     </div>
 
     <div class="vgrid">
-      <div class="vert">
-        <div class="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2 14 10 22 12 14 14 12 22 10 14 2 12 10 10z"/></svg></div>
-        <h3>International<br>Itineraries</h3>
-        <p>Structured design of complex multi-destination programs for individual and family travelers. Emphasis on sequencing, pacing, and validated ground operators.</p>
-      </div>
-      <div class="vert">
-        <div class="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3 21 12 12 21 3 12z"/></svg></div>
-        <h3>Panama<br>Experiences</h3>
+      <article class="vert">
+        <span class="vn">01 — International</span>
+        <h3>International <span class="sig">Itineraries</span></h3>
+        <p>Multi-destination programs designed around sequencing, pacing, and validated ground operators. Built for travelers and families with complex routes and zero tolerance for friction.</p>
+        <div class="meta"><span>Europe</span><span>Latin America</span><span>Middle East</span><span>Asia</span></div>
+        <a href="#intake" class="more">Plan an itinerary</a>
+      </article>
+      <article class="vert">
+        <span class="vn">02 — Panama</span>
+        <h3>Panama <span class="sig">Experiences</span></h3>
         <p>Deep local knowledge. Curated access to verified providers across the city, interior, and coasts — built for international clients with high operational standards.</p>
-      </div>
-      <div class="vert">
-        <div class="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2 21 7 21 17 12 22 3 17 3 7z"/></svg></div>
-        <h3>Corporate &amp;<br>MICE / Bleisure</h3>
+        <div class="meta"><span>City</span><span>Interior</span><span>Coast</span><span>Indigenous regions</span></div>
+        <a href="#intake" class="more">Design a Panama program</a>
+      </article>
+      <article class="vert">
+        <span class="vn">03 — Corporate</span>
+        <h3>Corporate &amp; <span class="sig">MICE / Bleisure</span></h3>
         <p>End-to-end coordination of group programs, incentive travel, and bleisure extensions. Designed to create zero problems for the decision-maker.</p>
-      </div>
-      <div class="vert">
-        <div class="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="4" width="16" height="16"/></svg></div>
-        <h3>Multigenerational<br>Family</h3>
-        <p>Complex group logistics across mixed age ranges, needs, and risk profiles. Coordinated from a single operational structure so the family experiences the trip, not the planning.</p>
-      </div>
+        <div class="meta"><span>Incentives</span><span>Off-sites</span><span>Conferences</span><span>Bleisure</span></div>
+        <a href="#intake" class="more">Brief a program</a>
+      </article>
+      <article class="vert">
+        <span class="vn">04 — Multigenerational</span>
+        <h3>Multigenerational <span class="sig">Family</span></h3>
+        <p>Complex logistics across mixed age ranges, dietary needs, and risk profiles. Coordinated from a single operational structure so the family experiences the trip, not the planning.</p>
+        <div class="meta"><span>3+ generations</span><span>Mixed mobility</span><span>Private guides</span></div>
+        <a href="#intake" class="more">Submit family brief</a>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ================ VOICE (write/never table) ================ -->
-<section id="voice" class="voice r">
+<!-- HOW WE WORK -->
+<section id="how" class="how r">
+  <div class="container">
+    <span class="label light">How we work</span>
+    <h2>From first conversation to <span class="sig">continuity</span>.</h2>
+    <p class="intro-p">A defined five-step path. Each phase has its own deliverables and its own commitments. <strong>You see the architecture before the pitch</strong> — the only way to know whether you're working with infrastructure or improvisation.</p>
+
+    <div class="steps">
+      <div class="step"><span class="sn">i.</span><h4>Intake</h4><p>A structured form and a 30-minute conversation. We assess fit before scope, scope before pricing.</p><div class="dur">15-min form · 30-min call</div></div>
+      <div class="step"><span class="sn">ii.</span><h4>Discovery</h4><p>Stakeholders, context, constraints. We surface the variables that determine whether the program is feasible at the level promised.</p><div class="dur">5–10 business days</div></div>
+      <div class="step"><span class="sn">iii.</span><h4>Architecture</h4><p>A documented proposal with supplier validation summary, risk contingencies, and clear cost structure. No filler.</p><div class="dur">10–14 business days</div></div>
+      <div class="step"><span class="sn">iv.</span><h4>Execution</h4><p>The program runs on validated suppliers and documented processes. Single point of contact, operational continuity throughout.</p><div class="dur">Trip duration</div></div>
+      <div class="step"><span class="sn">v.</span><h4>Continuity</h4><p>Debrief, archive, and a documented version of your program — repeatable when your needs return. Long-term clients build over years.</p><div class="dur">Ongoing</div></div>
+    </div>
+
+    <div class="actions">
+      <a href="#intake" class="cta alt">Begin intake</a>
+      <a href="#program" class="cta light">See a program</a>
+    </div>
+  </div>
+</section>
+
+<!-- A PROGRAM IN STRUCTURE -->
+<section id="program" class="proof r">
   <div class="container">
     <div class="head">
-      <span class="label label-num">04 — Brand Voice</span>
-      <h2>Speak like a strategist.<br>Not a content <span class="sig">creator</span>.</h2>
-      <p class="lead">Clarity over inspiration. Systems over aesthetics. Real scenarios, not aspirational language. If something is weak, say it and explain why.</p>
-    </div>
-
-    <div class="vc-table">
-      <div class="vc-head do">Write this</div>
-      <div class="vc-head dont">Never this</div>
-
-      <div class="vc-cell do">We resolve complexity before the client feels it.</div>
-      <div class="vc-cell dont">We create unforgettable travel memories.</div>
-
-      <div class="vc-cell do">Your itinerary runs on validated suppliers and documented processes.</div>
-      <div class="vc-cell dont">We have amazing connections around the world!</div>
-
-      <div class="vc-cell do">Corporate programs are designed to meet zero problems for the team lead.</div>
-      <div class="vc-cell dont">Our corporate travel is seamless and stress-free.</div>
-
-      <div class="vc-cell do">The proposal includes a supplier validation summary and risk contingencies.</div>
-      <div class="vc-cell dont">We work with only the best and most exclusive partners.</div>
-
-      <div class="vc-cell do">This program was built to absorb the complexity so your team doesn't have to.</div>
-      <div class="vc-cell dont">Leave it all to us — we'll take care of everything.</div>
-
-      <div class="vc-cell do" style="border-bottom:none">Three stakeholders. Fourteen variables. One structured execution plan.</div>
-      <div class="vc-cell dont" style="border-bottom:none">Family travel is complicated — but we make it magical.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ================ TAGLINE ================ -->
-<section class="tagline r">
-  <div class="container">
-    <span class="label label-num lbl">05 — Brand Tagline</span>
-    <h2>Where <span class="sig">Meaningful</span> Travel<br>Feels <span class="sig">Effortless</span>.</h2>
-    <p class="sub">Do not explain it. Demonstrate it. Show decisions, not inspiration. Show structure, not aesthetics.</p>
-    <span class="echo">Effortless.</span>
-
-    <div class="dual">
       <div>
-        <h4>Meaningful</h4>
-        <p>Intentional and well-designed. Every element of the program exists for a reason. Nothing is filler, nothing is assumed.</p>
+        <span class="label">A program in structure</span>
+        <h2>What our work looks like when <span class="sig">documented</span>.</h2>
       </div>
-      <div>
-        <h4>Effortless</h4>
-        <p>Complexity resolved before the client feels it. The work happens in the backend — structurally, not reactively. The client experiences the result, not the process.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================ CONTENT FILTER ================ -->
-<section class="filter r">
-  <div class="container">
-    <span class="label label-num label-light">06 — Content Filter</span>
-    <h2>Every piece of content must pass all four criteria. If not — <span class="sig">don't create it</span>.</h2>
-
-    <div class="fcards">
-      <div class="fcard">
-        <span class="fn">1</span>
-        <h4>Decision</h4>
-        <p>Does this help the reader make a decision? Content exists to reduce uncertainty. If it doesn't enable a choice — it's noise.</p>
-      </div>
-      <div class="fcard">
-        <span class="fn">2</span>
-        <h4>Structure</h4>
-        <p>Does this show how something is built or organized? Structure signals competence. Inspiration without architecture is decoration.</p>
-      </div>
-      <div class="fcard">
-        <span class="fn">3</span>
-        <h4>Insight</h4>
-        <p>Does this reveal something non-obvious? Generic information is available everywhere. Insight is earned through operational experience.</p>
-      </div>
-      <div class="fcard">
-        <span class="fn">4</span>
-        <h4>Optimized</h4>
-        <p>Is this built for its channel and purpose? A proposal is not social content. An Instagram post is not a case study. Format follows function.</p>
+      <div class="right">
+        <p>Identifying details are abstracted by request. What remains is the architecture — the layer that determines whether a program is reliable or reactive.</p>
       </div>
     </div>
 
-    <p class="note">This is not a content brand. This is a structured, high-trust business. Instagram is a positioning tool, not a volume channel. Every post is evidence of operational thinking — not aesthetic output.</p>
+    <article class="case">
+      <div class="imgz v2 img" aria-hidden="true">
+        <span class="index">№ 07 / Case</span>
+        <span class="cap">Image<small>Architectural shadow, Florentine interior, midday silence.</small></span>
+      </div>
+      <div class="right">
+        <span class="tag">Anonymized · Program 09 · 2025</span>
+        <h3>An 11-day multigenerational journey across <span class="sig">Italy &amp; Croatia</span>.</h3>
+        <p class="summary">Three generations, fourteen variables: dietary requirements across two restrictions, two mobility profiles, a 7-year-old, a 76-year-old, three cities, two coastlines, one private vessel.</p>
+        <h5>Service architecture</h5>
+        <ul class="case-list">
+          <li><span class="k">Stakeholders</span><span>Family lead + spouse + adult child coordinating</span></li>
+          <li><span class="k">Destinations</span><span>Rome → Florence → Hvar → Dubrovnik</span></li>
+          <li><span class="k">Suppliers</span><span>11 vetted, all with documented track records</span></li>
+          <li><span class="k">Guides</span><span>Private, multilingual, vetted by sector</span></li>
+          <li><span class="k">Risk surface</span><span>Mapped, contingencies documented</span></li>
+          <li><span class="k">Single contact</span><span>Studio · 24/7 during execution</span></li>
+          <li><span class="k">Outcome</span><span>Delivered as architected · Repeat client</span></li>
+        </ul>
+        <div class="footnote">Zero escalations during execution. Documented program archived for future iterations.</div>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- ================ NON-NEGOTIABLES ================ -->
-<section id="rules" class="rules r">
+<!-- TRUSTED BY (anonymized) -->
+<section class="trusted r">
   <div class="container">
     <div class="head">
-      <span class="label label-num">07 — Non-Negotiables</span>
-      <h2>The rules that protect the <span class="sig">brand</span> and the <span class="sig">client</span>.</h2>
+      <h3>Trusted by principals who measure work in <span class="sig">structure</span>, not adjectives.</h3>
+      <span class="note">Client identities abstracted by agreement</span>
     </div>
-
-    <div class="rule-grid">
-      <div class="rule"><p>Do not build visibility without backend readiness. The brand must be able to deliver on what it signals.</p></div>
-      <div class="rule"><p>Do not work with unvalidated suppliers. Every vendor in the network has a documented performance record.</p></div>
-      <div class="rule"><p>Do not design from scratch every time. If it's repeatable, it becomes a system. Document after twice. Systematize after three.</p></div>
-      <div class="rule"><p>Do not say yes to misaligned clients. The client profile is specific. A mismatch creates friction that the brand is designed to eliminate.</p></div>
-      <div class="rule"><p>Every client interaction must build trust, reduce uncertainty, and reinforce expertise. No exceptions, no casual exceptions.</p></div>
-      <div class="rule"><p>If it doesn't improve structure, positioning, or revenue — it is not a priority. Protect the calendar accordingly.</p></div>
+    <div class="trust-grid">
+      <div class="tcell">
+        <span class="ti">i.</span>
+        <p>A <strong>Geneva-based family office</strong> coordinating annual multigenerational programs across three continents.</p>
+      </div>
+      <div class="tcell">
+        <span class="ti">ii.</span>
+        <p>A <strong>US-listed industrial group</strong> commissioning recurring leadership offsites and incentive frameworks.</p>
+      </div>
+      <div class="tcell">
+        <span class="ti">iii.</span>
+        <p>A <strong>multigenerational principal</strong> with documented programs returning each year since 2021.</p>
+      </div>
+      <div class="tcell">
+        <span class="ti">iv.</span>
+        <p>A <strong>private collector</strong> commissioning the Atelier Route framework across Western Europe.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================ FINAL PRINCIPLE ================ -->
-<section class="final-p r">
+<!-- FOR WHOM -->
+<section id="fit" class="whom r">
   <div class="container">
-    <span class="label label-num lbl">Final principle</span>
-    <blockquote>Everything you build must reduce friction, increase clarity, and reinforce <span class="sig">control</span>. When executed consistently, the brand feels clear, elevated, reliable, and different. And our objective is conversion — <span class="sig">always</span>.</blockquote>
-    <cite>Marciacq Travel Studio — Brand Identity System</cite>
+    <div class="head">
+      <span class="label">Who it's for</span>
+      <h2>The studio is <span class="sig">selective</span> by design.</h2>
+      <p class="lead">A mismatch creates the kind of friction the brand is built to eliminate. We're direct about fit because it protects you and us.</p>
+    </div>
+
+    <div class="fits">
+      <div class="fit">
+        <h4>We work well with</h4>
+        <ul>
+          <li>Clients who treat travel as a decision, not a transaction</li>
+          <li>Family principals coordinating complex group logistics</li>
+          <li>Operations leads briefing corporate or MICE programs</li>
+          <li>Repeat travelers building a documented program over years</li>
+          <li>Stakeholders who value validated suppliers over name-dropping</li>
+        </ul>
+      </div>
+      <div class="nofit">
+        <h4>We're not the right studio for</h4>
+        <ul>
+          <li>Last-minute trip requests with no discovery phase</li>
+          <li>Single-component bookings — hotels only, flights only</li>
+          <li>Clients seeking influencer-style content or staged moments</li>
+          <li>Projects under budget thresholds that prevent operational rigor</li>
+          <li>Engagements that bypass the structured intake</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ================ CONTACT ================ -->
-<section id="contact" class="contact r">
+<!-- FOUNDER -->
+<section id="founder" class="founder r">
   <div class="container">
-    <div class="grid">
-      <div>
-        <span class="label label-num">08 — Begin intake</span>
-        <h2>Submit a brief.<br>Not a <span class="sig">wishlist</span>.</h2>
-        <p class="lead">Intake begins with a structured conversation. We assess fit before scope, scope before pricing. If the program isn't aligned with how we operate, we'll say so — and route you well.</p>
-        <div class="actions">
-          <a href="mailto:hello@marciacqtravelstudio.com?subject=Intake%20—%20New%20Program" class="cta alt">Open the conversation →</a>
+    <div class="imgz v4 portrait" aria-hidden="true">
+      <span class="index">№ 08 / Founder</span>
+      <span class="cap">Image<small>Nicole at the studio — working, half-light, no eye contact with camera.</small></span>
+    </div>
+    <div>
+      <span class="label">Founder</span>
+      <h2>Nicole <span class="sig">Marciacq</span>.</h2>
+      <p>The studio operates from Panama and across four service verticals. <strong>Nicole leads every intake personally.</strong> Programs are designed in-house, executed through a vetted operator network, and documented for continuity.</p>
+      <p>Background in international logistics, corporate program design, and high-trust family travel. Multilingual (EN · ES · FR) and connected across Europe, Latin America, the Middle East, and Asia — every supplier in the network holds a documented performance record.</p>
+      <span class="signature">— Nicole</span>
+      <div class="facts">
+        <div class="f"><b>In-house</b><small>Architecture</small></div>
+        <div class="f"><b>1:1</b><small>Founder-led intake</small></div>
+        <div class="f"><b>Documented</b><small>Every program</small></div>
+        <div class="f"><b>EN · ES · FR</b><small>Operating</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO DISPATCH -->
+<section class="dispatch r">
+  <div class="container">
+    <div class="l">
+      <span class="label">Studio dispatch</span>
+      <h3>Three to four times a year. <span class="sig">By request</span>.</h3>
+      <p>Operational notes from active programs, anonymized case structures, supplier reflections. No travel inspiration, no recap content, no curated lists. Read by family principals, operations leads, and a small group of fellow studios.</p>
+      <small>Infrequent · Confidential · Opt-out anytime</small>
+    </div>
+    <form class="dispatch-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Request received'">
+      <div class="row">
+        <div>
+          <label for="d-name">Name</label>
+          <input id="d-name" type="text" placeholder="Full name" required>
+        </div>
+        <div>
+          <label for="d-role">Role</label>
+          <input id="d-role" type="text" placeholder="Principal · Ops · Family · Studio">
         </div>
       </div>
-
-      <div class="channels">
-        <a class="ch" href="mailto:hello@marciacqtravelstudio.com">
-          <span class="ch-num">01</span>
-          <div><div class="ch-label">Direct</div><div class="ch-val">hello@marciacqtravelstudio.com</div></div>
-          <span class="ch-arrow">→</span>
-        </a>
-        <a class="ch" href="https://instagram.com/marciacqtravelstudio">
-          <span class="ch-num">02</span>
-          <div><div class="ch-label">Positioning</div><div class="ch-val">@marciacqtravelstudio</div></div>
-          <span class="ch-arrow">→</span>
-        </a>
-        <a class="ch" href="https://wa.me/507">
-          <span class="ch-num">03</span>
-          <div><div class="ch-label">For existing clients</div><div class="ch-val">WhatsApp · by referral</div></div>
-          <span class="ch-arrow">→</span>
-        </a>
-        <a class="ch" href="#" style="border-bottom:none">
-          <span class="ch-num">04</span>
-          <div><div class="ch-label">Studio</div><div class="ch-val">Panama City · By appointment</div></div>
-          <span class="ch-arrow">→</span>
-        </a>
+      <div>
+        <label for="d-email">Email</label>
+        <input id="d-email" type="email" placeholder="you@domain.com" required>
       </div>
+      <button type="submit">Request access</button>
+      <p class="fine">By submitting you agree to receive the studio dispatch. We don't sell or share addresses. Reply to any dispatch to unsubscribe.</p>
+    </form>
+  </div>
+</section>
+
+<!-- INTAKE -->
+<section id="intake" class="intake r">
+  <div class="container">
+    <div class="head">
+      <div>
+        <span class="label light">Begin intake</span>
+        <h2>Submit a brief. <span class="sig">Not a wishlist</span>.</h2>
+      </div>
+      <div class="right">
+        <p>Intake begins with a 15-minute form and a 30-minute call. We assess fit before scope, scope before pricing. If we're not the right studio, we'll say so — and route you well.</p>
+      </div>
+    </div>
+
+    <div class="channels">
+      <a href="mailto:hello@marciacqtravelstudio.com?subject=Intake%20—%20New%20Program" class="ch">
+        <span class="ck">01 — Direct</span>
+        <span class="cv">hello@<span class="sig">marciacq</span>travelstudio.com</span>
+        <span class="cd">For new programs and structured intake.</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://instagram.com/marciacqtravelstudio" class="ch">
+        <span class="ck">02 — Positioning</span>
+        <span class="cv">@marciacqtravelstudio</span>
+        <span class="cd">Operational evidence, not aesthetic output.</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="#" class="ch">
+        <span class="ck">03 — Existing clients</span>
+        <span class="cv">WhatsApp · <span class="sig">by referral</span></span>
+        <span class="cd">Direct line for active programs and continuity.</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <p class="response">Response within two business days. Intake fit confirmation within five. Studio operates on a paced calendar; intake closes when capacity is committed.</p>
+
+    <div class="actions">
+      <a href="mailto:hello@marciacqtravelstudio.com?subject=Intake" class="cta alt">Open the conversation</a>
+      <a href="#how" class="cta light">Review the process</a>
     </div>
   </div>
 </section>
 
-<!-- ================ FOOTER ================ -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
         <div class="mark">Marciacq</div>
         <div class="sub">Travel Studio</div>
-        <p>A structured, high-trust travel studio. Operational certainty through structural travel design.</p>
+        <p>A structured, high-trust travel studio. Where meaningful travel feels effortless.</p>
+      </div>
+      <div>
+        <h6>Programs</h6>
+        <ul>
+          <li><a href="#programs">The Adriatic Architecture</a></li>
+          <li><a href="#programs">The Indigenous Coast</a></li>
+          <li><a href="#programs">The Atelier Route</a></li>
+          <li><a href="#programs">The Family Concession</a></li>
+          <li><a href="#programs">The Offsite Mainframe</a></li>
+          <li><a href="#programs">The Quiet Itinerary</a></li>
+        </ul>
       </div>
       <div>
         <h6>Studio</h6>
         <ul>
-          <li><a href="#positioning">Positioning</a></li>
-          <li><a href="#verticals">Verticals</a></li>
-          <li><a href="#voice">Approach</a></li>
-          <li><a href="#rules">Principles</a></li>
+          <li><a href="#what">Verticals</a></li>
+          <li><a href="#how">How we work</a></li>
+          <li><a href="#program">A program</a></li>
+          <li><a href="#fit">Who it's for</a></li>
+          <li><a href="#founder">Nicole Marciacq</a></li>
         </ul>
       </div>
       <div>
-        <h6>Verticals</h6>
-        <ul>
-          <li><a href="#verticals">International</a></li>
-          <li><a href="#verticals">Panama</a></li>
-          <li><a href="#verticals">Corporate / MICE</a></li>
-          <li><a href="#verticals">Multigenerational</a></li>
-        </ul>
-      </div>
-      <div>
-        <h6>Direct</h6>
+        <h6>Begin</h6>
         <ul>
           <li><a href="mailto:hello@marciacqtravelstudio.com">Email</a></li>
           <li><a href="https://instagram.com/marciacqtravelstudio">Instagram</a></li>
-          <li><a href="#contact">Begin intake</a></li>
+          <li><a href="#intake">Submit a brief</a></li>
+          <li><a href="#dispatch">Studio dispatch</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Marciacq Travel Studio — Nicole Marciacq</span>
-      <span>Brand Identity System · Confidential</span>
+      <span>Panama City · By appointment</span>
     </div>
   </div>
 </footer>
 
 <script>
-  // mobile menu
   const mm = document.getElementById('mobileMenu');
   document.getElementById('menuOpen').addEventListener('click', ()=>mm.classList.add('on'));
   document.getElementById('menuClose').addEventListener('click', ()=>mm.classList.remove('on'));
   mm.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>mm.classList.remove('on')));
 
-  // reveal on scroll
   const obs = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
   },{threshold:.08});
