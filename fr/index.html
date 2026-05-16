@@ -771,7 +771,7 @@ section.affil .mk-logo img{height:100%;width:auto;object-fit:contain;display:blo
 section.affil .mk-logo.mpi img{filter:invert(1) brightness(.35) contrast(1.4)}
 section.affil .mk small{font-size:9.5px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500}
 /* Fora stylized wordmark — kept as text since real logo unavailable */
-section.affil .mk.fora{padding:0;border:none;background:transparent;align-items:flex-start}
+section.affil .mk.fora{}
 section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:30px;letter-spacing:-.005em;color:var(--arena);line-height:1;height:34px;display:flex;align-items:center;position:relative}
 section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:5px;height:5px;background:var(--terra);border-radius:50%;margin-left:5px;align-self:center}
 @media(max-width:760px){section.affil .mk-logo{height:28px}section.affil .mk.fora .wordmark{font-size:24px;height:28px}}
@@ -780,7 +780,7 @@ section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:5p
 /* AUDIT: Fora-only affiliations — centered elegant badge */
 section.affil .marks.fora-only{justify-content:center;width:100%}
 section.affil .mk.fora{flex-direction:row;align-items:baseline;gap:18px;padding:0;border:none;background:transparent}
-section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-style:normal;font-weight:500;font-size:36px;letter-spacing:.045em;text-transform:uppercase;color:var(--arena);line-height:1;height:auto;position:relative}
+
 section.affil .mk.fora .wordmark::after{display:none}
 section.affil .mk.fora small{font-size:11px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:flex;align-items:center}
 section.affil .al-tag{flex-shrink:0}
@@ -816,6 +816,16 @@ section.affil .al-tag{flex-shrink:0}
 .principle .body .sign .line{background:var(--terra)}
 /* Headings keep some italic accent but body italic gets reduced */
 .style-block .quote em{color:var(--terra)}  /* stronger sig color */
+
+
+/* AUDIT: FORA wordmark refined — clickable, properly weighted to match real logo */
+section.affil .mk.fora{padding:0;border:none;background:transparent;align-items:center;text-align:center;flex-direction:column;gap:8px}
+section.affil .mk.fora a.fora-link{text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:8px;transition:opacity .2s}
+section.affil .mk.fora a.fora-link:hover{opacity:.7}
+section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-style:normal;font-weight:500;font-size:40px;letter-spacing:.06em;text-transform:uppercase;color:var(--arena);line-height:.95;display:inline-block}
+section.affil .mk.fora .wordmark::after{display:none}
+section.affil .mk.fora small{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:block;text-align:center}
+@media(max-width:760px){section.affil .mk.fora .wordmark{font-size:32px}}
 
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
@@ -890,7 +900,7 @@ section.affil .al-tag{flex-shrink:0}
     <div>
       <span class="label lbl">Un studio de voyage</span>
       <h1>Là où le voyage <span class="sig">significatif</span> se vit <span class="sig">sans friction</span>.</h1>
-      <p class="lead">Un <strong>studio de design d'expériences de voyage de luxe</strong>. Itinéraires internationaux, Panama et voyages multigénérationnels — conçus sans friction. La complexité se résout avant que vous ne la ressentiez.</p>
+      <p class="lead">Une <strong>entreprise de voyage structurée et de haute confiance</strong>. Marciacq Travel Studio conçoit, coordonne et exécute des programmes de voyage pour qu'ils tournent sans échec. <strong>Le rôle n'est pas consultatif. Il est opérationnel.</strong></p>
       <div class="actions">
         <a href="#intake" class="cta">Démarrer la consultation</a>
         <a href="#programs" class="cta ghost">Programmes signature</a>
@@ -905,7 +915,7 @@ section.affil .al-tag{flex-shrink:0}
     </div>
 
     <div class="trust">
-      <div class="t"><b>Famille · <span class="sig">Couples</span></b><small>Panama · International · MICE</small></div>
+      <div class="t"><b>4 <span class="sig">verticales</span></b><small>Leisure · Corporate · MICE/Bleisure · Famille</small></div>
       <div class="t"><b><span class="sig">Fora</span> Certified</b><small>Conseillère de voyage indépendante</small></div>
       <div class="t"><b>Sur <span class="sig">rendez-vous</span></b><small>Consultation sélective, calendrier mesuré</small></div>
     </div>
@@ -918,8 +928,10 @@ section.affil .al-tag{flex-shrink:0}
     <span class="al-tag">Réseau</span>
     <div class="marks fora-only">
       <span class="mk fora">
-        <span class="wordmark">Fora</span>
-        <small>Certified Travel Advisor · Réseau de luxe curaté</small>
+        <a href="https://www.foratravel.com" target="_blank" rel="noopener" class="fora-link" aria-label="Fora Travel — Certified Travel Advisor">
+          <span class="wordmark">Fora</span>
+          <small>Certified Travel Advisor · Réseau curaté</small>
+        </a>
       </span>
     </div>
   </div>
@@ -933,9 +945,9 @@ section.affil .al-tag{flex-shrink:0}
       <h2>La complexité est <span class="sig">notre</span> responsabilité. Pas la vôtre.</h2>
     </div>
     <div class="body">
-      <p>Marciacq Travel Studio est un <strong>studio de design d'expériences de voyage de luxe</strong> — itinéraires internationaux, expériences au Panama et voyages multigénérationnels. Fondé par Nicole Marciacq, formée en hôtellerie internationale en Suisse et en Espagne. Le principe tient en une ligne : <strong>la complexité est notre responsabilité, pas celle du client</strong>.</p>
+      <p>Marciacq Travel Studio conçoit, coordonne et exécute des programmes de voyage pour qu'ils tournent sans échec. Nicole Marciacq opère sur <strong>leisure, corporate, MICE/bleisure et voyages familiaux multigénérationnels</strong> — avec la mentalité système et la fluidité multi-contexte que la plupart des conseillers ne construisent pas simultanément.</p>
       <p>Chaque voyage est structuré avec <strong>des fournisseurs validés, des processus définis et une attention opérationnelle au détail</strong> — pour que le client arrive, profite et rentre avec la certitude que chaque détail a été résolu.</p>
-      <p>Les expériences que nous concevons s'ancrent dans le patrimoine naturel et culturel de chaque destination — ce qu'une communauté a construit, préservé et transmis au fil du temps. Ce contexte donne à chaque itinéraire sa profondeur et son sens.</p>
+      <p>Ce que nous vendons : <strong>clarté, contrôle et tranquillité d'esprit</strong> — pas des destinations, pas du luxe, pas des expériences.</p>
       <div class="signoff">
         <span class="name">— Nicole Marciacq</span>
         <span>Fondatrice &amp; Travel Advisor · Marciacq Travel Studio</span>
@@ -1357,7 +1369,7 @@ section.affil .al-tag{flex-shrink:0}
       <div class="foot-brand">
         <div class="mark">Marciacq</div>
         <div class="sub">Travel Studio</div>
-        <p>Un studio de design d'expériences de voyage de luxe. Là où le voyage significatif se vit sans friction.</p>
+        <p>Une entreprise de voyage structurée et de haute confiance. Là où le voyage significatif se vit sans friction.</p>
       </div>
       <div>
         <h6>Programmes</h6>

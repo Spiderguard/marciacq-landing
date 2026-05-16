@@ -771,7 +771,7 @@ section.affil .mk-logo img{height:100%;width:auto;object-fit:contain;display:blo
 section.affil .mk-logo.mpi img{filter:invert(1) brightness(.35) contrast(1.4)}
 section.affil .mk small{font-size:9.5px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500}
 /* Fora stylized wordmark — kept as text since real logo unavailable */
-section.affil .mk.fora{padding:0;border:none;background:transparent;align-items:flex-start}
+section.affil .mk.fora{}
 section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:30px;letter-spacing:-.005em;color:var(--arena);line-height:1;height:34px;display:flex;align-items:center;position:relative}
 section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:5px;height:5px;background:var(--terra);border-radius:50%;margin-left:5px;align-self:center}
 @media(max-width:760px){section.affil .mk-logo{height:28px}section.affil .mk.fora .wordmark{font-size:24px;height:28px}}
@@ -780,7 +780,7 @@ section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:5p
 /* AUDIT: Fora-only affiliations — centered elegant badge */
 section.affil .marks.fora-only{justify-content:center;width:100%}
 section.affil .mk.fora{flex-direction:row;align-items:baseline;gap:18px;padding:0;border:none;background:transparent}
-section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-style:normal;font-weight:500;font-size:36px;letter-spacing:.045em;text-transform:uppercase;color:var(--arena);line-height:1;height:auto;position:relative}
+
 section.affil .mk.fora .wordmark::after{display:none}
 section.affil .mk.fora small{font-size:11px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:flex;align-items:center}
 section.affil .al-tag{flex-shrink:0}
@@ -816,6 +816,16 @@ section.affil .al-tag{flex-shrink:0}
 .principle .body .sign .line{background:var(--terra)}
 /* Headings keep some italic accent but body italic gets reduced */
 .style-block .quote em{color:var(--terra)}  /* stronger sig color */
+
+
+/* AUDIT: FORA wordmark refined — clickable, properly weighted to match real logo */
+section.affil .mk.fora{padding:0;border:none;background:transparent;align-items:center;text-align:center;flex-direction:column;gap:8px}
+section.affil .mk.fora a.fora-link{text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:8px;transition:opacity .2s}
+section.affil .mk.fora a.fora-link:hover{opacity:.7}
+section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-style:normal;font-weight:500;font-size:40px;letter-spacing:.06em;text-transform:uppercase;color:var(--arena);line-height:.95;display:inline-block}
+section.affil .mk.fora .wordmark::after{display:none}
+section.affil .mk.fora small{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:block;text-align:center}
+@media(max-width:760px){section.affil .mk.fora .wordmark{font-size:32px}}
 
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
@@ -890,7 +900,7 @@ section.affil .al-tag{flex-shrink:0}
     <div>
       <span class="label lbl">A travel studio</span>
       <h1>Where <span class="sig">Meaningful</span> Travel Feels <span class="sig">Effortless</span>.</h1>
-      <p class="lead">A <strong>luxury tourism experience design studio</strong>. International itineraries, Panama, and multigenerational journeys — designed without friction. The complexity is resolved before you feel it.</p>
+      <p class="lead">A <strong>structured, high-trust travel business</strong>. Marciacq Travel Studio designs, coordinates, and executes travel programs so they run without failure. <strong>The role is not advisory. It is operational.</strong></p>
       <div class="actions">
         <a href="#intake" class="cta">Begin intake</a>
         <a href="#programs" class="cta ghost">Signature programs</a>
@@ -905,7 +915,7 @@ section.affil .al-tag{flex-shrink:0}
     </div>
 
     <div class="trust">
-      <div class="t"><b>Family · <span class="sig">Couples</span></b><small>Panama · International · MICE</small></div>
+      <div class="t"><b>4 <span class="sig">verticals</span></b><small>Leisure · Corporate · MICE/Bleisure · Family</small></div>
       <div class="t"><b><span class="sig">Fora</span> Certified</b><small>Independent travel advisor</small></div>
       <div class="t"><b>By <span class="sig">appointment</span></b><small>Selective intake, paced calendar</small></div>
     </div>
@@ -918,8 +928,10 @@ section.affil .al-tag{flex-shrink:0}
     <span class="al-tag">Network</span>
     <div class="marks fora-only">
       <span class="mk fora">
-        <span class="wordmark">Fora</span>
-        <small>Certified Travel Advisor · Curated luxury network</small>
+        <a href="https://www.foratravel.com" target="_blank" rel="noopener" class="fora-link" aria-label="Fora Travel — Certified Travel Advisor">
+          <span class="wordmark">Fora</span>
+          <small>Certified Travel Advisor · Curated network</small>
+        </a>
       </span>
     </div>
   </div>
@@ -933,7 +945,7 @@ section.affil .al-tag{flex-shrink:0}
       <h2>Complexity is <span class="sig">our</span> responsibility. Not yours.</h2>
     </div>
     <div class="body">
-      <p>Marciacq Travel Studio is a <strong>luxury tourism experience design studio</strong> — international itineraries, Panama experiences, and multigenerational journeys. Founded by Nicole Marciacq, trained in international hospitality in Switzerland and Spain. The principle is one line: <strong>complexity is our responsibility, not the client's</strong>.</p>
+      <p>Marciacq Travel Studio designs, coordinates, and executes travel programs so they run without failure. Nicole Marciacq operates across <strong>leisure, corporate, MICE/bleisure, and multigenerational family travel</strong> — with the systems mindset and multi-context fluency that most advisors don't build simultaneously.</p>
       <p>Each journey is structured with <strong>validated suppliers, defined processes, and operational attention to detail</strong> — so the client arrives, lives the trip, and returns with the certainty that every detail was resolved.</p>
       <p>The experiences we design are anchored in the natural and cultural heritage of each destination — what a community has built, preserved, and passed down over time. That context is what gives every itinerary its depth.</p>
       <div class="signoff">
@@ -1357,7 +1369,7 @@ section.affil .al-tag{flex-shrink:0}
       <div class="foot-brand">
         <div class="mark">Marciacq</div>
         <div class="sub">Travel Studio</div>
-        <p>A luxury tourism experience design studio. Where meaningful travel feels effortless.</p>
+        <p>A structured, high-trust travel business. Where meaningful travel feels effortless.</p>
       </div>
       <div>
         <h6>Programs</h6>
