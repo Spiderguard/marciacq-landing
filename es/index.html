@@ -742,6 +742,27 @@ section.affil .mk.school b{font-size:16px!important}
 section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
 @media(max-width:760px){section.affil{padding:20px 0!important}section.affil .marks{gap:16px 22px!important}section.affil .mk b{font-size:14px!important}}
 
+
+/* UX-AUDIT: trajectory strip mobile improvement */
+@media(max-width:760px){
+  .arc{margin-top:36px;padding-top:24px}
+  .arc-head{margin-bottom:18px;gap:10px}
+  .arc-head .arc-sub{text-align:left;font-size:12px}
+  .arc-grid{grid-template-columns:1fr 1fr!important;gap:0}
+  .arc-item{padding:18px 14px 0 0!important;min-height:auto;border-bottom:1px solid rgba(49,37,31,.10)}
+  .arc-item:nth-child(2n+1){border-right:1px solid rgba(49,37,31,.10)!important;padding-left:0!important;padding-right:14px!important}
+  .arc-item:nth-child(2n){padding-left:14px!important;padding-right:0!important;border-right:none!important}
+  .arc-item:nth-last-child(-n+2){border-bottom:none}
+  .arc-item .y{font-size:9px!important;margin-bottom:8px}
+  .arc-item .r{font-size:13px!important;margin-bottom:4px}
+  .arc-item .r b{font-size:13.5px!important}
+  .arc-item .d{font-size:11px!important;line-height:1.45}
+}
+@media(max-width:380px){
+  .arc-grid{grid-template-columns:1fr!important}
+  .arc-item,.arc-item:nth-child(2n+1){border-right:none!important;padding-left:0!important;padding-right:0!important;padding-bottom:16px!important}
+}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
@@ -831,7 +852,7 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
 
     <div class="trust">
       <div class="t"><b>4 <span class="sig">verticales</span></b><small>Leisure · Panamá · Corporativo / MICE · Familia</small></div>
-      <div class="t"><b>Virtuoso <span class="sig">·</span> FORA</b><small>Acceso de red de miembros</small></div>
+      <div class="t"><b><span class="sig">Fora</span> Certified</b><small>Asesora de viajes independiente</small></div>
       <div class="t"><b>Con <span class="sig">cita</span></b><small>Consulta selectiva, calendario pausado</small></div>
       <div class="t"><b>EN · ES · FR</b><small>Idiomas operativos</small></div>
     </div>
@@ -860,7 +881,7 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
     </div>
     <div class="body">
       <p>Marciacq Travel Studio es un estudio boutique de diseño de viajes especializado en itinerarios internacionales, programas corporativos y viajes familiares multigeneracionales. Fundado por Nicole Marciacq, con formación en hospitalidad internacional en Suiza y España, el estudio opera con un principio claro: <strong>la complejidad es nuestra responsabilidad, no la del cliente</strong>.</p>
-      <p>Cada viaje se estructura con <strong>proveedores validados, procesos definidos y atención al detalle logístico</strong>, para que el cliente llegue, disfrute y regrese con la certeza de que cada detalle estuvo resuelto.</p>
+      <p>Cada viaje se estructura con <strong>proveedores validados, procesos definidos y atención al detalle logístico</strong>, para que el cliente llegue, viva el viaje y regrese con la certeza de que cada detalle estuvo resuelto.</p>
       <p>Las experiencias que diseñamos se anclan en el patrimonio natural y cultural de cada destino — lo que una comunidad ha construido, preservado y transmitido a lo largo del tiempo. Ese conocimiento le da profundidad y sentido a cada itinerario.</p>
       <div class="signoff">
         <span class="name">— Nicole Marciacq</span>
@@ -912,38 +933,6 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
   </div>
 </section>
 
-<!-- FOUNDER -->
-<section id="founder" class="founder r">
-  <div class="container">
-    <!--MOCKUP-IMG · replace with editorial Nicole photo per brand image direction-->
-    <div class="imgz real portrait" aria-hidden="true">
-      <img src="../images/nicole-amalfi.webp" alt="" loading="lazy" class="founder-photo">
-      <span class="index">№ 08 / Fundadora &amp; Travel Advisor</span>
-      <span class="cap">Fundadora<small>Editorial · Costa amalfitana, en viaje.</small></span>
-    </div>
-    <div>
-      <span class="label">№ 02 — Fundadora &amp; Travel Advisor</span>
-      <h2>Nicole <span class="sig">Marciacq</span>.</h2>
-      <p><strong>Fundadora &amp; Travel Advisor.</strong> Nicole lidera personalmente Marciacq Travel Studio. Su trayectoria abarca operaciones de lujo, protocolo diplomático y cuatro años como <strong>Head of Product Development de la Autoridad de Turismo de Panamá</strong>, trabajando en el Plan Maestro de Turismo Sostenible (2020–2025).</p>
-      <p>Formada en <strong>Glion Institute of Higher Education</strong> (Suiza) — International Hospitality Management con especialización en Event Management — y en <strong>Ostelea</strong> (España) — Máster en Eventos, Protocolo y Turismo MICE. Como <strong>Certified Travel Advisor con Fora Travel</strong>, el estudio opera a través de la red curada de Fora — tarifas y amenities preferenciales en hoteles y operadores de lujo validados a nivel mundial.</p>
-      <span class="signature">— Nicole</span>
-      <div class="arc">
-        <div class="arc-head">
-          <span class="arc-tag">Trayectoria</span>
-          <span class="arc-sub">Suiza · Portugal · Panamá · España — y de vuelta. El estudio se construye sobre lo que vino antes.</span>
-        </div>
-        <div class="arc-grid">
-          <div class="arc-item"><span class="y">2011 — 2015</span><span class="r"><b>Glion</b> · Suiza</span><span class="d">BSc International Hospitality Management · especialización Event Management</span></div>
-          <div class="arc-item"><span class="y">2015</span><span class="r"><b>Cumbre de las Américas</b></span><span class="d">Jefes de Estado · coordinación de protocolo, reunión restringida</span></div>
-          <div class="arc-item"><span class="y">2017 — 2018</span><span class="r"><b>Ostelea</b> · España</span><span class="d">Máster · Eventos, Protocolo &amp; Turismo MICE</span></div>
-          <div class="arc-item"><span class="y">2019 — 2023</span><span class="r"><b>Autoridad de Turismo de Panamá</b></span><span class="d">Head of Product Development · 4 años · Plan Maestro de Turismo Sostenible</span></div>
-          <div class="arc-item"><span class="y">2025</span><span class="r"><b>Marciacq Travel Studio</b></span><span class="d">Fundado · Fora Certified Travel Advisor</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- SIGNATURE PROGRAMS -->
 <section id="programs" class="programs r">
   <div class="container">
@@ -964,7 +953,7 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
         <div class="pbody">
           <span class="tag">Caribe panameño · 7-9 noches</span>
           <h3>Guna Yala · <span class="sig">Open Water</span></h3>
-          <p>Un programa de navegación por el archipiélago de la Comarca — diseñado con los stewards indígenas, no a través de ellos. Embarcación privada, capitán validado, sin encuentros posados. Continuidad operativa de extremo a extremo.</p>
+          <p>Un programa de navegación por el archipiélago de la Comarca — diseñado con los guardianes indígenas, no a través de ellos. Embarcación privada, capitán validado, sin encuentros posados. Continuidad operativa de extremo a extremo.</p>
           <div class="footrow">
             <div class="price"><small>Compromiso</small><b>Por <span class="sig">encargo</span></b></div>
             <span class="arrow">→</span>
@@ -978,7 +967,7 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
         <div class="pbody">
           <span class="tag">Tierras altas panameñas · 6 noches</span>
           <h3>The <span class="sig">Highland</span> Threshold</h3>
-          <p>Boquete, Cerro Punta, Volcán Barú. Un programa para principales que miden la altitud en silencio. Ascenso pre-alba a 3.475 m, mañanas de bosque nuboso, noches off-grid.</p>
+          <p>Boquete, Cerro Punta, Volcán Barú. Un programa para principales que miden la altitud en silencio. Ascenso pre-alba a 3.475 m, mañanas de bosque nuboso, noches sin conexión.</p>
           <div class="footrow">
             <div class="price"><small>Compromiso</small><b>Por <span class="sig">encargo</span></b></div>
             <span class="arrow">→</span>
@@ -1004,7 +993,7 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
         <div class="pbody">
           <span class="tag">Parejas · 6-9 noches</span>
           <h3>The Honeymoon <span class="sig">Reserve</span></h3>
-          <p>Un programa diseñado para dos — ritmo, privacidad y decisiones tomadas por el grupo más pequeño. Lunas de miel, aniversarios y viajes de milestone que se ganan su quietud.</p>
+          <p>Un programa diseñado para dos — ritmo, privacidad y decisiones tomadas por el grupo más pequeño. Lunas de miel, aniversarios y viajes de hito que se ganan su quietud.</p>
           <div class="footrow">
             <div class="price"><small>Compromiso</small><b>Por <span class="sig">encargo</span></b></div>
             <span class="arrow">→</span>
@@ -1039,7 +1028,39 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
       </a>
     </div>
 
-    <p class="note">Toda inversión es un punto de partida. El costo final del programa depende del tamaño del grupo, alcance operativo, sourcing y duración. Cotizamos en USD y atendemos multi-moneda bajo solicitud.</p>
+    <p class="note">Toda inversión es un punto de partida. El costo final del programa depende del tamaño del grupo, alcance operativo, aprovisionamiento y duración. Cotizamos en USD y atendemos multi-moneda bajo solicitud.</p>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder" class="founder r">
+  <div class="container">
+    <!--MOCKUP-IMG · replace with editorial Nicole photo per brand image direction-->
+    <div class="imgz real portrait" aria-hidden="true">
+      <img src="../images/nicole-amalfi.webp" alt="" loading="lazy" class="founder-photo">
+      <span class="index">№ 08 / Fundadora &amp; Travel Advisor</span>
+      <span class="cap">Fundadora<small>Editorial · Costa amalfitana, en viaje.</small></span>
+    </div>
+    <div>
+      <span class="label">№ 02 — Fundadora &amp; Travel Advisor</span>
+      <h2>Nicole <span class="sig">Marciacq</span>.</h2>
+      <p><strong>Fundadora &amp; Travel Advisor.</strong> Nicole lidera personalmente Marciacq Travel Studio. Su trayectoria abarca operaciones de lujo, protocolo diplomático y cuatro años como <strong>Head of Product Development de la Autoridad de Turismo de Panamá</strong>, trabajando en el Plan Maestro de Turismo Sostenible (2020–2025).</p>
+      <p>Formada en <strong>Glion Institute of Higher Education</strong> (Suiza) — International Hospitality Management con especialización en Event Management — y en <strong>Ostelea</strong> (España) — Máster en Eventos, Protocolo y Turismo MICE. Como <strong>Certified Travel Advisor con Fora Travel</strong>, el estudio opera a través de la red curada de Fora — tarifas y amenities preferenciales en hoteles y operadores de lujo validados a nivel mundial.</p>
+      <span class="signature">— Nicole</span>
+      <div class="arc">
+        <div class="arc-head">
+          <span class="arc-tag">Trayectoria</span>
+          <span class="arc-sub">Suiza · Portugal · Panamá · España — y de vuelta. El estudio se construye sobre lo que vino antes.</span>
+        </div>
+        <div class="arc-grid">
+          <div class="arc-item"><span class="y">2011 — 2015</span><span class="r"><b>Glion</b> · Suiza</span><span class="d">BSc International Hospitality Management · especialización Event Management</span></div>
+          <div class="arc-item"><span class="y">2015</span><span class="r"><b>Cumbre de las Américas</b></span><span class="d">Jefes de Estado · coordinación de protocolo, reunión restringida</span></div>
+          <div class="arc-item"><span class="y">2017 — 2018</span><span class="r"><b>Ostelea</b> · España</span><span class="d">Máster · Eventos, Protocolo &amp; Turismo MICE</span></div>
+          <div class="arc-item"><span class="y">2019 — 2023</span><span class="r"><b>Autoridad de Turismo de Panamá</b></span><span class="d">Head of Product Development · 4 años · Plan Maestro de Turismo Sostenible</span></div>
+          <div class="arc-item"><span class="y">2025</span><span class="r"><b>Marciacq Travel Studio</b></span><span class="d">Fundado · Fora Certified Travel Advisor</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1067,7 +1088,7 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
       <article class="vert">
         <span class="vn">02 — Panamá</span>
         <h3>Experiencias en <span class="sig">Panamá</span></h3>
-        <p>Conocimiento local profundo en Guna Yala, las tierras altas de Boquete, la península de Azuero y la costa caribeña. Proveedores validados, stewards indígenas, aviación privada — para clientes internacionales con altos estándares operativos.</p>
+        <p>Conocimiento local profundo en Guna Yala, las tierras altas de Boquete, la península de Azuero y la costa caribeña. Proveedores validados, guardianes indígenas, aviación privada — para clientes internacionales con altos estándares operativos.</p>
         <div class="meta"><span>Guna Yala</span><span>Boquete · Barú</span><span>Azuero · Pedasí</span><span>Portobelo</span></div>
         <a href="#intake" class="more">Diseñar un programa de Panamá</a>
       </article>
@@ -1075,14 +1096,14 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
         <span class="vn">03 — Corporativo</span>
         <h3>Corporativo &amp; <span class="sig">MICE / Bleisure</span></h3>
         <p>Coordinación end-to-end de programas grupales, viajes de incentivos y extensiones bleisure. Diseñado para crear cero problemas al decisor.</p>
-        <div class="meta"><span>Incentives</span><span>Off-sites</span><span>Conferences</span><span>Bleisure</span></div>
-        <a href="#intake" class="more">Briefar un programa</a>
+        <div class="meta"><span>Incentivos</span><span>Off-sites</span><span>Conferencias</span><span>Bleisure</span></div>
+        <a href="#intake" class="more">Encargar un programa</a>
       </article>
       <article class="vert">
         <span class="vn">04 — Multigeneracional</span>
         <h3>Familia <span class="sig">multigeneracional</span></h3>
         <p>Logística compleja entre rangos de edad mixtos, necesidades dietéticas y perfiles de riesgo. Coordinado desde una sola estructura operativa para que la familia experimente el viaje, no la planificación.</p>
-        <div class="meta"><span>3+ generations</span><span>Mixed mobility</span><span>Private guides</span></div>
+        <div class="meta"><span>3+ generations</span><span>Movilidad mixta</span><span>Guías privados</span></div>
         <a href="#intake" class="more">Enviar brief familiar</a>
       </article>
     </div>
@@ -1097,11 +1118,11 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
     <p class="intro-p">Un camino definido de cinco pasos. Cada fase tiene sus entregables y sus compromisos. <strong>Ves la arquitectura antes de la propuesta</strong> — la única forma de saber si trabajas con infraestructura o con improvisación.</p>
 
     <div class="steps">
-      <div class="step"><span class="sn">i.</span><h4>Consulta</h4><p>Un formulario estructurado y una conversación de 30 minutos. Evaluamos fit antes que alcance, alcance antes que precio.</p><div class="dur">Formulario 15 min · Llamada 30 min</div></div>
+      <div class="step"><span class="sn">i.</span><h4>Consulta</h4><p>Un formulario estructurado y una conversación de 30 minutos. Evaluamos compatibilidad antes que alcance, alcance antes que precio.</p><div class="dur">Formulario 15 min · Llamada 30 min</div></div>
       <div class="step"><span class="sn">ii.</span><h4>Descubrimiento</h4><p>Stakeholders, contexto, restricciones. Sacamos a la superficie las variables que determinan si el programa es factible al nivel prometido.</p><div class="dur">5-10 días hábiles</div></div>
       <div class="step"><span class="sn">iii.</span><h4>Arquitectura</h4><p>Una propuesta documentada con resumen de validación de proveedores, contingencias de riesgo y estructura clara de costos. Sin relleno.</p><div class="dur">10-14 días hábiles</div></div>
-      <div class="step"><span class="sn">iv.</span><h4>Ejecución</h4><p>El programa corre sobre proveedores validados y procesos documentados. <strong>Global Rescue, evacuación médica y protocolos de risk-advisory activos en todo momento.</strong> Itinerario entregado a través de la <strong>app Fora Travel</strong> con PDF de respaldo offline. Único punto de contacto, de inicio a fin.</p><div class="dur">Duración del viaje</div></div>
-      <div class="step"><span class="sn">v.</span><h4>Continuidad</h4><p>Debrief, archivo y una versión documentada de tu programa — repetible cuando tus necesidades vuelvan. Los clientes de largo plazo construyen a lo largo de años.</p><div class="dur">Continuo</div></div>
+      <div class="step"><span class="sn">iv.</span><h4>Ejecución</h4><p>El programa corre sobre proveedores validados y procesos documentados. <strong>Global Rescue, evacuación médica y protocolos de asesoría de riesgo activos en todo momento.</strong> Itinerario entregado a través de la <strong>app Fora Travel</strong> con PDF de respaldo offline. Único punto de contacto, de inicio a fin.</p><div class="dur">Duración del viaje</div></div>
+      <div class="step"><span class="sn">v.</span><h4>Continuidad</h4><p>Cierre, archivo y una versión documentada de tu programa — repetible cuando tus necesidades vuelvan. Los clientes de largo plazo construyen a lo largo de años.</p><div class="dur">Continuo</div></div>
     </div>
 
     <div class="actions">
@@ -1136,11 +1157,11 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
         <p class="summary">Ocho viajeros, tres generaciones — incluyendo un niño pequeño y un principal mayor. De Roma a la Costa Amalfitana, día privado en bote en Capri, una semana en villa toscana, tres días en Madrid. Celebración de cumpleaños 60 a mitad del itinerario. Catorce variables, un plan de ejecución.</p>
         <h5>Arquitectura del servicio</h5>
         <ul class="case-list">
-          <li><span class="k">Viajeros</span><span>Tres generaciones, ocho personas incluyendo un toddler</span></li>
+          <li><span class="k">Viajeros</span><span>Tres generaciones, ocho personas incluyendo un niño pequeño</span></li>
           <li><span class="k">Recorrido</span><span>Panamá → París → Roma → Salerno → Capri → Toscana → Madrid → Panamá</span></li>
           <li><span class="k">Alojamientos</span><span>Crossing Condotti (Roma) · Villa Le Calvane (Toscana) · apartamento curado + Petit Palace (Madrid)</span></li>
           <li><span class="k">Proveedores</span><span>14+ partners validados · historial documentado</span></li>
-          <li><span class="k">Logística</span><span>Frecciarossa Business, transfers privados, flota rentada, bote privado en Capri, experiencia en bodega Antinori</span></li>
+          <li><span class="k">Logística</span><span>Frecciarossa Business, transfers privados, flota de alquiler, embarcación privada en Capri, experiencia en bodega Antinori</span></li>
           <li><span class="k">Superficie de riesgo</span><span>Mapeada antes del viaje · advisor en tiempo real durante</span></li>
           <li><span class="k">Itinerario</span><span>App Fora Travel + PDF offline · fuente única de verdad</span></li>
           <li><span class="k">Resultado</span><span>Entregado como se diseñó · cumpleaños 60 celebrado a mitad de ruta</li>
@@ -1158,7 +1179,7 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
     <div class="head">
       <span class="label">№ 07 — Para quién</span>
       <h2>El estudio es <span class="sig">selectivo</span> por diseño.</h2>
-      <p class="lead">Un mismatch crea exactamente la fricción que la marca está construida para eliminar. Somos directos sobre el fit porque protege a las dos partes.</p>
+      <p class="lead">Un desajuste crea exactamente la fricción que la marca está construida para eliminar. Somos directos sobre el fit porque protege a las dos partes.</p>
     </div>
 
     <div class="fits">
@@ -1166,10 +1187,10 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
         <h4>Trabajamos bien con</h4>
         <ul>
           <li>Clientes que tratan el viaje como una decisión, no como una transacción</li>
-          <li>Principales familiares coordinando logística grupal compleja</li>
-          <li>Leads de operaciones briefando programas corporativos o MICE</li>
+          <li>Cabezas de familia que coordinan logística grupal compleja</li>
+          <li>Responsables de operaciones que encargan programas corporativos o MICE</li>
           <li>Viajeros recurrentes construyendo un programa documentado a lo largo de años</li>
-          <li>Stakeholders que valoran proveedores validados sobre name-dropping</li>
+          <li>Stakeholders que valoran proveedores validados por encima del name-dropping</li>
         </ul>
       </div>
       <div class="nofit">
@@ -1179,7 +1200,7 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
           <li>Reservas de un solo componente — solo hotel, solo vuelos</li>
           <li>Clientes buscando contenido influencer o momentos escenificados</li>
           <li>Proyectos bajo umbrales presupuestarios que impiden el rigor operativo</li>
-          <li>Engagements que se saltan la consulta estructurada</li>
+          <li>Compromisos que omiten la consulta estructurada</li>
         </ul>
       </div>
     </div>
@@ -1254,21 +1275,21 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
         <h2>Envía un brief. <span class="sig">No una lista de deseos</span>.</h2>
       </div>
       <div class="right">
-        <p>La consulta inicia con un formulario de 15 minutos y una llamada de 30. Evaluamos fit antes que alcance, alcance antes que precio. Si no somos el estudio adecuado, lo decimos — y te dirigimos bien.</p>
+        <p>La consulta inicia con un formulario de 15 minutos y una llamada de 30. Evaluamos compatibilidad antes que alcance, alcance antes que precio. Si no somos el estudio adecuado, lo decimos — y te dirigimos bien.</p>
       </div>
     </div>
 
     <div class="channels">
       <a href="mailto:nicole@marciacqtravel.com?subject=Intake%20—%20New%20Program" class="ch">
         <span class="ck">01 — Directo</span>
-        <span class="cv">hello@<span class="sig">marciacq</span>travelstudio.com</span>
+        <span class="cv">nicole@<span class="sig">marciacq</span>travel.com</span>
         <span class="cd">Para nuevos programas y consulta estructurada.</span>
         <span class="arrow">→</span>
       </a>
     </div>
 
     <p class="discretion">La discreción es procedimental. NDA firmado antes de la arquitectura. Identidades, itinerarios y relaciones de proveedores archivados bajo acceso restringido.</p>
-    <p class="response">Respuesta en dos días hábiles. Confirmación de fit en cinco. El estudio opera con calendario pausado; la consulta cierra cuando la capacidad está comprometida.</p>
+    <p class="response">Respuesta en dos días hábiles. Confirmación de compatibilidad en cinco. El estudio opera con calendario pausado; la consulta cierra cuando la capacidad está comprometida.</p>
 
     <div class="actions">
       <a href="mailto:nicole@marciacqtravel.com?subject=Intake" class="cta alt">Iniciar la conversación</a>

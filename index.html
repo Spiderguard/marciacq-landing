@@ -742,6 +742,27 @@ section.affil .mk.school b{font-size:16px!important}
 section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
 @media(max-width:760px){section.affil{padding:20px 0!important}section.affil .marks{gap:16px 22px!important}section.affil .mk b{font-size:14px!important}}
 
+
+/* UX-AUDIT: trajectory strip mobile improvement */
+@media(max-width:760px){
+  .arc{margin-top:36px;padding-top:24px}
+  .arc-head{margin-bottom:18px;gap:10px}
+  .arc-head .arc-sub{text-align:left;font-size:12px}
+  .arc-grid{grid-template-columns:1fr 1fr!important;gap:0}
+  .arc-item{padding:18px 14px 0 0!important;min-height:auto;border-bottom:1px solid rgba(49,37,31,.10)}
+  .arc-item:nth-child(2n+1){border-right:1px solid rgba(49,37,31,.10)!important;padding-left:0!important;padding-right:14px!important}
+  .arc-item:nth-child(2n){padding-left:14px!important;padding-right:0!important;border-right:none!important}
+  .arc-item:nth-last-child(-n+2){border-bottom:none}
+  .arc-item .y{font-size:9px!important;margin-bottom:8px}
+  .arc-item .r{font-size:13px!important;margin-bottom:4px}
+  .arc-item .r b{font-size:13.5px!important}
+  .arc-item .d{font-size:11px!important;line-height:1.45}
+}
+@media(max-width:380px){
+  .arc-grid{grid-template-columns:1fr!important}
+  .arc-item,.arc-item:nth-child(2n+1){border-right:none!important;padding-left:0!important;padding-right:0!important;padding-bottom:16px!important}
+}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
@@ -912,38 +933,6 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
   </div>
 </section>
 
-<!-- FOUNDER -->
-<section id="founder" class="founder r">
-  <div class="container">
-    <!--MOCKUP-IMG · replace with editorial Nicole photo per brand image direction-->
-    <div class="imgz real portrait" aria-hidden="true">
-      <img src="images/nicole-amalfi.webp" alt="" loading="lazy" class="founder-photo">
-      <span class="index">№ 08 / Founder &amp; Travel Advisor</span>
-      <span class="cap">Founder<small>Editorial · Costiera amalfitana, on assignment.</small></span>
-    </div>
-    <div>
-      <span class="label">№ 02 — Founder &amp; Travel Advisor</span>
-      <h2>Nicole <span class="sig">Marciacq</span>.</h2>
-      <p><strong>Founder &amp; Travel Advisor.</strong> Nicole leads Marciacq Travel Studio personally. Her trajectory spans luxury operations, diplomatic protocol, and four years as <strong>Head of Product Development at the Panama Tourism Authority</strong>, working on Panama's Sustainable Tourism Master Plan (2020–2025).</p>
-      <p>Trained at <strong>Glion Institute of Higher Education</strong> (Switzerland) — International Hospitality Management with Event Management specialization — and <strong>Ostelea</strong> (Spain) — Master's Degree in Events, Protocol, and MICE Tourism. As a <strong>Certified Travel Advisor with Fora Travel</strong>, the studio operates through Fora's curated network — preferred-partner rates and amenities across vetted luxury hotels and operators worldwide.</p>
-      <span class="signature">— Nicole</span>
-      <div class="arc">
-        <div class="arc-head">
-          <span class="arc-tag">Trajectory</span>
-          <span class="arc-sub">Switzerland · Portugal · Panama · Spain — and back. The studio rests on what came before it.</span>
-        </div>
-        <div class="arc-grid">
-          <div class="arc-item"><span class="y">2011 — 2015</span><span class="r"><b>Glion</b> · Switzerland</span><span class="d">BSc International Hospitality Management · Event Management specialization</span></div>
-          <div class="arc-item"><span class="y">2015</span><span class="r"><b>Summit of the Americas</b></span><span class="d">Heads of State · Protocol coordination, restricted-access meeting</span></div>
-          <div class="arc-item"><span class="y">2017 — 2018</span><span class="r"><b>Ostelea</b> · Spain</span><span class="d">Master's · Events, Protocol &amp; MICE Tourism</span></div>
-          <div class="arc-item"><span class="y">2019 — 2023</span><span class="r"><b>Panama Tourism Authority</b></span><span class="d">Head of Product Development · 4 yrs · Sustainable Tourism Master Plan</span></div>
-          <div class="arc-item"><span class="y">2025</span><span class="r"><b>Marciacq Travel Studio</b></span><span class="d">Founded · Fora Certified Travel Advisor</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- SIGNATURE PROGRAMS -->
 <section id="programs" class="programs r">
   <div class="container">
@@ -1040,6 +1029,38 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
     </div>
 
     <p class="note">All investments are starting points. Final program cost is a function of group size, operational scope, sourcing, and duration. We quote in USD and accommodate multi-currency on request.</p>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder" class="founder r">
+  <div class="container">
+    <!--MOCKUP-IMG · replace with editorial Nicole photo per brand image direction-->
+    <div class="imgz real portrait" aria-hidden="true">
+      <img src="images/nicole-amalfi.webp" alt="" loading="lazy" class="founder-photo">
+      <span class="index">№ 08 / Founder &amp; Travel Advisor</span>
+      <span class="cap">Founder<small>Editorial · Costiera amalfitana, on assignment.</small></span>
+    </div>
+    <div>
+      <span class="label">№ 02 — Founder &amp; Travel Advisor</span>
+      <h2>Nicole <span class="sig">Marciacq</span>.</h2>
+      <p><strong>Founder &amp; Travel Advisor.</strong> Nicole leads Marciacq Travel Studio personally. Her trajectory spans luxury operations, diplomatic protocol, and four years as <strong>Head of Product Development at the Panama Tourism Authority</strong>, working on Panama's Sustainable Tourism Master Plan (2020–2025).</p>
+      <p>Trained at <strong>Glion Institute of Higher Education</strong> (Switzerland) — International Hospitality Management with Event Management specialization — and <strong>Ostelea</strong> (Spain) — Master's Degree in Events, Protocol, and MICE Tourism. As a <strong>Certified Travel Advisor with Fora Travel</strong>, the studio operates through Fora's curated network — preferred-partner rates and amenities across vetted luxury hotels and operators worldwide.</p>
+      <span class="signature">— Nicole</span>
+      <div class="arc">
+        <div class="arc-head">
+          <span class="arc-tag">Trajectory</span>
+          <span class="arc-sub">Switzerland · Portugal · Panama · Spain — and back. The studio rests on what came before it.</span>
+        </div>
+        <div class="arc-grid">
+          <div class="arc-item"><span class="y">2011 — 2015</span><span class="r"><b>Glion</b> · Switzerland</span><span class="d">BSc International Hospitality Management · Event Management specialization</span></div>
+          <div class="arc-item"><span class="y">2015</span><span class="r"><b>Summit of the Americas</b></span><span class="d">Heads of State · Protocol coordination, restricted-access meeting</span></div>
+          <div class="arc-item"><span class="y">2017 — 2018</span><span class="r"><b>Ostelea</b> · Spain</span><span class="d">Master's · Events, Protocol &amp; MICE Tourism</span></div>
+          <div class="arc-item"><span class="y">2019 — 2023</span><span class="r"><b>Panama Tourism Authority</b></span><span class="d">Head of Product Development · 4 yrs · Sustainable Tourism Master Plan</span></div>
+          <div class="arc-item"><span class="y">2025</span><span class="r"><b>Marciacq Travel Studio</b></span><span class="d">Founded · Fora Certified Travel Advisor</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1261,7 +1282,7 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
     <div class="channels">
       <a href="mailto:nicole@marciacqtravel.com?subject=Intake%20—%20New%20Program" class="ch">
         <span class="ck">01 — Direct</span>
-        <span class="cv">hello@<span class="sig">marciacq</span>travelstudio.com</span>
+        <span class="cv">nicole@<span class="sig">marciacq</span>travel.com</span>
         <span class="cd">For new programs and structured intake.</span>
         <span class="arrow">→</span>
       </a>
