@@ -356,7 +356,7 @@ p{color:var(--musgo);font-weight:300}
 .how .intro-p{font-size:16px;color:rgba(245,239,233,.78);line-height:1.75;max-width:54ch;margin-top:26px;font-weight:300}
 .how .intro-p strong{color:var(--perla);font-weight:400}
 
-.steps{margin-top:74px;display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid rgba(245,239,233,.16)}
+.steps{margin-top:74px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(245,239,233,.16)}
 .step{padding:36px 22px 0 0;border-right:1px solid rgba(245,239,233,.16);position:relative}
 .step:nth-child(n+2){padding-left:22px}
 .step:last-child{border-right:none;padding-right:0}
@@ -620,7 +620,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
 .arc-head .arc-tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:inline-flex;align-items:center;gap:14px}
 .arc-head .arc-tag::before{content:"";display:inline-block;width:22px;height:1px;background:var(--terra)}
 .arc-head .arc-sub{font-size:13px;color:var(--musgo);font-weight:300;font-style:italic;line-height:1.6;max-width:48ch;text-align:right}
-.arc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid rgba(49,37,31,.10)}
+.arc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(49,37,31,.10)}
 .arc-item{padding:24px 18px 0 0;border-right:1px solid rgba(49,37,31,.10);min-height:140px}
 .arc-item:nth-child(n+2){padding-left:18px}
 .arc-item:last-child{border-right:none;padding-right:0}
@@ -637,7 +637,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
 .arc-head .arc-tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:inline-flex;align-items:center;gap:14px}
 .arc-head .arc-tag::before{content:"";display:inline-block;width:22px;height:1px;background:var(--terra)}
 .arc-head .arc-sub{font-size:13px;color:var(--musgo);font-weight:300;font-style:italic;line-height:1.6;max-width:48ch;text-align:right}
-.arc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid rgba(49,37,31,.10)}
+.arc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(49,37,31,.10)}
 .arc-item{padding:24px 18px 0 0;border-right:1px solid rgba(49,37,31,.10);min-height:140px}
 .arc-item:nth-child(n+2){padding-left:18px}
 .arc-item:last-child{border-right:none;padding-right:0}
@@ -780,15 +780,28 @@ section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:5p
 /* AUDIT: Fora-only affiliations — centered elegant badge */
 section.affil .marks.fora-only{justify-content:center;width:100%}
 section.affil .mk.fora{flex-direction:row;align-items:baseline;gap:18px;padding:0;border:none;background:transparent}
-section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:38px;letter-spacing:-.005em;color:var(--arena);line-height:1;height:auto;position:relative}
-section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:6px;height:6px;background:var(--terra);border-radius:50%;margin-left:6px;vertical-align:middle;transform:translateY(-12px)}
+section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-style:normal;font-weight:500;font-size:36px;letter-spacing:.045em;text-transform:uppercase;color:var(--arena);line-height:1;height:auto;position:relative}
+section.affil .mk.fora .wordmark::after{display:none}
 section.affil .mk.fora small{font-size:11px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:flex;align-items:center}
 section.affil .al-tag{flex-shrink:0}
 @media(max-width:760px){
   section.affil .marks.fora-only{justify-content:flex-start}
   section.affil .mk.fora{flex-direction:column;align-items:flex-start;gap:6px}
-  section.affil .mk.fora .wordmark{font-size:30px}
+  section.affil .mk.fora .wordmark{font-size:26px}
 }
+
+
+/* AUDIT: subtle brand palette enrichment — Vered Salvia + Azul Orion accents */
+.arc-item:nth-child(odd) .y{color:var(--terra)}
+.arc-item:nth-child(even) .y{color:var(--salvia)}  /* Vered Salvia for visual variety */
+.pcard:hover{border-color:var(--terra)}
+.pcard:hover h3 .sig{color:var(--terra)}
+.vert .vn{color:var(--terra)}
+.step .dur{color:rgba(245,239,233,.55)}
+.feature-card .tag{color:var(--terra)}
+/* Use Azul Orion for select element accents */
+.about .signature{color:var(--terra)}
+.case .tag{color:var(--terra)}
 
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
@@ -863,7 +876,7 @@ section.affil .al-tag{flex-shrink:0}
     <div>
       <span class="label lbl">Un studio de voyage</span>
       <h1>Là où le voyage <span class="sig">significatif</span> se vit <span class="sig">sans friction</span>.</h1>
-      <p class="lead">Un studio structuré et de haute confiance qui conçoit des itinéraires internationaux, des expériences au Panama, des programmes d'entreprise et des voyages multigénérationnels. La complexité se résout avant que vous ne la ressentiez.</p>
+      <p class="lead">Un <strong>studio de design d'expériences de voyage de luxe</strong>. Itinéraires internationaux, Panama et voyages multigénérationnels — conçus sans friction. La complexité se résout avant que vous ne la ressentiez.</p>
       <div class="actions">
         <a href="#intake" class="cta">Démarrer la consultation</a>
         <a href="#programs" class="cta ghost">Programmes signature</a>
@@ -906,7 +919,7 @@ section.affil .al-tag{flex-shrink:0}
       <h2>La complexité est <span class="sig">notre</span> responsabilité. Pas la vôtre.</h2>
     </div>
     <div class="body">
-      <p>Marciacq Travel Studio est un studio boutique de design de voyages spécialisé dans les itinéraires internationaux, les programmes corporate et les voyages familiaux multigénérationnels. Fondé par Nicole Marciacq — formée en hôtellerie internationale en Suisse et en Espagne — le studio opère selon un principe clair : <strong>la complexité est notre responsabilité, pas celle du client</strong>.</p>
+      <p>Marciacq Travel Studio est un <strong>studio de design d'expériences de voyage de luxe</strong> — itinéraires internationaux, expériences au Panama et voyages multigénérationnels. Fondé par Nicole Marciacq, formée en hôtellerie internationale en Suisse et en Espagne. Le principe tient en une ligne : <strong>la complexité est notre responsabilité, pas celle du client</strong>.</p>
       <p>Chaque voyage est structuré avec <strong>des fournisseurs validés, des processus définis et une attention opérationnelle au détail</strong> — pour que le client arrive, profite et rentre avec la certitude que chaque détail a été résolu.</p>
       <p>Les expériences que nous concevons s'ancrent dans le patrimoine naturel et culturel de chaque destination — ce qu'une communauté a construit, préservé et transmis au fil du temps. Ce contexte donne à chaque itinéraire sa profondeur et son sens.</p>
       <div class="signoff">
@@ -942,7 +955,7 @@ section.affil .al-tag{flex-shrink:0}
         <div>
           <span class="tag">Multigénérationnel · Italie &amp; Croatie</span>
           <h3>The <span class="sig">Adriatic Architecture</span>.</h3>
-          <p class="summary" style="margin-top:18px">Un programme documenté de 12 jours conçu pour des familles à trois générations. De Rome aux îles dalmates. Yacht privé pour la portion maritime. Point unique de contact opérationnel d'un bout à l'autre.</p>
+          <p class="summary" style="margin-top:18px">Programme de 12 jours pour des familles à trois générations. De Rome aux îles dalmates. Yacht privé pour la portion maritime. Point de contact unique, d'un bout à l'autre.</p>
         </div>
         <div class="facts">
           <div class="fact"><small>Durée</small><b>12 nuits</b></div>
@@ -993,7 +1006,7 @@ section.affil .al-tag{flex-shrink:0}
         <div class="pbody">
           <span class="tag">Hautes terres du Panama · 6 nuits</span>
           <h3>The <span class="sig">Highland</span> Threshold</h3>
-          <p>Boquete, Cerro Punta, Volcán Barú. Un programme pour ceux qui mesurent l'altitude en silence. Ascension avant l'aube à 3 475 m, matins en forêt nébuleuse, soirées hors-réseau.</p>
+          <p>Boquete, Cerro Punta, Volcán Barú. Pour ceux qui mesurent l'altitude en silence. Ascension avant l'aube à 3 475 m. Matins en forêt nébuleuse. Soirées hors-réseau.</p>
           <div class="footrow">
             <div class="price"><small>Engagement</small><b>Sur <span class="sig">brief</span></b></div>
             <span class="arrow">→</span>
@@ -1006,7 +1019,7 @@ section.affil .al-tag{flex-shrink:0}
         <div class="pbody">
           <span class="tag">Panama culturel · 5-7 nuits</span>
           <h3>The <span class="sig">Azuero</span> Sequence</h3>
-          <p>Las Tablas, Pedasí, Pedregal. Construit autour du calendrier culturel — festivals, polleras, cuisines familiales, guides en langues autochtones issus de la région. Pas un circuit.</p>
+          <p>Las Tablas, Pedasí, Pedregal. Construit autour du calendrier culturel — festivals, polleras, cuisines familiales. Pas un circuit.</p>
           <div class="footrow">
             <div class="price"><small>Engagement</small><b>Sur <span class="sig">brief</span></b></div>
             <span class="arrow">→</span>
@@ -1032,7 +1045,7 @@ section.affil .al-tag{flex-shrink:0}
         <div class="pbody">
           <span class="tag">Multigénérationnel · 9 nuits</span>
           <h3>The Family <span class="sig">Estate</span></h3>
-          <p>Un seul domaine comme base. Trois générations, profils de mobilité distribués, journées programmées et après-midis non programmés. Pour ceux qui veulent la présence sans chorégraphie.</p>
+          <p>Un seul domaine comme base. Trois générations, profils de mobilité distribués. Matinées programmées, après-midis non programmés. Présence sans chorégraphie.</p>
           <div class="footrow">
             <div class="price"><small>Engagement</small><b>Sur <span class="sig">brief</span></b></div>
             <span class="arrow">→</span>
@@ -1045,7 +1058,7 @@ section.affil .al-tag{flex-shrink:0}
         <div class="pbody">
           <span class="tag">Corporate / MICE · 3-7 nuits</span>
           <h3>Corporate &amp; <span class="sig">Groupe</span></h3>
-          <p>Un cadre pour entreprises modulaire. Lieux validés sur trois continents. Surface de risque cartographiée, contingences documentées, escalades éliminées avant de se former.</p>
+          <p>Un cadre modulaire. Lieux validés sur trois continents. Surface de risque cartographiée. Contingences documentées. Zéro escalade.</p>
           <div class="footrow">
             <div class="price"><small>Engagement</small><b>Sur <span class="sig">brief</span></b></div>
             <span class="arrow">→</span>
@@ -1070,8 +1083,8 @@ section.affil .al-tag{flex-shrink:0}
     <div>
       <span class="label">№ 02 — Fondatrice &amp; Travel Advisor</span>
       <h2>Nicole <span class="sig">Marciacq</span>.</h2>
-      <p><strong>Fondatrice &amp; Travel Advisor.</strong> Nicole dirige personnellement Marciacq Travel Studio. Parcours en opérations de luxe, protocole diplomatique et quatre années comme <strong>Head of Product Development à l'Autorité du Tourisme du Panama</strong>, sur le Plan Directeur du Tourisme Durable (2020–2025).</p>
-      <p>Formée à <strong>Glion Institute of Higher Education</strong> (Suisse) — International Hospitality Management avec spécialisation Event Management — et à <strong>Ostelea</strong> (Espagne) — Master en Événementiel, Protocole et Tourisme MICE. En tant que <strong>Certified Travel Advisor chez Fora Travel</strong>, le studio opère via le réseau curaté de Fora — tarifs et amenities préférentiels dans des hôtels et opérateurs de luxe validés dans le monde entier.</p>
+      <p><strong>Fondatrice &amp; Travel Advisor.</strong> Nicole dirige personnellement Marciacq Travel Studio. Parcours en opérations de luxe, protocole diplomatique et plus d'une décennie en hôtellerie internationale et conception d'événements.</p>
+      <p>Formée à <strong>Glion</strong> (Suisse · BSc Hôtellerie) et à <strong>Ostelea</strong> (Espagne · Master Événementiel, Protocole &amp; MICE). En tant que <strong>Certified Travel Advisor chez Fora Travel</strong>, le studio opère via le réseau curaté de Fora — tarifs et amenities préférentiels dans des hôtels et opérateurs de luxe validés dans le monde entier.</p>
       <span class="signature">— Nicole</span>
       <div class="arc">
         <div class="arc-head">
@@ -1082,7 +1095,6 @@ section.affil .al-tag{flex-shrink:0}
           <div class="arc-item"><span class="y">2011 — 2015</span><span class="r"><b>Glion</b> · Suisse</span><span class="d">BSc International Hospitality Management · spécialisation Event Management</span></div>
           <div class="arc-item"><span class="y">2015</span><span class="r"><b>Sommet des Amériques</b></span><span class="d">Chefs d'État · coordination protocolaire, réunion restreinte</span></div>
           <div class="arc-item"><span class="y">2017 — 2018</span><span class="r"><b>Ostelea</b> · Espagne</span><span class="d">Master · Événementiel, Protocole &amp; Tourisme MICE</span></div>
-          <div class="arc-item"><span class="y">2019 — 2023</span><span class="r"><b>Autorité du Tourisme du Panama</b></span><span class="d">Head of Product Development · 4 ans · Plan Directeur du Tourisme Durable</span></div>
           <div class="arc-item"><span class="y">2025</span><span class="r"><b>Marciacq Travel Studio</b></span><span class="d">Fondé · Fora Certified Travel Advisor</span></div>
         </div>
       </div>
@@ -1180,7 +1192,7 @@ section.affil .al-tag{flex-shrink:0}
       <div class="right">
         <span class="tag">Anonymisé · Programme 04 · 2026</span>
         <h3>Un programme multigénérationnel de 18 jours à travers <span class="sig">l'Italie &amp; l'Espagne</span>.</h3>
-        <p class="summary">Huit voyageurs sur trois générations — incluant un jeune enfant et un principal aîné. De Rome à la Côte Amalfitaine, journée en yacht privé à Capri, une semaine en villa toscane, trois jours à Madrid. Célébration des 60 ans à mi-parcours. Quatorze variables, un plan d'exécution.</p>
+        <p class="summary">Huit voyageurs, trois générations — du jeune enfant au principal aîné. Rome → Côte Amalfitaine → Capri (yacht privé) → villa toscane → Madrid. Célébration des 60 ans à mi-parcours. Quatorze variables, un plan d'exécution.</p>
         <h5>Architecture du service</h5>
         <ul class="case-list">
           <li><span class="k">Voyageurs</span><span>Trois générations, huit personnes dont un jeune enfant</span></li>
@@ -1256,7 +1268,7 @@ section.affil .al-tag{flex-shrink:0}
     <div class="body-block">
       <p class="quote">"Travel advisor basée au Panama qui conçoit des voyages <em>lents et réfléchis</em> — ancrés dans la nature, la culture et le luxe qui n'a pas besoin de s'annoncer."</p>
       <p class="lbl">Dans ses mots</p>
-      <p class="body">Attirée par les lieux sauvages et la culture profonde. Construite pour livrer des itinéraires structurés avec de la place pour les moments non planifiés — la conversation qui s'étire, la matinée qui demande du calme, l'itinéraire qui s'améliore avec une étape de moins.</p>
+      <p class="body">Attirée par les lieux sauvages et la culture profonde. Itinéraires structurés avec de la place pour l'imprévu — la conversation qui s'étire, la matinée qui demande du calme, l'itinéraire qui s'améliore avec une étape de moins.</p>
       <span class="sig">— Nicole · @marciacqtravelstudio</span>
     </div>
   </div>
@@ -1331,7 +1343,7 @@ section.affil .al-tag{flex-shrink:0}
       <div class="foot-brand">
         <div class="mark">Marciacq</div>
         <div class="sub">Travel Studio</div>
-        <p>Un studio de voyage structuré et de haute confiance. Là où le voyage significatif se vit sans friction.</p>
+        <p>Un studio de design d'expériences de voyage de luxe. Là où le voyage significatif se vit sans friction.</p>
       </div>
       <div>
         <h6>Programmes</h6>
