@@ -613,6 +613,58 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
   .about .stats{grid-template-columns:1fr 1fr}
 }
 
+
+/* ================ TRAJECTORY STRIP ================ */
+.arc{margin-top:48px;padding-top:34px;border-top:1px solid rgba(49,37,31,.12)}
+.arc-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px;gap:24px;flex-wrap:wrap}
+.arc-head .arc-tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:inline-flex;align-items:center;gap:14px}
+.arc-head .arc-tag::before{content:"";display:inline-block;width:22px;height:1px;background:var(--terra)}
+.arc-head .arc-sub{font-size:13px;color:var(--musgo);font-weight:300;font-style:italic;line-height:1.6;max-width:48ch;text-align:right}
+.arc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid rgba(49,37,31,.10)}
+.arc-item{padding:24px 18px 0 0;border-right:1px solid rgba(49,37,31,.10);min-height:140px}
+.arc-item:nth-child(n+2){padding-left:18px}
+.arc-item:last-child{border-right:none;padding-right:0}
+.arc-item .y{display:block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:500;margin-bottom:12px;line-height:1}
+.arc-item .r{display:block;font-size:14px;color:var(--arena);line-height:1.35;margin-bottom:6px;font-weight:400}
+.arc-item .r b{font-weight:500}
+.arc-item .d{display:block;font-size:11.5px;color:var(--musgo);line-height:1.5;font-weight:300}
+@media(max-width:980px){.arc-grid{grid-template-columns:1fr 1fr;gap:0}.arc-item{border-right:none!important;padding:22px 0!important;border-bottom:1px solid rgba(49,37,31,.10);min-height:auto}.arc-item:nth-child(2n+1){border-right:1px solid rgba(49,37,31,.10)!important;padding-right:18px!important}.arc-item:nth-child(2n){padding-left:18px!important}.arc-item:last-child{border-bottom:none}}
+@media(max-width:560px){.arc-grid{grid-template-columns:1fr}.arc-item,.arc-item:nth-child(2n+1){border-right:none!important;padding:20px 0!important}}
+
+
+.arc{margin-top:48px;padding-top:34px;border-top:1px solid rgba(49,37,31,.12)}
+.arc-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px;gap:24px;flex-wrap:wrap}
+.arc-head .arc-tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:inline-flex;align-items:center;gap:14px}
+.arc-head .arc-tag::before{content:"";display:inline-block;width:22px;height:1px;background:var(--terra)}
+.arc-head .arc-sub{font-size:13px;color:var(--musgo);font-weight:300;font-style:italic;line-height:1.6;max-width:48ch;text-align:right}
+.arc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid rgba(49,37,31,.10)}
+.arc-item{padding:24px 18px 0 0;border-right:1px solid rgba(49,37,31,.10);min-height:140px}
+.arc-item:nth-child(n+2){padding-left:18px}
+.arc-item:last-child{border-right:none;padding-right:0}
+.arc-item .y{display:block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:500;margin-bottom:12px;line-height:1}
+.arc-item .r{display:block;font-size:14px;color:var(--arena);line-height:1.35;margin-bottom:6px;font-weight:400}
+.arc-item .r b{font-weight:500}
+.arc-item .d{display:block;font-size:11.5px;color:var(--musgo);line-height:1.5;font-weight:300}
+@media(max-width:980px){.arc-grid{grid-template-columns:1fr 1fr;gap:0}.arc-item{border-right:none!important;padding:22px 0!important;border-bottom:1px solid rgba(49,37,31,.10);min-height:auto}.arc-item:nth-child(2n+1){border-right:1px solid rgba(49,37,31,.10)!important;padding-right:18px!important}.arc-item:nth-child(2n){padding-left:18px!important}.arc-item:last-child{border-bottom:none}}
+@media(max-width:560px){.arc-grid{grid-template-columns:1fr}.arc-item,.arc-item:nth-child(2n+1){border-right:none!important;padding:20px 0!important}}
+
+/* ─── Travel Style voice block (Nicole's personal voice) ─── */
+.style-block{background:var(--linen);padding:var(--sec) 0;border-top:1px solid rgba(49,37,31,.08);border-bottom:1px solid rgba(49,37,31,.08)}
+.style-block .container{display:grid;grid-template-columns:.9fr 1.5fr;gap:80px;align-items:start}
+.style-block .head .tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:inline-flex;align-items:center;gap:14px}
+.style-block .head .tag::before{content:"";display:inline-block;width:22px;height:1px;background:var(--terra)}
+.style-block h2{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:.005em;color:var(--arena);margin-top:22px}
+.style-block .tags{margin-top:32px;display:flex;flex-direction:column;gap:8px}
+.style-block .tags small{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--musgo);font-weight:500}
+.style-block .tags .pill{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid var(--terra);color:var(--terra);font-size:12px;font-weight:500;letter-spacing:.10em;text-transform:uppercase;width:fit-content;border-radius:2px}
+.style-block .quote{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;font-size:clamp(20px,2.4vw,28px);line-height:1.45;color:var(--arena);margin-bottom:32px;letter-spacing:.002em}
+.style-block .quote::before{content:""}
+.style-block .lbl{display:block;margin-bottom:12px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:500}
+.style-block .body{font-size:16px;color:var(--musgo);line-height:1.75;margin-bottom:28px;font-weight:300}
+.style-block .sig{margin-top:16px;padding-top:18px;border-top:1px solid rgba(49,37,31,.12);font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;color:var(--terra);font-size:18px;display:inline-flex;align-items:center;gap:14px}
+.style-block .sig::after{content:"";width:46px;height:1px;background:var(--terra)}
+@media(max-width:880px){.style-block .container{grid-template-columns:1fr;gap:30px}}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
@@ -630,7 +682,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
     </div>
     <div class="right">
       <a href="tel:+50766731449" class="v">+507 6673-1449</a>
-      <a href="mailto:hello@marciacqtravelstudio.com" class="v">hello@marciacqtravelstudio.com</a>
+      <a href="mailto:nicole@marciacqtravel.com" class="v">nicole@marciacqtravel.com</a>
       <span class="lang"><span class="on">EN</span><a href="/marciacq-landing/es/">ES</a><a href="/marciacq-landing/fr/">FR</a></span>
     </div>
   </div>
@@ -674,7 +726,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
   </nav>
   <div class="foot">
     <a href="tel:+50766731449">+507 6673-1449 · WhatsApp</a>
-    <a href="mailto:hello@marciacqtravelstudio.com">hello@marciacqtravelstudio.com</a>
+    <a href="mailto:nicole@marciacqtravel.com">nicole@marciacqtravel.com</a>
     <a href="https://instagram.com/marciacqtravelstudio">Instagram</a>
     <span>Panama City · By appointment</span>
   </div>
@@ -727,15 +779,15 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
   <div class="container">
     <div>
       <span class="label">A note from the studio</span>
-      <h2>We design conditions, not <span class="sig">itineraries</span>.</h2>
+      <h2>Complexity is <span class="sig">our</span> responsibility. Not yours.</h2>
     </div>
     <div class="body">
-      <p>Most travel is built reactively — booked piece by piece, dependent on the energy of whoever's coordinating it. We work differently.</p>
-      <p>Every program is built on <strong>validated suppliers, documented processes, and a clear service architecture</strong>. The structure is designed before the pitch starts. The work happens in the backend. The client experiences the result, not the process.</p>
-      <p>We're not for everyone, and that's the point. The studio operates on a paced, selective calendar — because what we promise can only be delivered when capacity matches commitment.</p>
+      <p>Marciacq Travel Studio is a boutique design house for international itineraries, corporate programs, and multigenerational family travel. Founded by Nicole Marciacq — trained in international hospitality in Switzerland and Spain — the studio operates with a clear principle: <strong>complexity is our responsibility, not the client's</strong>.</p>
+      <p>Each journey is structured with <strong>validated suppliers, defined processes, and operational attention to detail</strong> — so the client arrives, lives the trip, and returns with the certainty that every detail was resolved.</p>
+      <p>The experiences we design are anchored in the natural and cultural heritage of each destination — what a community has built, preserved, and passed down over time. That context is what gives every itinerary its depth.</p>
       <div class="signoff">
         <span class="name">— Nicole Marciacq</span>
-        <span>Founder · Marciacq Travel Studio</span>
+        <span>Founder &amp; Travel Advisor · Marciacq Travel Studio</span>
       </div>
     </div>
   </div>
@@ -939,7 +991,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
       <div class="step"><span class="sn">i.</span><h4>Intake</h4><p>A structured form and a 30-minute conversation. We assess fit before scope, scope before pricing.</p><div class="dur">15-min form · 30-min call</div></div>
       <div class="step"><span class="sn">ii.</span><h4>Discovery</h4><p>Stakeholders, context, constraints. We surface the variables that determine whether the program is feasible at the level promised.</p><div class="dur">5–10 business days</div></div>
       <div class="step"><span class="sn">iii.</span><h4>Architecture</h4><p>A documented proposal with supplier validation summary, risk contingencies, and clear cost structure. No filler.</p><div class="dur">10–14 business days</div></div>
-      <div class="step"><span class="sn">iv.</span><h4>Execution</h4><p>The program runs on validated suppliers and documented processes. <strong>Global Rescue, medical evacuation, and risk-advisory protocols active throughout.</strong> Single point of contact, end to end.</p><div class="dur">Trip duration</div></div>
+      <div class="step"><span class="sn">iv.</span><h4>Execution</h4><p>The program runs on validated suppliers and documented processes. <strong>Global Rescue, medical evacuation, and risk-advisory protocols active throughout.</strong> Itinerary delivered through the <strong>Fora Travel app</strong> with offline PDF backup. Single point of contact, end to end.</p><div class="dur">Trip duration</div></div>
       <div class="step"><span class="sn">v.</span><h4>Continuity</h4><p>Debrief, archive, and a documented version of your program — repeatable when your needs return. Long-term clients build over years.</p><div class="dur">Ongoing</div></div>
     </div>
 
@@ -966,23 +1018,24 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
     <article class="case">
       <div class="imgz v2 img" aria-hidden="true">
         <span class="index">№ 07 / Case</span>
-        <span class="cap">Image<small>Architectural shadow, Florentine interior, midday silence.</small></span>
+        <span class="cap">Editorial<small>Tuscan estate · Villa Le Calvane, last light.</small></span>
       </div>
       <div class="right">
-        <span class="tag">Anonymized · Program 09 · 2025</span>
-        <h3>An 11-day multigenerational journey across <span class="sig">Italy &amp; Croatia</span>.</h3>
-        <p class="summary">Three generations, fourteen variables: dietary requirements across two restrictions, two mobility profiles, a 7-year-old, a 76-year-old, three cities, two coastlines, one private vessel.</p>
+        <span class="tag">Anonymized · Program 04 · 2026</span>
+        <h3>An 18-day multigenerational program across <span class="sig">Italy &amp; Spain</span>.</h3>
+        <p class="summary">Eight travelers spanning three generations — including a toddler and an elder principal. Rome to the Amalfi Coast, a private vessel day on Capri, a week in a Tuscan villa, three days in Madrid. A 60th-birthday celebration mid-route, fourteen variables, one execution plan.</p>
         <h5>Service architecture</h5>
         <ul class="case-list">
-          <li><span class="k">Stakeholders</span><span>Family lead + spouse + adult child coordinating</span></li>
-          <li><span class="k">Destinations</span><span>Rome → Florence → Hvar → Dubrovnik</span></li>
-          <li><span class="k">Suppliers</span><span>11 vetted, all with documented track records</span></li>
-          <li><span class="k">Guides</span><span>Private, multilingual, vetted by sector</span></li>
-          <li><span class="k">Risk surface</span><span>Mapped, contingencies documented</span></li>
-          <li><span class="k">Single contact</span><span>Studio · 24/7 during execution</span></li>
-          <li><span class="k">Outcome</span><span>Delivered as architected · Repeat client</span></li>
+          <li><span class="k">Travelers</span><span>Three generations, eight people including a toddler</span></li>
+          <li><span class="k">Routing</span><span>Panama → Paris → Rome → Salerno → Capri → Tuscany → Madrid → Panama</span></li>
+          <li><span class="k">Properties</span><span>Crossing Condotti (Rome) · Villa Le Calvane (Tuscany) · curated apartment + Petit Palace (Madrid)</span></li>
+          <li><span class="k">Suppliers</span><span>14+ vetted partners · documented performance records</span></li>
+          <li><span class="k">Logistics</span><span>Frecciarossa Business class, private transfers, rental fleet, private vessel Capri, Antinori winery experience</span></li>
+          <li><span class="k">Risk surface</span><span>Mapped before departure · real-time advisor on call throughout</span></li>
+          <li><span class="k">Itinerary delivery</span><span>Fora Travel app + offline PDF · single source of truth</span></li>
+          <li><span class="k">Outcome</span><span>Delivered as architected · 60th birthday celebrated mid-route</li>
         </ul>
-        <div class="footnote">Zero escalations during execution. Documented program archived for future iterations.</div>
+        <div class="footnote">Eight travelers. Three generations. One execution plan — and a 60th birthday delivered with full studio support, mid-itinerary.</div>
       </div>
     </article>
   </div>
@@ -998,19 +1051,19 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
     <div class="trust-grid">
       <div class="tcell">
         <span class="ti">i.</span>
-        <p>A <strong>Geneva-based family office</strong> coordinating annual multigenerational programs across three continents.</p>
+        <p>A <strong>multigenerational family</strong> coordinating an 18-day European program across two countries and three coordinators.</p>
       </div>
       <div class="tcell">
         <span class="ti">ii.</span>
-        <p>A <strong>US-listed industrial group</strong> commissioning recurring leadership offsites and incentive frameworks.</p>
+        <p>A <strong>corporate decision-maker</strong> briefing a structured offsite framework — single point of contact end to end.</p>
       </div>
       <div class="tcell">
         <span class="ti">iii.</span>
-        <p>A <strong>multigenerational principal</strong> with documented programs returning each year since 2021.</p>
+        <p>A <strong>repeat traveler</strong> building a documented program across multiple destinations — pacing tailored, stakeholders aligned.</p>
       </div>
       <div class="tcell">
         <span class="ti">iv.</span>
-        <p>A <strong>private collector</strong> commissioning the Atelier Route framework across Western Europe.</p>
+        <p>A <strong>private client</strong> commissioning cultural and craft access across Western Europe — by introduction.</p>
       </div>
     </div>
   </div>
@@ -1056,21 +1109,51 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
     <!--MOCKUP-IMG · replace with editorial Nicole photo per brand image direction-->
     <div class="imgz real portrait" aria-hidden="true">
       <img src="images/nicole.jpg" alt="" loading="lazy" class="founder-photo">
-      <span class="index">№ 08 / Founder</span>
-      <span class="cap">Image<small>Nicole at the studio — working, half-light, no eye contact with camera.</small></span>
+      <span class="index">№ 08 / Founder &amp; Travel Advisor</span>
+      <span class="cap">Founder<small>Nicole Marciacq — Marciacq Travel Studio.</small></span>
     </div>
     <div>
-      <span class="label">Founder</span>
+      <span class="label">Founder &amp; Travel Advisor</span>
       <h2>Nicole <span class="sig">Marciacq</span>.</h2>
-      <p>The studio operates from Panama across four service verticals. <strong>Nicole leads every intake personally.</strong> Programs are designed in-house and executed through the <strong>Virtuoso preferred partner network</strong> as an independent advisor with <strong>FORA Travel</strong> — every supplier holds a documented performance record.</p>
-      <p>Background in international logistics, corporate program design, and high-trust family travel. Multilingual (EN · ES · FR) and connected across Europe, Latin America, the Middle East, and Asia. Access to Forbes Five-Star and Travel + Leisure A-list hotels through preferred-partner agreements.</p>
+      <p><strong>Founder &amp; Travel Advisor.</strong> Nicole leads Marciacq Travel Studio personally. Her trajectory spans luxury operations, diplomatic protocol, and four years as <strong>Head of Product Development at the Panama Tourism Authority</strong>, working on Panama's Sustainable Tourism Master Plan (2020–2025).</p>
+      <p>Trained at <strong>Glion Institute of Higher Education</strong> (Switzerland) — International Hospitality Management with Event Management specialization — and <strong>Ostelea</strong> (Spain) — Master's Degree in Events, Protocol, and MICE Tourism. As a <strong>Certified Travel Advisor with Fora Travel</strong>, the studio operates through the <strong>Virtuoso® Travel Network</strong> — preferred-partner access to Forbes Five-Star, Travel + Leisure A-list, and verified luxury operators worldwide.</p>
       <span class="signature">— Nicole</span>
-      <div class="facts">
-        <div class="f"><b>In-house</b><small>Architecture</small></div>
-        <div class="f"><b>1:1</b><small>Founder-led intake</small></div>
-        <div class="f"><b>Documented</b><small>Every program</small></div>
-        <div class="f"><b>EN · ES · FR</b><small>Operating</small></div>
+      <div class="arc">
+        <div class="arc-head">
+          <span class="arc-tag">Trajectory</span>
+          <span class="arc-sub">Switzerland · Portugal · Panama · Spain — and back. The studio rests on what came before it.</span>
+        </div>
+        <div class="arc-grid">
+          <div class="arc-item"><span class="y">2011 — 2015</span><span class="r"><b>Glion</b> · Switzerland</span><span class="d">BSc International Hospitality Management · Event Management specialization</span></div>
+          <div class="arc-item"><span class="y">2015</span><span class="r"><b>Summit of the Americas</b></span><span class="d">Heads of State · Protocol coordination, restricted-access meeting</span></div>
+          <div class="arc-item"><span class="y">2017 — 2018</span><span class="r"><b>Ostelea</b> · Spain</span><span class="d">Master's · Events, Protocol &amp; MICE Tourism</span></div>
+          <div class="arc-item"><span class="y">2019 — 2023</span><span class="r"><b>Panama Tourism Authority</b></span><span class="d">Head of Product Development · 4 yrs · Sustainable Tourism Master Plan</span></div>
+          <div class="arc-item"><span class="y">2025</span><span class="r"><b>Marciacq Travel Studio</b></span><span class="d">Founded · Fora Certified · Virtuoso® via Fora</span></div>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── TRAVEL STYLE (Nicole's personal voice, from her FORA profile) ─── -->
+<section class="style-block r">
+  <div class="container">
+    <div class="head">
+      <span class="tag">Travel style</span>
+      <h2>"…&#8202;always make room to&#8202; <em>linger&#8202;</em>."</h2>
+      <div class="tags">
+        <small>Ask me about</small>
+        <span class="pill">Family travel</span>
+        <span class="pill">Couples travel</span>
+        <span class="pill">Panama</span>
+      </div>
+    </div>
+    <div class="body-block">
+      <p class="quote">"Panama-based travel curator crafting <em>slow, soulful</em> journeys — rooted in nature, culture, and laid-back luxury. Travel that honors destinations and transforms travelers."</p>
+      <p class="lbl">In her words</p>
+      <p class="body">Rainforest soul with a soft spot for the beauty of the world. Drawn to wild places, deep culture, and laid-back luxury — barefoot mornings, jungle mist, hot showers, slow sips with a view. A good itinerary, with room to linger when the present moment asks for it.</p>
+      <span class="sig">— Nicole · @marciacqtravelstudio</span>
     </div>
   </div>
 </section>
@@ -1119,7 +1202,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
     </div>
 
     <div class="channels">
-      <a href="mailto:hello@marciacqtravelstudio.com?subject=Intake%20—%20New%20Program" class="ch">
+      <a href="mailto:nicole@marciacqtravel.com?subject=Intake%20—%20New%20Program" class="ch">
         <span class="ck">01 — Direct</span>
         <span class="cv">hello@<span class="sig">marciacq</span>travelstudio.com</span>
         <span class="cd">For new programs and structured intake.</span>
@@ -1143,7 +1226,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
     <p class="response">Response within two business days. Intake fit confirmation within five. Studio operates on a paced calendar; intake closes when capacity is committed.</p>
 
     <div class="actions">
-      <a href="mailto:hello@marciacqtravelstudio.com?subject=Intake" class="cta alt">Open the conversation</a>
+      <a href="mailto:nicole@marciacqtravel.com?subject=Intake" class="cta alt">Open the conversation</a>
       <a href="#how" class="cta light">Review the process</a>
     </div>
   </div>
@@ -1183,7 +1266,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
       <div>
         <h6>Begin</h6>
         <ul>
-          <li><a href="mailto:hello@marciacqtravelstudio.com">Email</a></li>
+          <li><a href="mailto:nicole@marciacqtravel.com">Email</a></li>
           <li><a href="https://instagram.com/marciacqtravelstudio">Instagram</a></li>
           <li><a href="#intake">Submit a brief</a></li>
           <li><a href="#dispatch">Studio dispatch</a></li>
