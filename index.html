@@ -776,6 +776,20 @@ section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-sty
 section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:5px;height:5px;background:var(--terra);border-radius:50%;margin-left:5px;align-self:center}
 @media(max-width:760px){section.affil .mk-logo{height:28px}section.affil .mk.fora .wordmark{font-size:24px;height:28px}}
 
+
+/* AUDIT: Fora-only affiliations — centered elegant badge */
+section.affil .marks.fora-only{justify-content:center;width:100%}
+section.affil .mk.fora{flex-direction:row;align-items:baseline;gap:18px;padding:0;border:none;background:transparent}
+section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:38px;letter-spacing:-.005em;color:var(--arena);line-height:1;height:auto;position:relative}
+section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:6px;height:6px;background:var(--terra);border-radius:50%;margin-left:6px;vertical-align:middle;transform:translateY(-12px)}
+section.affil .mk.fora small{font-size:11px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500;display:flex;align-items:center}
+section.affil .al-tag{flex-shrink:0}
+@media(max-width:760px){
+  section.affil .marks.fora-only{justify-content:flex-start}
+  section.affil .mk.fora{flex-direction:column;align-items:flex-start;gap:6px}
+  section.affil .mk.fora .wordmark{font-size:30px}
+}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
@@ -864,7 +878,7 @@ section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:5p
     </div>
 
     <div class="trust">
-      <div class="t"><b>4 <span class="sig">verticals</span></b><small>Leisure · Panama · Corporate / MICE · Family</small></div>
+      <div class="t"><b>Family · <span class="sig">Couples</span></b><small>Panama · International · MICE</small></div>
       <div class="t"><b><span class="sig">Fora</span> Certified</b><small>Independent travel advisor</small></div>
       <div class="t"><b>By <span class="sig">appointment</span></b><small>Selective intake, paced calendar</small></div>
     </div>
@@ -874,23 +888,11 @@ section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:5p
 <!-- AFFILIATIONS -->
 <section class="affil">
   <div class="container">
-    <span class="al-tag">Credentials &amp; network</span>
-    <div class="marks">
+    <span class="al-tag">Network</span>
+    <div class="marks fora-only">
       <span class="mk fora">
         <span class="wordmark">Fora</span>
-        <small>Certified Travel Advisor</small>
-      </span>
-      <span class="mk">
-        <span class="mk-logo"><img src="images/glion-logo.svg" alt="Glion Institute of Higher Education"></span>
-        <small>BSc · Switzerland</small>
-      </span>
-      <span class="mk">
-        <span class="mk-logo"><img src="images/ostelea-logo.png" alt="Ostelea Tourism Management School"></span>
-        <small>Master's · MICE · Spain</small>
-      </span>
-      <span class="mk">
-        <span class="mk-logo mpi"><img src="images/mpi-logo.png" alt="Meeting Professionals International"></span>
-        <small>Meeting Professionals International</small>
+        <small>Certified Travel Advisor · Curated luxury network</small>
       </span>
     </div>
   </div>
@@ -1000,7 +1002,7 @@ section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:5p
       </a>
 
       <a class="pcard" href="#intake">
-        <div class="imgz v3 img"><span class="index">№ 03 · Panama</span><span class="cap">Image<small>Azuero courtyard, late afternoon, working hands.</small></span></div>
+        <!--MOCKUP-IMG--><div class="imgz real img"><img src="images/azuero-hacienda.jpg" alt="" loading="lazy"><span class="index">№ 03 · Panama</span><span class="cap">Editorial<small>Azuero hacienda · colonial courtyard, late light.</small></span></div>
         <div class="pbody">
           <span class="tag">Panama Cultural · 5–7 nights</span>
           <h3>The <span class="sig">Azuero</span> Sequence</h3>
