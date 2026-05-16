@@ -712,6 +712,14 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
   .affil .marks{grid-template-columns:1fr!important}
 }
 
+
+/* AUDIT: more prominent affiliations row */
+.affil{padding:42px 0}
+.affil .marks{gap:48px}
+.affil .mk b{font-size:22px;letter-spacing:0}
+.affil .mk small{font-size:10.5px}
+@media(max-width:880px){.affil{padding:32px 0}.affil .marks{gap:24px 32px}}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
@@ -825,7 +833,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
 <section class="intro r">
   <div class="container">
     <div>
-      <span class="label">Une note du studio</span>
+      <span class="label">№ 01 — Une note du studio</span>
       <h2>La complexité est <span class="sig">notre</span> responsabilité. Pas la vôtre.</h2>
     </div>
     <div class="body">
@@ -892,7 +900,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
       <span class="cap">Fondatrice<small>Nicole Marciacq — Marciacq Travel Studio.</small></span>
     </div>
     <div>
-      <span class="label">Fondatrice &amp; Travel Advisor</span>
+      <span class="label">№ 02 — Fondatrice &amp; Travel Advisor</span>
       <h2>Nicole <span class="sig">Marciacq</span>.</h2>
       <p><strong>Fondatrice &amp; Travel Advisor.</strong> Nicole dirige personnellement Marciacq Travel Studio. Parcours en opérations de luxe, protocole diplomatique et quatre années comme <strong>Head of Product Development à l'Autorité du Tourisme du Panama</strong>, sur le Plan Directeur du Tourisme Durable (2020–2025).</p>
       <p>Formée à <strong>Glion Institute of Higher Education</strong> (Suisse) — International Hospitality Management avec spécialisation Event Management — et à <strong>Ostelea</strong> (Espagne) — Master en Événementiel, Protocole et Tourisme MICE. En tant que <strong>Certified Travel Advisor chez Fora Travel</strong>, le studio opère via le réseau <strong>Virtuoso®</strong> — accès préférentiel aux hôtels Forbes Five-Star, Travel + Leisure A-list et opérateurs de luxe vérifiés dans le monde entier.</p>
@@ -919,7 +927,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
   <div class="container">
     <div class="head">
       <div>
-        <span class="label">Programmes signature</span>
+        <span class="label">№ 03 — Programmes signature</span>
         <h2>Six cadres. <span class="sig">Documentés</span>, adaptables, jamais improvisés.</h2>
       </div>
       <div class="right">
@@ -970,11 +978,11 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
       </a>
 
       <a class="pcard" href="#intake">
-        <div class="imgz v1 img"><span class="index">№ 04 · International</span><span class="cap">Image<small>European atelier, midday light, restrained craft.</small></span></div>
+        <!--MOCKUP-IMG--><div class="imgz real img"><img src="../images/honeymoon-terrace.jpg" alt="" loading="lazy"><span class="index">№ 04 · Couples</span><span class="cap">Éditorial<small>Terrasse côtière · dernière lumière.</small></span></div>
         <div class="pbody">
-          <span class="tag">Europe · 11 nuits</span>
-          <h3>The <span class="sig">Atelier</span> Route</h3>
-          <p>Paris, Genève, Florence, Milan. Accès privé aux ateliers en exercice — cuir, horlogerie, textiles, céramique. Pas un tour. Un apprentissage documenté en retenue.</p>
+          <span class="tag">Couples · 6-9 nuits</span>
+          <h3>The Honeymoon <span class="sig">Reserve</span></h3>
+          <p>Un programme conçu pour deux — rythme, intimité et décisions prises par le plus petit groupe. Voyages de noces, anniversaires et voyages-jalons qui méritent leur silence.</p>
           <div class="footrow">
             <div class="price"><small>Engagement</small><b>Sur <span class="sig">brief</span></b></div>
             <span class="arrow">→</span>
@@ -986,7 +994,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
         <div class="imgz v5 img"><span class="index">№ 05 · Family</span><span class="cap">Image<small>Andalusian estate, midday, architectural shadow.</small></span></div>
         <div class="pbody">
           <span class="tag">Multigénérationnel · 9 nuits</span>
-          <h3>The Family <span class="sig">Concession</span></h3>
+          <h3>The Family <span class="sig">Estate</span></h3>
           <p>Un seul domaine comme base. Trois générations, profils de mobilité distribués, journées programmées et après-midis non programmés. Pour ceux qui veulent la présence sans chorégraphie.</p>
           <div class="footrow">
             <div class="price"><small>Engagement</small><b>Sur <span class="sig">brief</span></b></div>
@@ -1018,7 +1026,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
   <div class="container">
     <div class="head">
       <div>
-        <span class="label">Ce que nous faisons</span>
+        <span class="label">№ 04 — Ce que nous faisons</span>
         <h2>Quatre verticales.<br>Une <span class="sig">infrastructure</span>.</h2>
       </div>
       <div class="right">
@@ -1062,7 +1070,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
 <!-- HOW WE WORK -->
 <section id="how" class="how r">
   <div class="container">
-    <span class="label light">Notre méthode</span>
+    <span class="label light">№ 05 — Notre méthode</span>
     <h2>De la première conversation à la <span class="sig">continuité</span>.</h2>
     <p class="intro-p">Un parcours défini en cinq étapes. Chaque phase a ses livrables et ses engagements. <strong>Vous voyez l'architecture avant la proposition</strong> — la seule façon de savoir si vous travaillez avec une infrastructure ou avec de l'improvisation.</p>
 
@@ -1086,7 +1094,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
   <div class="container">
     <div class="head">
       <div>
-        <span class="label">Un programme structuré</span>
+        <span class="label">№ 06 — Un programme structuré</span>
         <h2>À quoi ressemble notre travail une fois <span class="sig">documenté</span>.</h2>
       </div>
       <div class="right">
@@ -1126,7 +1134,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
 <section id="fit" class="whom r">
   <div class="container">
     <div class="head">
-      <span class="label">À qui c'est destiné</span>
+      <span class="label">№ 07 — À qui c'est destiné</span>
       <h2>Le studio est <span class="sig">sélectif</span> par conception.</h2>
       <p class="lead">Un mismatch crée exactement la friction que la marque est construite pour éliminer. Nous sommes directs sur le fit car cela protège les deux parties.</p>
     </div>
@@ -1162,7 +1170,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
 <section class="style-block r">
   <div class="container">
     <div class="head">
-      <span class="tag">Style de voyage</span>
+      <span class="tag">№ 08 — Style de voyage</span>
       <h2>Un studio avec <em>un regard personnel</em>.</h2>
       <div class="tags">
         <small>Demandez-moi sur</small>
@@ -1189,7 +1197,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
 <section class="dispatch r">
   <div class="container">
     <div class="l">
-      <span class="label">Bulletin du studio</span>
+      <span class="label">№ 09 — Bulletin du studio</span>
       <h3>Trois à quatre fois par an. <span class="sig">Sur demande</span>.</h3>
       <p>Notes opérationnelles de programmes actifs, structures de cas anonymisées, réflexions sur les fournisseurs. Aucune inspiration de voyage, aucun récap, aucune liste curatoriale. Lu par des chefs de famille, des responsables d'opérations et un petit groupe de studios pairs.</p>
       <small>Peu fréquent · Confidentiel · Désinscription à tout moment</small>
@@ -1220,7 +1228,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
   <div class="container">
     <div class="head">
       <div>
-        <span class="label light">Démarrer la consultation</span>
+        <span class="label light">№ 10 — Démarrer la consultation</span>
         <h2>Soumettez un brief. <span class="sig">Pas une liste de souhaits</span>.</h2>
       </div>
       <div class="right">
@@ -1263,8 +1271,8 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
           <li><a href="#programs">Guna Yala · Open Water</a></li>
           <li><a href="#programs">The Highland Threshold</a></li>
           <li><a href="#programs">The Azuero Sequence</a></li>
-          <li><a href="#programs">The Atelier Route</a></li>
-          <li><a href="#programs">The Family Concession</a></li>
+          <li><a href="#programs">The Honeymoon Reserve</a></li>
+          <li><a href="#programs">The Family Estate</a></li>
           <li><a href="#programs">The Offsite Mainframe</a></li>
         </ul>
       </div>
