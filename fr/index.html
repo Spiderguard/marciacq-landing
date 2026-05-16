@@ -848,6 +848,11 @@ section.affil .mk.fora .wordmark{font-family:"Bodoni Moda","Cormorant Garamond",
 .about .stats .s small{color:var(--orion)}
 .about .signature{color:var(--terra)}
 
+
+/* AUDIT: real FORA logo PNG sizing */
+section.affil .mk.fora .fora-logo{height:42px;width:auto;display:block;object-fit:contain}
+@media(max-width:760px){section.affil .mk.fora .fora-logo{height:34px}}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
@@ -950,7 +955,7 @@ section.affil .mk.fora .wordmark{font-family:"Bodoni Moda","Cormorant Garamond",
     <div class="marks fora-only">
       <span class="mk fora">
         <a href="https://www.foratravel.com" target="_blank" rel="noopener" class="fora-link" aria-label="Fora Travel — Certified Travel Advisor">
-          <span class="wordmark">Fora</span>
+          <img src="../images/fora-logo.png" alt="Fora Travel" class="fora-logo">
           <small>Certified Travel Advisor · Réseau curaté</small>
         </a>
       </span>
