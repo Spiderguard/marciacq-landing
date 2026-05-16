@@ -853,6 +853,11 @@ section.affil .mk.fora .wordmark{font-family:"Bodoni Moda","Cormorant Garamond",
 section.affil .mk.fora .fora-logo{height:42px;width:auto;display:block;object-fit:contain}
 @media(max-width:760px){section.affil .mk.fora .fora-logo{height:34px}}
 
+
+/* AUDIT: real Nicole portrait — minimal filter (it's her actual photo) */
+.imgz.real.portrait .founder-photo{filter:saturate(.9) contrast(1.02)!important;object-position:center 22%!important}
+.imgz.real.portrait::after{background:linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(49,37,31,.4) 100%)!important}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
@@ -1128,9 +1133,9 @@ section.affil .mk.fora .fora-logo{height:42px;width:auto;display:block;object-fi
   <div class="container">
     <!--MOCKUP-IMG · replace with editorial Nicole photo per brand image direction-->
     <div class="imgz real portrait" aria-hidden="true">
-      <img src="../images/nicole-amalfi.webp" alt="" loading="lazy" class="founder-photo">
+      <img src="../images/nicole.jpg" alt="" loading="lazy" class="founder-photo">
       <span class="index">№ 08 / Fondatrice &amp; Travel Advisor</span>
-      <span class="cap">Fondatrice<small>Éditorial · Côte amalfitaine, en mission.</small></span>
+      <span class="cap">Fondatrice<small>Nicole Marciacq · Marciacq Travel Studio.</small></span>
     </div>
     <div>
       <span class="label">№ 02 — Fondatrice &amp; Travel Advisor</span>
