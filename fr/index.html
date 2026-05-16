@@ -230,7 +230,7 @@ p{color:var(--musgo);font-weight:300}
 .hero .trust{
   grid-column:1 / -1;
   border-top:1px solid rgba(49,37,31,.10);padding-top:42px;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
 }
 .hero .trust .t b{font-family:"Raleway";font-weight:300;font-size:30px;color:var(--arena);letter-spacing:-.01em;line-height:1;display:block}
 .hero .trust .t b .sig{font-size:.92em}
@@ -763,6 +763,19 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
   .arc-item,.arc-item:nth-child(2n+1){border-right:none!important;padding-left:0!important;padding-right:0!important;padding-bottom:16px!important}
 }
 
+
+/* AUDIT: real logos in affiliations row */
+section.affil .mk{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+section.affil .mk-logo{height:34px;display:flex;align-items:center;justify-content:flex-start}
+section.affil .mk-logo img{height:100%;width:auto;object-fit:contain;display:block;max-width:140px}
+section.affil .mk-logo.mpi img{filter:invert(1) brightness(.35) contrast(1.4)}
+section.affil .mk small{font-size:9.5px;letter-spacing:.20em;text-transform:uppercase;color:var(--musgo);font-weight:500}
+/* Fora stylized wordmark — kept as text since real logo unavailable */
+section.affil .mk.fora{padding:0;border:none;background:transparent;align-items:flex-start}
+section.affil .mk.fora .wordmark{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:30px;letter-spacing:-.005em;color:var(--arena);line-height:1;height:34px;display:flex;align-items:center;position:relative}
+section.affil .mk.fora .wordmark::after{content:"";display:inline-block;width:5px;height:5px;background:var(--terra);border-radius:50%;margin-left:5px;align-self:center}
+@media(max-width:760px){section.affil .mk-logo{height:28px}section.affil .mk.fora .wordmark{font-size:24px;height:28px}}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
@@ -854,7 +867,6 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
       <div class="t"><b>4 <span class="sig">verticales</span></b><small>Leisure · Panama · Corporate / MICE · Famille</small></div>
       <div class="t"><b><span class="sig">Fora</span> Certified</b><small>Conseillère de voyage indépendante</small></div>
       <div class="t"><b>Sur <span class="sig">rendez-vous</span></b><small>Consultation sélective, calendrier mesuré</small></div>
-      <div class="t"><b>EN · ES · FR</b><small>Langues opérationnelles</small></div>
     </div>
   </div>
 </section>
@@ -864,10 +876,22 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
   <div class="container">
     <span class="al-tag">Références et réseau</span>
     <div class="marks">
-      <span class="mk fora"><b>Fora</b><small>Certified Travel Advisor</small></span>
-      <span class="mk school"><b>Glion</b><small>BSc · Suisse</small></span>
-      <span class="mk school"><b>Ostelea</b><small>Master · MICE · Espagne</small></span>
-      <span class="mk"><b>MPI</b><small>Meeting Professionals International</small></span>
+      <span class="mk fora">
+        <span class="wordmark">Fora</span>
+        <small>Certified Travel Advisor</small>
+      </span>
+      <span class="mk">
+        <span class="mk-logo"><img src="../images/glion-logo.svg" alt="Glion Institute of Higher Education"></span>
+        <small>BSc · Suisse</small>
+      </span>
+      <span class="mk">
+        <span class="mk-logo"><img src="../images/ostelea-logo.png" alt="Ostelea Tourism Management School"></span>
+        <small>Master · MICE · Espagne</small>
+      </span>
+      <span class="mk">
+        <span class="mk-logo mpi"><img src="../images/mpi-logo.png" alt="Meeting Professionals International"></span>
+        <small>Meeting Professionals International</small>
+      </span>
     </div>
   </div>
 </section>
@@ -1223,7 +1247,7 @@ section.affil .mk small{font-size:9.5px!important;letter-spacing:.18em}
       </div>
       <div class="style-img">
         <!--MOCKUP-IMG · replace with editorial Panama atmospheric image-->
-        <img src="../images/panama-zipline.webp" alt="" loading="lazy">
+        <img src="../images/panama-cloudforest.jpg" alt="" loading="lazy">
         <span class="cap">Editorial<small>Tropical highlands · Boquete panorama.</small></span>
       </div>
     </div>
