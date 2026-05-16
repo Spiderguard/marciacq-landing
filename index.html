@@ -677,6 +677,41 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
 .style-block .style-img .cap::before{content:"";display:inline-block;width:16px;height:1px;background:rgba(245,239,233,.6)}
 .style-block .style-img .cap small{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:13px;letter-spacing:0;color:rgba(245,239,233,.85);text-transform:none;display:block;margin-top:3px}
 
+
+/* ───── AUDIT: convert intake from dark Arena → warm Linen (per reviewer) ───── */
+section.intake{background:var(--linen);color:var(--arena)}
+section.intake .label.light{color:var(--musgo)}
+section.intake .label.light::before{background:var(--terra)}
+section.intake h2{color:var(--arena)}
+section.intake h2 .sig{color:var(--terra)}
+section.intake .head .right p{color:var(--musgo)}
+section.intake .channels{border-top-color:rgba(49,37,31,.16);border-bottom-color:rgba(49,37,31,.16)}
+section.intake .ch{border-right-color:rgba(49,37,31,.16)}
+section.intake .ch .ck{color:var(--musgo)}
+section.intake .ch .cv{color:var(--arena);font-weight:300}
+section.intake .ch .cv .sig{color:var(--terra);font-weight:400}
+section.intake .ch .cd{color:var(--musgo)}
+section.intake .ch .arrow{color:var(--musgo)}
+section.intake .ch:hover .arrow{color:var(--terra)}
+section.intake .discretion{color:var(--musgo);border-top-color:rgba(49,37,31,.16)}
+section.intake .discretion strong{color:var(--arena);font-weight:500}
+section.intake .response{color:var(--musgo)}
+section.intake .response::before{color:var(--terra)}
+section.intake .cta.light{background:transparent;color:var(--arena);border-color:var(--arena)}
+section.intake .cta.light:hover{background:var(--arena);color:var(--perla);border-color:var(--arena)}
+
+/* ───── AUDIT: mobile hero trust + affiliations restack ───── */
+@media(max-width:560px){
+  .hero .trust{grid-template-columns:1fr 1fr!important}
+  .affil .marks{display:grid!important;grid-template-columns:1fr 1fr;gap:14px 20px!important}
+  .affil .mk b{font-size:16px!important}
+  .affil .mk small{font-size:9.5px!important}
+}
+@media(max-width:380px){
+  .hero .trust{grid-template-columns:1fr!important;gap:18px!important}
+  .affil .marks{grid-template-columns:1fr!important}
+}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
@@ -780,7 +815,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
     <div class="marks">
       <span class="mk"><b>Virtuoso</b><small>Preferred-partner rates &amp; amenities</small></span>
       <span class="mk"><b>FORA Travel</b><small>Independent advisor</small></span>
-      <span class="mk"><b>Forbes Five-Star</b><small>Reserved access · 5★</small></span>
+      <span class="mk"><b>Forbes Five-Star</b><small>Reserved access</small></span>
       <span class="mk"><b>Travel + Leisure</b><small>Preferred-rate hotels</small></span>
     </div>
   </div>
@@ -844,6 +879,38 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
         </div>
       </div>
     </article>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder" class="founder r">
+  <div class="container">
+    <!--MOCKUP-IMG · replace with editorial Nicole photo per brand image direction-->
+    <div class="imgz real portrait" aria-hidden="true">
+      <img src="images/nicole-amalfi.webp" alt="" loading="lazy" class="founder-photo">
+      <span class="index">№ 08 / Founder &amp; Travel Advisor</span>
+      <span class="cap">Founder<small>Nicole Marciacq — Marciacq Travel Studio.</small></span>
+    </div>
+    <div>
+      <span class="label">Founder &amp; Travel Advisor</span>
+      <h2>Nicole <span class="sig">Marciacq</span>.</h2>
+      <p><strong>Founder &amp; Travel Advisor.</strong> Nicole leads Marciacq Travel Studio personally. Her trajectory spans luxury operations, diplomatic protocol, and four years as <strong>Head of Product Development at the Panama Tourism Authority</strong>, working on Panama's Sustainable Tourism Master Plan (2020–2025).</p>
+      <p>Trained at <strong>Glion Institute of Higher Education</strong> (Switzerland) — International Hospitality Management with Event Management specialization — and <strong>Ostelea</strong> (Spain) — Master's Degree in Events, Protocol, and MICE Tourism. As a <strong>Certified Travel Advisor with Fora Travel</strong>, the studio operates through the <strong>Virtuoso® Travel Network</strong> — preferred-partner access to Forbes Five-Star, Travel + Leisure A-list, and verified luxury operators worldwide.</p>
+      <span class="signature">— Nicole</span>
+      <div class="arc">
+        <div class="arc-head">
+          <span class="arc-tag">Trajectory</span>
+          <span class="arc-sub">Switzerland · Portugal · Panama · Spain — and back. The studio rests on what came before it.</span>
+        </div>
+        <div class="arc-grid">
+          <div class="arc-item"><span class="y">2011 — 2015</span><span class="r"><b>Glion</b> · Switzerland</span><span class="d">BSc International Hospitality Management · Event Management specialization</span></div>
+          <div class="arc-item"><span class="y">2015</span><span class="r"><b>Summit of the Americas</b></span><span class="d">Heads of State · Protocol coordination, restricted-access meeting</span></div>
+          <div class="arc-item"><span class="y">2017 — 2018</span><span class="r"><b>Ostelea</b> · Spain</span><span class="d">Master's · Events, Protocol &amp; MICE Tourism</span></div>
+          <div class="arc-item"><span class="y">2019 — 2023</span><span class="r"><b>Panama Tourism Authority</b></span><span class="d">Head of Product Development · 4 yrs · Sustainable Tourism Master Plan</span></div>
+          <div class="arc-item"><span class="y">2025</span><span class="r"><b>Marciacq Travel Studio</b></span><span class="d">Founded · Fora Certified · Virtuoso® via Fora</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1054,33 +1121,6 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
   </div>
 </section>
 
-<!-- TRUSTED BY (anonymized) -->
-<section class="trusted r">
-  <div class="container">
-    <div class="head">
-      <h3>Trusted by principals who measure work in <span class="sig">structure</span>, not adjectives.</h3>
-      <span class="note">Client identities abstracted by agreement</span>
-    </div>
-    <div class="trust-grid">
-      <div class="tcell">
-        <span class="ti">i.</span>
-        <p>A <strong>multigenerational family</strong> coordinating an 18-day European program across two countries and three coordinators.</p>
-      </div>
-      <div class="tcell">
-        <span class="ti">ii.</span>
-        <p>A <strong>corporate decision-maker</strong> briefing a structured offsite framework — single point of contact end to end.</p>
-      </div>
-      <div class="tcell">
-        <span class="ti">iii.</span>
-        <p>A <strong>repeat traveler</strong> building a documented program across multiple destinations — pacing tailored, stakeholders aligned.</p>
-      </div>
-      <div class="tcell">
-        <span class="ti">iv.</span>
-        <p>A <strong>private client</strong> commissioning cultural and craft access across Western Europe — by introduction.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- FOR WHOM -->
 <section id="fit" class="whom r">
@@ -1116,37 +1156,6 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
   </div>
 </section>
 
-<!-- FOUNDER -->
-<section id="founder" class="founder r">
-  <div class="container">
-    <!--MOCKUP-IMG · replace with editorial Nicole photo per brand image direction-->
-    <div class="imgz real portrait" aria-hidden="true">
-      <img src="images/nicole-amalfi.webp" alt="" loading="lazy" class="founder-photo">
-      <span class="index">№ 08 / Founder &amp; Travel Advisor</span>
-      <span class="cap">Founder<small>Nicole Marciacq — Marciacq Travel Studio.</small></span>
-    </div>
-    <div>
-      <span class="label">Founder &amp; Travel Advisor</span>
-      <h2>Nicole <span class="sig">Marciacq</span>.</h2>
-      <p><strong>Founder &amp; Travel Advisor.</strong> Nicole leads Marciacq Travel Studio personally. Her trajectory spans luxury operations, diplomatic protocol, and four years as <strong>Head of Product Development at the Panama Tourism Authority</strong>, working on Panama's Sustainable Tourism Master Plan (2020–2025).</p>
-      <p>Trained at <strong>Glion Institute of Higher Education</strong> (Switzerland) — International Hospitality Management with Event Management specialization — and <strong>Ostelea</strong> (Spain) — Master's Degree in Events, Protocol, and MICE Tourism. As a <strong>Certified Travel Advisor with Fora Travel</strong>, the studio operates through the <strong>Virtuoso® Travel Network</strong> — preferred-partner access to Forbes Five-Star, Travel + Leisure A-list, and verified luxury operators worldwide.</p>
-      <span class="signature">— Nicole</span>
-      <div class="arc">
-        <div class="arc-head">
-          <span class="arc-tag">Trajectory</span>
-          <span class="arc-sub">Switzerland · Portugal · Panama · Spain — and back. The studio rests on what came before it.</span>
-        </div>
-        <div class="arc-grid">
-          <div class="arc-item"><span class="y">2011 — 2015</span><span class="r"><b>Glion</b> · Switzerland</span><span class="d">BSc International Hospitality Management · Event Management specialization</span></div>
-          <div class="arc-item"><span class="y">2015</span><span class="r"><b>Summit of the Americas</b></span><span class="d">Heads of State · Protocol coordination, restricted-access meeting</span></div>
-          <div class="arc-item"><span class="y">2017 — 2018</span><span class="r"><b>Ostelea</b> · Spain</span><span class="d">Master's · Events, Protocol &amp; MICE Tourism</span></div>
-          <div class="arc-item"><span class="y">2019 — 2023</span><span class="r"><b>Panama Tourism Authority</b></span><span class="d">Head of Product Development · 4 yrs · Sustainable Tourism Master Plan</span></div>
-          <div class="arc-item"><span class="y">2025</span><span class="r"><b>Marciacq Travel Studio</b></span><span class="d">Founded · Fora Certified · Virtuoso® via Fora</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ─── TRAVEL STYLE (Nicole's personal voice, from her FORA profile) ─── -->
@@ -1154,7 +1163,7 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
   <div class="container">
     <div class="head">
       <span class="tag">Travel style</span>
-      <h2>"…&#8202;always make room to&#8202; <em>linger&#8202;</em>."</h2>
+      <h2>A studio with <em>a personal eye</em>.</h2>
       <div class="tags">
         <small>Ask me about</small>
         <span class="pill">Family travel</span>
@@ -1168,9 +1177,9 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
       </div>
     </div>
     <div class="body-block">
-      <p class="quote">"Panama-based travel curator crafting <em>slow, soulful</em> journeys — rooted in nature, culture, and laid-back luxury. Travel that honors destinations and transforms travelers."</p>
+      <p class="quote">"A Panama-based travel advisor who designs <em>slow, considered</em> journeys — rooted in nature, culture, and the kind of luxury that doesn't need to announce itself."</p>
       <p class="lbl">In her words</p>
-      <p class="body">Rainforest soul with a soft spot for the beauty of the world. Drawn to wild places, deep culture, and laid-back luxury — barefoot mornings, jungle mist, hot showers, slow sips with a view. A good itinerary, with room to linger when the present moment asks for it.</p>
+      <p class="body">Drawn to wild places and deep culture. Built to deliver structured itineraries with room for the unplanned moments — the conversation that runs long, the morning that asks for stillness, the route that benefits from one less stop.</p>
       <span class="sig">— Nicole · @marciacqtravelstudio</span>
     </div>
   </div>
@@ -1224,18 +1233,6 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
         <span class="ck">01 — Direct</span>
         <span class="cv">hello@<span class="sig">marciacq</span>travelstudio.com</span>
         <span class="cd">For new programs and structured intake.</span>
-        <span class="arrow">→</span>
-      </a>
-      <a href="https://instagram.com/marciacqtravelstudio" class="ch">
-        <span class="ck">02 — Positioning</span>
-        <span class="cv">@marciacqtravelstudio</span>
-        <span class="cd">Operational evidence, not aesthetic output.</span>
-        <span class="arrow">→</span>
-      </a>
-      <a href="https://wa.me/50766731449?text=Hello%20Marciacq%20Studio" class="ch">
-        <span class="ck">03 — Direct line</span>
-        <span class="cv">+507 6673-1449 · <span class="sig">WhatsApp</span></span>
-        <span class="cd">For introductions, existing programs, and continuity.</span>
         <span class="arrow">→</span>
       </a>
     </div>
