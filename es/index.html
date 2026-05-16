@@ -961,6 +961,21 @@ section.affil .trust-line{
 
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
+
+/* ================ EDITORIAL RHYTHM — selective inter-section breathing ================ */
+/* +40px (~15% of inter-section gap) at the five transitions where cadence carries narrative weight */
+section.intro,
+section.programs,
+section.feature,
+section.how,
+section.intake{margin-top:40px}
+@media(max-width:880px){
+  section.intro,
+  section.programs,
+  section.feature,
+  section.how,
+  section.intake{margin-top:24px}
+}
 </style>
 </head>
 <body>
