@@ -720,6 +720,15 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
 .affil .mk small{font-size:10.5px}
 @media(max-width:880px){.affil{padding:32px 0}.affil .marks{gap:24px 32px}}
 
+
+/* FORA wordmark — stylized representation of their advisor brand */
+.affil .mk.fora{padding:14px 22px;border:1.5px solid var(--arena);background:var(--perla);position:relative}
+.affil .mk.fora b{font-family:"Raleway",sans-serif;font-style:normal;font-weight:500;font-size:24px;letter-spacing:-.01em;color:var(--arena);text-transform:none}
+.affil .mk.fora b::after{content:"";display:inline-block;width:5px;height:5px;background:var(--terra);border-radius:50%;margin-left:6px;vertical-align:middle;transform:translateY(-6px)}
+.affil .mk.fora small{color:var(--musgo);font-weight:500}
+.affil .mk.school b{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;font-size:22px;letter-spacing:.01em}
+@media(max-width:760px){.affil .mk.fora b{font-size:20px}}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
@@ -819,12 +828,12 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
 <!-- AFFILIATIONS -->
 <section class="affil">
   <div class="container">
-    <span class="al-tag">Accès au réseau</span>
+    <span class="al-tag">Références et réseau</span>
     <div class="marks">
-      <span class="mk"><b>Virtuoso</b><small>Tarifs et amenities préférentiels</small></span>
-      <span class="mk"><b>FORA Travel</b><small>Conseillère indépendante</small></span>
-      <span class="mk"><b>Forbes Five-Star</b><small>Accès réservé</small></span>
-      <span class="mk"><b>Travel + Leisure</b><small>Hôtels à tarif préférentiel</small></span>
+      <span class="mk fora"><b>Fora</b><small>Certified Travel Advisor</small></span>
+      <span class="mk school"><b>Glion</b><small>BSc · Suisse</small></span>
+      <span class="mk school"><b>Ostelea</b><small>Master · MICE · Espagne</small></span>
+      <span class="mk"><b>MPI</b><small>Meeting Professionals International</small></span>
     </div>
   </div>
 </section>
@@ -903,7 +912,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
       <span class="label">№ 02 — Fondatrice &amp; Travel Advisor</span>
       <h2>Nicole <span class="sig">Marciacq</span>.</h2>
       <p><strong>Fondatrice &amp; Travel Advisor.</strong> Nicole dirige personnellement Marciacq Travel Studio. Parcours en opérations de luxe, protocole diplomatique et quatre années comme <strong>Head of Product Development à l'Autorité du Tourisme du Panama</strong>, sur le Plan Directeur du Tourisme Durable (2020–2025).</p>
-      <p>Formée à <strong>Glion Institute of Higher Education</strong> (Suisse) — International Hospitality Management avec spécialisation Event Management — et à <strong>Ostelea</strong> (Espagne) — Master en Événementiel, Protocole et Tourisme MICE. En tant que <strong>Certified Travel Advisor chez Fora Travel</strong>, le studio opère via le réseau <strong>Virtuoso®</strong> — accès préférentiel aux hôtels Forbes Five-Star, Travel + Leisure A-list et opérateurs de luxe vérifiés dans le monde entier.</p>
+      <p>Formée à <strong>Glion Institute of Higher Education</strong> (Suisse) — International Hospitality Management avec spécialisation Event Management — et à <strong>Ostelea</strong> (Espagne) — Master en Événementiel, Protocole et Tourisme MICE. En tant que <strong>Certified Travel Advisor chez Fora Travel</strong>, le studio opère via le réseau curaté de Fora — tarifs et amenities préférentiels dans des hôtels et opérateurs de luxe validés dans le monde entier.</p>
       <span class="signature">— Nicole</span>
       <div class="arc">
         <div class="arc-head">
@@ -915,7 +924,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
           <div class="arc-item"><span class="y">2015</span><span class="r"><b>Sommet des Amériques</b></span><span class="d">Chefs d'État · coordination protocolaire, réunion restreinte</span></div>
           <div class="arc-item"><span class="y">2017 — 2018</span><span class="r"><b>Ostelea</b> · Espagne</span><span class="d">Master · Événementiel, Protocole &amp; Tourisme MICE</span></div>
           <div class="arc-item"><span class="y">2019 — 2023</span><span class="r"><b>Autorité du Tourisme du Panama</b></span><span class="d">Head of Product Development · 4 ans · Plan Directeur du Tourisme Durable</span></div>
-          <div class="arc-item"><span class="y">2025</span><span class="r"><b>Marciacq Travel Studio</b></span><span class="d">Fondé · Fora Certified · Virtuoso® via Fora</span></div>
+          <div class="arc-item"><span class="y">2025</span><span class="r"><b>Marciacq Travel Studio</b></span><span class="d">Fondé · Fora Certified Travel Advisor</span></div>
         </div>
       </div>
     </div>
@@ -1298,7 +1307,7 @@ section.intake .cta.light:hover{background:var(--arena);color:var(--perla);borde
     </div>
     <div class="foot-bottom">
       <span>© 2026 Marciacq Travel Studio — Nicole Marciacq</span>
-      <span>Membre : Virtuoso · FORA Travel · Panama City</span>
+      <span>Membre : Fora Travel · Panama City</span>
     </div>
   </div>
 </footer>
