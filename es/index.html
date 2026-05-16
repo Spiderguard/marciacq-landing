@@ -531,6 +531,88 @@ footer{background:var(--selva);color:rgba(245,239,233,.7);padding:80px 0 36px}
   footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
 }
 
+
+.discretion{margin-top:30px;padding-top:24px;border-top:1px solid rgba(245,239,233,.16);font-size:13px;color:rgba(245,239,233,.6);line-height:1.65;max-width:64ch;font-weight:300;letter-spacing:.005em}
+
+.imgz.real.portrait .founder-photo{filter:saturate(.65) contrast(1.04) brightness(.96);object-position:center 28%}
+.imgz.real.portrait::after{background:linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(49,37,31,.55) 100%)}
+
+/* ================ MOBILE FINE-TUNE ================ */
+@media(max-width:880px){
+  .topstrip .container{justify-content:center;text-align:center;gap:8px;padding-top:10px;padding-bottom:10px}
+  .topstrip .left{justify-content:center;gap:8px;width:100%;flex-wrap:wrap}
+  .topstrip .right{justify-content:center;gap:14px;width:100%;flex-wrap:wrap}
+  .lang a, .lang span.on{min-height:28px;padding:4px 8px;font-size:12px;letter-spacing:.16em}
+  .nav .container{padding-left:24px;padding-right:24px}
+  .nav-cta{gap:8px}
+  .affil{padding:24px 0}
+  .affil .container{flex-direction:column;align-items:flex-start;gap:18px}
+  .affil .marks{gap:18px}
+  .affil .mk b{font-size:18px}
+  .hero{padding-top:54px;padding-bottom:70px}
+  .hero h1{font-size:36px;line-height:1.05;margin-bottom:26px}
+  .hero .lead{font-size:16px;margin-bottom:30px}
+  .hero .actions{flex-direction:column;align-items:stretch;gap:10px}
+  .hero .cta{justify-content:center}
+  .hero .trust{padding-top:32px;gap:24px 14px}
+  .hero .trust .t b{font-size:24px}
+  .hero .trust .t small{font-size:10px;letter-spacing:.14em}
+  .feature .head{flex-direction:column;align-items:flex-start;gap:8px}
+  .feature .head .meta{text-align:left}
+  .feature-card .body{padding:32px 24px;gap:24px}
+  .feature-card h3{font-size:26px}
+  .pgrid{gap:18px}
+  .pcard .pbody{padding:22px 22px 24px}
+  .programs .head{gap:16px}
+  .vert{padding:32px 26px}
+  .vert h3{font-size:20px}
+  .how{padding-top:64px;padding-bottom:64px}
+  .steps{margin-top:46px}
+  .case .right{padding:36px 28px;gap:22px}
+  .case h3{font-size:22px;line-height:1.18}
+  .case-list .k{min-width:80px;font-size:10px}
+  .case-list li{padding:14px 0;font-size:13.5px;gap:18px}
+  .trusted .head{flex-direction:column;align-items:flex-start;gap:14px}
+  .trusted{padding:64px 0}
+  .tcell{padding:28px 0!important;border-right:none!important}
+  .fits > div{padding:28px 22px}
+  .fits li{font-size:14px;gap:12px}
+  .about .container{gap:32px}
+  .portrait{max-width:340px}
+  .about .stats{margin-top:32px;padding-top:24px;gap:22px}
+  .dispatch-form{padding:26px 22px}
+  .dispatch-form input{padding:12px 0 10px}
+  .intake .head{gap:16px}
+  .channels{grid-template-columns:1fr}
+  .ch{padding:24px 0!important;border-right:none!important;border-bottom:1px solid rgba(245,239,233,.16)}
+  .ch:hover{padding-left:0!important}
+  .ch .cv{font-size:17px}
+  .ch:last-child{border-bottom:none}
+  .intake .response{font-size:14px;margin-top:24px}
+  .discretion{font-size:12.5px;margin-top:22px;padding-top:18px}
+  .intake .actions{flex-direction:column;align-items:stretch}
+  .intake .actions a{justify-content:center}
+  .foot-grid{gap:32px;margin-bottom:42px}
+  .foot-grid h6{margin-bottom:14px}
+  .foot-grid a{font-size:13px;line-height:1.6}
+  .foot-bottom{flex-direction:column;align-items:flex-start;font-size:10px;line-height:1.5}
+}
+@media(max-width:480px){
+  :root{--gut:20px}
+  .nav .container{height:62px}
+  .brand .mark{font-size:22px}
+  .brand .sub{display:none}
+  .nav-cta .cta{padding:9px 12px;font-size:10px;letter-spacing:.18em}
+  .hero h1{font-size:32px}
+  .hero .trust{grid-template-columns:1fr 1fr}
+  .feature .head .meta{font-size:10px}
+  .feature-card .facts{grid-template-columns:1fr;gap:14px}
+  .vert{padding:28px 22px}
+  .case-list li{grid-template-columns:1fr;gap:4px}
+  .case-list .k{padding-top:0}
+  .about .stats{grid-template-columns:1fr 1fr}
+}
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
