@@ -803,6 +803,20 @@ section.affil .al-tag{flex-shrink:0}
 .about .signature{color:var(--terra)}
 .case .tag{color:var(--terra)}
 
+
+/* AUDIT: girlie-balance — slightly heavier weights for structural HNI register */
+.section-head h2,h2{font-weight:300!important}  /* 200 → 300 for more presence */
+.hero h1{font-weight:300}  /* hero gets more presence */
+.feature .head h2,.programs h2,.verticals h2,.how h2,.proof h2,.whom h2,.founder h2,.intake h2{font-weight:300}
+/* More terracota presence in structural elements */
+.label::before,.section-head .eyebrow::before{background:var(--terra);height:2px}
+.eyebrow::before{background:var(--terra)!important}
+.hero .eyebrow::before{background:var(--terra);height:2px}
+.principle .body .sign{color:var(--terra)}
+.principle .body .sign .line{background:var(--terra)}
+/* Headings keep some italic accent but body italic gets reduced */
+.style-block .quote em{color:var(--terra)}  /* stronger sig color */
+
 .r{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
 .r.on{opacity:1;transform:translateY(0)}
 </style>
